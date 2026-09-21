@@ -1,0 +1,2959 @@
+{
+  "site": "legal",
+  "pages": 34,
+  "strings": [
+    "<1/> All products",
+    "<1/> Atlas",
+    "<1/> Back to Acceptable Use Policy",
+    "<1/> Back to Account &amp; Data Deletion",
+    "<1/> Back to Community Guidelines",
+    "<1/> Back to Cookies &amp; Tracking",
+    "<1/> Back to Copyright",
+    "<1/> Back to Data &amp; Retention",
+    "<1/> Back to DMCA Notices",
+    "<1/> Back to Nova Account Terms",
+    "<1/> Back to Privacy Policy",
+    "<1/> Back to Security",
+    "<1/> Back to Terms of Service",
+    "<1/> Back to Terms of Usage",
+    "<1/> Nova",
+    "<1/> Nova Cut",
+    "<1/> Nova Forge",
+    "<1/> Nova.Help",
+    "<1/> Online Earth",
+    "<1/> Replay.GG",
+    "<1/> The documents on this site are being prepared. Nothing published here yet is in force.",
+    "<1/>Content pending",
+    "<1>About Nova <2>site pending</2></1>",
+    "<1>Acceptable Use Policy</1>",
+    "<1>Account &amp; Data Deletion</1>",
+    "<1>Accounts</1>",
+    "<1>Atlas website <2>(site pending)</2></1> <3/> <4>Help with Atlas<5/></4>",
+    "<1>Atlas</1>",
+    "<1>Community Guidelines</1>",
+    "<1>Community</1>",
+    "<1>Cookies &amp; Tracking</1>",
+    "<1>Copyright</1>",
+    "<1>Data &amp; Retention</1>",
+    "<1>DMCA Notices</1>",
+    "<1>Legal</1>",
+    "<1>Nova Account Terms</1>",
+    "<1>Nova Cut website <2>(site pending)</2></1> <3/> <4>Help with Nova Cut<5/></4>",
+    "<1>Nova Cut</1>",
+    "<1>Nova Forge website <2>(site pending)</2></1> <3/> <4>Help with Nova Forge</4>",
+    "<1>Nova Forge</1>",
+    "<1>Nova website <2>(site pending)</2></1> <3/> <4>Help with Nova<5/></4>",
+    "<1>Nova.Help website<2/></1> <3/> <4>Help with Nova.Help<5/></4>",
+    "<1>Nova.Help</1>",
+    "<1>Nova</1>",
+    "<1>Online Earth website <2>(site pending)</2></1> <3/> <4>Help with Online Earth<5/></4>",
+    "<1>Online Earth</1>",
+    "<1>Privacy Policy</1>",
+    "<1>Privacy</1>",
+    "<1>Products</1>",
+    "<1>Replay.GG website <2>(site pending)</2></1> <3/> <4>Help with Replay.GG<5/></4>",
+    "<1>Replay.GG</1>",
+    "<1>Search</1>",
+    "<1>Security</1>",
+    "<1>Terms of Service</1>",
+    "<1>Terms of Usage</1>",
+    "<1>Terms</1>",
+    "<1>Version history</1>",
+    "12 documents",
+    "12 documents across 4 categories and 7 products. None published yet.",
+    "A desktop app for recording gameplay and creating clips from PC games.",
+    "A desktop toolkit for organizing game configuration, mods, profiles, and saves.",
+    "A desktop-first non-linear video and photo editor.",
+    "A local-first desktop assistant that helps operate a computer.",
+    "A Nova Account connects the ecosystem, but does not gate the products. Product features remain available without signing in.",
+    "A Nova Account is optional and does not unlock Atlas features. Signing in links the ecosystem identity without uploading this machine’s Atlas data.",
+    "A Nova Account is optional in every Nova product, and is the same account across all of them.",
+    "A Nova Account is optional. Replay.GG can be used without signing in.",
+    "A Nova Account is optional. The editor remains usable without signing in.",
+    "A spatial platform for exploring the world and what is connected to it.",
+    "About Atlas",
+    "About Nova",
+    "About Nova Cut",
+    "About Nova.Help",
+    "About Replay.GG",
+    "Acceptable Use",
+    "Acceptable Use Policy",
+    "Acceptable Use Policy — Nova Legal",
+    "Acceptable Use Policy — version history — Nova Legal",
+    "Account & Data Deletion — Nova Legal",
+    "Account & Data Deletion — version history — Nova Legal",
+    "Account &amp; Data Deletion",
+    "Accounts",
+    "All",
+    "Applicable documents",
+    "Applicable documents not yet determined",
+    "Applies only to products with community spaces or shared content.",
+    "Applies to",
+    "Atlas",
+    "Atlas — legal — Nova Legal",
+    "Atlas desktop app",
+    "Atlas is a local-first desktop assistant. It can work with files, applications, system information, voice, and its on-device memory through declared capabilities.",
+    "Atlas website",
+    "Being prepared — not in force",
+    "Breadcrumb",
+    "Browse help for Nova products and issue categories.",
+    "Browse legal information",
+    "Browse recordings and clips, with media metadata and thumbnails where available.",
+    "Browse the Nova ecosystem and product information.",
+    "Community",
+    "Community Guidelines",
+    "Community Guidelines — Nova Legal",
+    "Community Guidelines — version history — Nova Legal",
+    "Community rules",
+    "Content pending",
+    "Cookies & Tracking — Nova Legal",
+    "Cookies & Tracking — version history — Nova Legal",
+    "Cookies &amp; Tracking",
+    "Copyright",
+    "Copyright — Nova Legal",
+    "Copyright — version history — Nova Legal",
+    "Copyright &amp; DMCA",
+    "Create, sign in to, and manage a Nova Account.",
+    "Current version",
+    "Data",
+    "Data & Retention — Nova Legal",
+    "Data & Retention — version history — Nova Legal",
+    "Data &amp; Retention",
+    "Desktop app",
+    "Desktop app &amp; website",
+    "Details",
+    "DMCA Notices",
+    "DMCA Notices — Nova Legal",
+    "DMCA Notices — version history — Nova Legal",
+    "Document details",
+    "Edit multi-track video and audio on a timeline with trimming, splitting, snapping, and undo/redo.",
+    "Every document on this site, filtered as you type.",
+    "Every Nova product has a page here. A new product is one entry in <1/> — no route, template or navigation change. There are 12 documents in total; see <2>the legal home</2>.",
+    "Export media with configurable resolution, frame rate, codec, quality, and hardware acceleration where available.",
+    "Filter by category",
+    "Find a document by name, category or subject.",
+    "Find links to product support and the Nova community.",
+    "Find local files, open registered applications, and report system status.",
+    "Help",
+    "Help with a Nova product, or open a support ticket. Legal is not support.",
+    "How long information is kept, where it is held, and how it is removed.",
+    "How Nova handles copyright, and what to do about work that is not yours.",
+    "How Nova protects accounts and information, and how to report a problem.",
+    "How to close a Nova Account, and what happens to information when you do.",
+    "How to send a takedown notice or a counter-notice.",
+    "Information about the terms for using Nova products.",
+    "Installed Nova products use the shared account client to connect to Nova Accounts when someone chooses to sign in.",
+    "Installed product connection",
+    "It can record a full session or maintain an instant-replay buffer so a recent moment can be saved after it happens.",
+    "Its featured products are Nova Cut and Atlas; the site also links people to support and the Nova community.",
+    "Join the Nova Discord",
+    "Join the Nova Discord<1/>",
+    "Legal",
+    "Legal home",
+    "Legal information for Atlas.",
+    "Legal information for each Nova product, and which documents apply to it.",
+    "Legal information for each Nova product.",
+    "Legal information for each product in the Nova ecosystem.",
+    "Legal information for Nova Cut.",
+    "Legal information for Nova Forge.",
+    "Legal information for Nova.",
+    "Legal information for Nova.Help.",
+    "Legal information for Online Earth.",
+    "Legal information for Replay.GG.",
+    "Legal information for the Nova ecosystem",
+    "Looking for something else?",
+    "Menu",
+    "No earlier versions. When this document is revised, the version it replaces will be listed here with the dates it was in force.",
+    "No terms specific to Atlas have been written.",
+    "No terms specific to Nova Cut have been written.",
+    "No terms specific to Nova Forge have been written.",
+    "No terms specific to Nova have been written.",
+    "No terms specific to Nova.Help have been written.",
+    "No terms specific to Online Earth have been written.",
+    "No terms specific to Replay.GG have been written.",
+    "No version published yet",
+    "No versions published yet.",
+    "None published yet",
+    "Not determined yet. Which documents apply to this product is recorded on the documents themselves, and will appear here once that has been decided.",
+    "Nothing here is in force yet",
+    "Nothing in NovaLegal has been approved or reviewed by an attorney. That does not mean you do not have to follow, agree to, and accept the terms, rules, or notices presented to you when using a Nova product.",
+    "Nothing matched. Try a shorter word, or <1>browse every document</1>.",
+    "Nova",
+    "Nova — legal — Nova Legal",
+    "Nova Account",
+    "Nova Account Terms",
+    "Nova Account Terms — Nova Legal",
+    "Nova Account Terms — version history — Nova Legal",
+    "Nova Cut",
+    "Nova Cut — legal — Nova Legal",
+    "Nova Cut desktop app",
+    "Nova Cut is a professional non-linear editor for video and photos. Its shared core and rendering engine are designed for desktop today and other platforms over time.",
+    "Nova Cut website",
+    "Nova Forge",
+    "Nova Forge — legal — Nova Legal",
+    "Nova is the public home for the ecosystem: a place to discover the products, their shared direction, and a Nova Account.",
+    "Nova Legal",
+    "Nova Legal — home",
+    "Nova Legal — Legal information for the Nova ecosystem",
+    "Nova Legal — Legal information for the Nova ecosystem.",
+    "Nova Legal is being built",
+    "Nova Legal's documents are still being written, and which of them apply to Atlas has not been determined. This page shows the structure that will hold that information — it is not a statement about how Atlas is governed.",
+    "Nova Legal's documents are still being written, and which of them apply to Nova Cut has not been determined. This page shows the structure that will hold that information — it is not a statement about how Nova Cut is governed.",
+    "Nova Legal's documents are still being written, and which of them apply to Nova Forge has not been determined. This page shows the structure that will hold that information — it is not a statement about how Nova Forge is governed.",
+    "Nova Legal's documents are still being written, and which of them apply to Nova has not been determined. This page shows the structure that will hold that information — it is not a statement about how Nova is governed.",
+    "Nova Legal's documents are still being written, and which of them apply to Nova.Help has not been determined. This page shows the structure that will hold that information — it is not a statement about how Nova.Help is governed.",
+    "Nova Legal's documents are still being written, and which of them apply to Online Earth has not been determined. This page shows the structure that will hold that information — it is not a statement about how Online Earth is governed.",
+    "Nova Legal's documents are still being written, and which of them apply to Replay.GG has not been determined. This page shows the structure that will hold that information — it is not a statement about how Replay.GG is governed.",
+    "Nova website",
+    "Nova.Help",
+    "Nova.Help — legal — Nova Legal",
+    "Nova.Help is the support portal for the Nova ecosystem. It organizes product help, routes support issues, and provides a web surface for Nova Accounts.",
+    "Nova.Help website",
+    "Nova.Help<1/>",
+    "Nova<1/>Legal",
+    "One place to find the status and legal information for Nova products.",
+    "Online Earth",
+    "Online Earth — legal — Nova Legal",
+    "Preview compositions with GPU rendering and work with effects, transitions, keyframes, text, and audio controls.",
+    "Previous versions",
+    "Primary",
+    "Print",
+    "Privacy",
+    "Privacy Policy",
+    "Privacy Policy — Nova Legal",
+    "Privacy Policy — version history — Nova Legal",
+    "Product",
+    "Product data information pending",
+    "Product surfaces",
+    "Product-specific terms",
+    "Products",
+    "Products — Nova Legal",
+    "Record gameplay from a selected display and save full sessions.",
+    "Related documents",
+    "Replay.GG",
+    "Replay.GG — legal — Nova Legal",
+    "Replay.GG captures gameplay from a Windows desktop and organizes recordings and clips in a local media library.",
+    "Replay.GG desktop app",
+    "Save clips from an instant-replay buffer and create clips from recordings.",
+    "Search",
+    "Search — Nova Legal",
+    "Search documents, categories and products",
+    "Search Nova Legal",
+    "Search Nova Legal for terms, privacy, community and product documents.",
+    "Security",
+    "Security — Nova Legal",
+    "Security — version history — Nova Legal",
+    "Skip to content",
+    "Start and manage Nova Account sign-in from the web.",
+    "Status",
+    "Support website",
+    "Switch between light and dark",
+    "Terms",
+    "Terms of Service",
+    "Terms of Service — Nova Legal",
+    "Terms of Service — version history — Nova Legal",
+    "Terms of Usage",
+    "Terms of Usage — Nova Legal",
+    "Terms of Usage — version history — Nova Legal",
+    "Terms that apply to Atlas in particular, in addition to any general terms.",
+    "Terms that apply to Nova Cut in particular, in addition to any general terms.",
+    "Terms that apply to Nova Forge in particular, in addition to any general terms.",
+    "Terms that apply to Nova in particular, in addition to any general terms.",
+    "Terms that apply to Nova.Help in particular, in addition to any general terms.",
+    "Terms that apply to Online Earth in particular, in addition to any general terms.",
+    "Terms that apply to Replay.GG in particular, in addition to any general terms.",
+    "The agreement between you and Nova for using its products.",
+    "The agreements that govern using Nova products.",
+    "The complete support path is available to guests. Signing in connects an optional Nova Account; it does not unlock product features.",
+    "The desktop app is designed to keep its work on the computer. An optional external model can add wider-world reasoning, but is not required for Atlas to function.",
+    "The editing application for creating video and photo projects.",
+    "The editor keeps projects and media work on the machine, with native file access and FFmpeg-backed export in the desktop application.",
+    "The independent software studio and front door to the Nova ecosystem.",
+    "The legal centre for the Nova ecosystem. Terms, privacy, community and product-specific documents in one place.",
+    "The local-first assistant, summoned with a global shortcut.",
+    "The Nova Account — one identity across every Nova product.",
+    "The Nova community.",
+    "The public ecosystem and account website.",
+    "The separate marketing and download website for Atlas.",
+    "The separate official website for product information, downloads, updates, and help.",
+    "The shared account client used by supported Nova desktop products.",
+    "The storage and identifiers Nova products use in a browser, and what for.",
+    "The structure of this site is finished; the legal documents themselves have not been written. Every document below is a placeholder, and <1>nothing on this site is in force or should be relied on</1>. Each document will be published here with an effective date and a version number once it has been written and reviewed.",
+    "The support portal and account web surface.",
+    "The support portal for Nova products and a Nova Account sign-in surface.",
+    "The terms for a Nova Account — one identity across every Nova product.",
+    "The Windows gameplay capture, replay, clip, and media-library application.",
+    "Theme",
+    "This document is being prepared",
+    "This document is being prepared. There is no text here yet, and nothing on this page is in force or should be relied on.",
+    "This is factual product context, not legal terms or a privacy statement.",
+    "Use declared skills to interact with desktop interfaces and perform approved actions.",
+    "Use offline voice, local memory, and a local file index when available.",
+    "Use product support paths without requiring a Nova Account.",
+    "Version",
+    "Version history",
+    "Version history <1/>",
+    "Version history for Acceptable Use Policy.",
+    "Version history for Account & Data Deletion.",
+    "Version history for Community Guidelines.",
+    "Version history for Cookies & Tracking.",
+    "Version history for Copyright.",
+    "Version history for Data & Retention.",
+    "Version history for DMCA Notices.",
+    "Version history for Nova Account Terms.",
+    "Version history for Privacy Policy.",
+    "Version history for Security.",
+    "Version history for Terms of Service.",
+    "Version history for Terms of Usage.",
+    "Versions",
+    "Website",
+    "Website &amp; desktop app",
+    "What Atlas stores, where it is kept, and how long for.",
+    "What information Atlas handles, and what happens to it.",
+    "What information Nova Cut handles, and what happens to it.",
+    "What information Nova Forge handles, and what happens to it.",
+    "What information Nova handles, and what happens to it.",
+    "What information Nova handles, why, and what happens to it.",
+    "What information Nova.Help handles, and what happens to it.",
+    "What information Online Earth handles, and what happens to it.",
+    "What information Replay.GG handles, and what happens to it.",
+    "What is expected of people in Nova community spaces.",
+    "What is expected of people using Nova products, and how content is handled.",
+    "What it does",
+    "What may and may not be done with Nova products and services.",
+    "What Nova Cut stores, where it is kept, and how long for.",
+    "What Nova Forge stores, where it is kept, and how long for.",
+    "What Nova stores, where it is kept, and how long for.",
+    "What Nova.Help stores, where it is kept, and how long for.",
+    "What Online Earth stores, where it is kept, and how long for.",
+    "What Replay.GG stores, where it is kept, and how long for.",
+    "When it has been written and reviewed it will be published here with an effective date and a version number.",
+    "Whether community rules apply to Atlas has not been determined.",
+    "Whether community rules apply to Nova Cut has not been determined.",
+    "Whether community rules apply to Nova Forge has not been determined.",
+    "Whether community rules apply to Nova has not been determined.",
+    "Whether community rules apply to Nova.Help has not been determined.",
+    "Whether community rules apply to Online Earth has not been determined.",
+    "Whether community rules apply to Replay.GG has not been determined.",
+    "Which Nova Legal documents govern Atlas has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.",
+    "Which Nova Legal documents govern Nova Cut has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.",
+    "Which Nova Legal documents govern Nova Forge has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.",
+    "Which Nova Legal documents govern Nova has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.",
+    "Which Nova Legal documents govern Nova.Help has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.",
+    "Which Nova Legal documents govern Online Earth has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.",
+    "Which Nova Legal documents govern Replay.GG has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.",
+    "Which Nova products this document applies to has not been determined yet."
+  ],
+  "where": {
+    "<1/> All products": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "<1/> Atlas": [
+      "/products"
+    ],
+    "<1/> Back to Acceptable Use Policy": [
+      "/acceptable-use/versions"
+    ],
+    "<1/> Back to Account &amp; Data Deletion": [
+      "/account-deletion/versions"
+    ],
+    "<1/> Back to Community Guidelines": [
+      "/community-guidelines/versions"
+    ],
+    "<1/> Back to Cookies &amp; Tracking": [
+      "/cookies/versions"
+    ],
+    "<1/> Back to Copyright": [
+      "/copyright/versions"
+    ],
+    "<1/> Back to Data &amp; Retention": [
+      "/data/versions"
+    ],
+    "<1/> Back to DMCA Notices": [
+      "/dmca/versions"
+    ],
+    "<1/> Back to Nova Account Terms": [
+      "/account/versions"
+    ],
+    "<1/> Back to Privacy Policy": [
+      "/privacy/versions"
+    ],
+    "<1/> Back to Security": [
+      "/security/versions"
+    ],
+    "<1/> Back to Terms of Service": [
+      "/terms/versions"
+    ],
+    "<1/> Back to Terms of Usage": [
+      "/terms-of-usage/versions"
+    ],
+    "<1/> Nova": [
+      "/products"
+    ],
+    "<1/> Nova Cut": [
+      "/products"
+    ],
+    "<1/> Nova Forge": [
+      "/products"
+    ],
+    "<1/> Nova.Help": [
+      "/products"
+    ],
+    "<1/> Online Earth": [
+      "/products"
+    ],
+    "<1/> Replay.GG": [
+      "/products"
+    ],
+    "<1/> The documents on this site are being prepared. Nothing published here yet is in force.": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "<1/>Content pending": [
+      "/",
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/search",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "<1>About Nova <2>site pending</2></1>": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "<1>Acceptable Use Policy</1>": [
+      "/acceptable-use",
+      "/acceptable-use/versions"
+    ],
+    "<1>Account &amp; Data Deletion</1>": [
+      "/account-deletion",
+      "/account-deletion/versions"
+    ],
+    "<1>Accounts</1>": [
+      "/account",
+      "/account-deletion"
+    ],
+    "<1>Atlas website <2>(site pending)</2></1> <3/> <4>Help with Atlas<5/></4>": [
+      "/products/atlas"
+    ],
+    "<1>Atlas</1>": [
+      "/products/atlas"
+    ],
+    "<1>Community Guidelines</1>": [
+      "/community-guidelines",
+      "/community-guidelines/versions"
+    ],
+    "<1>Community</1>": [
+      "/community-guidelines",
+      "/copyright",
+      "/dmca"
+    ],
+    "<1>Cookies &amp; Tracking</1>": [
+      "/cookies",
+      "/cookies/versions"
+    ],
+    "<1>Copyright</1>": [
+      "/copyright",
+      "/copyright/versions"
+    ],
+    "<1>Data &amp; Retention</1>": [
+      "/data",
+      "/data/versions"
+    ],
+    "<1>DMCA Notices</1>": [
+      "/dmca",
+      "/dmca/versions"
+    ],
+    "<1>Legal</1>": [
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "<1>Nova Account Terms</1>": [
+      "/account",
+      "/account/versions"
+    ],
+    "<1>Nova Cut website <2>(site pending)</2></1> <3/> <4>Help with Nova Cut<5/></4>": [
+      "/products/nova-cut"
+    ],
+    "<1>Nova Cut</1>": [
+      "/products/nova-cut"
+    ],
+    "<1>Nova Forge website <2>(site pending)</2></1> <3/> <4>Help with Nova Forge</4>": [
+      "/products/nova-forge"
+    ],
+    "<1>Nova Forge</1>": [
+      "/products/nova-forge"
+    ],
+    "<1>Nova website <2>(site pending)</2></1> <3/> <4>Help with Nova<5/></4>": [
+      "/products/nova"
+    ],
+    "<1>Nova.Help website<2/></1> <3/> <4>Help with Nova.Help<5/></4>": [
+      "/products/nova-help"
+    ],
+    "<1>Nova.Help</1>": [
+      "/products/nova-help"
+    ],
+    "<1>Nova</1>": [
+      "/products/nova"
+    ],
+    "<1>Online Earth website <2>(site pending)</2></1> <3/> <4>Help with Online Earth<5/></4>": [
+      "/products/online-earth"
+    ],
+    "<1>Online Earth</1>": [
+      "/products/online-earth"
+    ],
+    "<1>Privacy Policy</1>": [
+      "/privacy",
+      "/privacy/versions"
+    ],
+    "<1>Privacy</1>": [
+      "/cookies",
+      "/data",
+      "/privacy",
+      "/security"
+    ],
+    "<1>Products</1>": [
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "<1>Replay.GG website <2>(site pending)</2></1> <3/> <4>Help with Replay.GG<5/></4>": [
+      "/products/replay-gg"
+    ],
+    "<1>Replay.GG</1>": [
+      "/products/replay-gg"
+    ],
+    "<1>Search</1>": [
+      "/search"
+    ],
+    "<1>Security</1>": [
+      "/security",
+      "/security/versions"
+    ],
+    "<1>Terms of Service</1>": [
+      "/terms",
+      "/terms/versions"
+    ],
+    "<1>Terms of Usage</1>": [
+      "/terms-of-usage",
+      "/terms-of-usage/versions"
+    ],
+    "<1>Terms</1>": [
+      "/acceptable-use",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "<1>Version history</1>": [
+      "/acceptable-use/versions",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines/versions",
+      "/cookies/versions",
+      "/copyright/versions",
+      "/data/versions",
+      "/dmca/versions",
+      "/privacy/versions",
+      "/security/versions",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "12 documents": [
+      "/search"
+    ],
+    "12 documents across 4 categories and 7 products. None published yet.": [
+      "/"
+    ],
+    "A desktop app for recording gameplay and creating clips from PC games.": [
+      "/products",
+      "/products/replay-gg"
+    ],
+    "A desktop toolkit for organizing game configuration, mods, profiles, and saves.": [
+      "/products",
+      "/products/nova-forge"
+    ],
+    "A desktop-first non-linear video and photo editor.": [
+      "/products",
+      "/products/nova-cut"
+    ],
+    "A local-first desktop assistant that helps operate a computer.": [
+      "/products",
+      "/products/atlas"
+    ],
+    "A Nova Account connects the ecosystem, but does not gate the products. Product features remain available without signing in.": [
+      "/products/nova"
+    ],
+    "A Nova Account is optional and does not unlock Atlas features. Signing in links the ecosystem identity without uploading this machine’s Atlas data.": [
+      "/products/atlas"
+    ],
+    "A Nova Account is optional in every Nova product, and is the same account across all of them.": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "A Nova Account is optional. Replay.GG can be used without signing in.": [
+      "/products/replay-gg"
+    ],
+    "A Nova Account is optional. The editor remains usable without signing in.": [
+      "/products/nova-cut"
+    ],
+    "A spatial platform for exploring the world and what is connected to it.": [
+      "/products",
+      "/products/online-earth"
+    ],
+    "About Atlas": [
+      "/products/atlas"
+    ],
+    "About Nova": [
+      "/products/nova"
+    ],
+    "About Nova Cut": [
+      "/products/nova-cut"
+    ],
+    "About Nova.Help": [
+      "/products/nova-help"
+    ],
+    "About Replay.GG": [
+      "/products/replay-gg"
+    ],
+    "Acceptable Use": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Acceptable Use Policy": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/community-guidelines",
+      "/search",
+      "/terms"
+    ],
+    "Acceptable Use Policy — Nova Legal": [
+      "/acceptable-use"
+    ],
+    "Acceptable Use Policy — version history — Nova Legal": [
+      "/acceptable-use/versions"
+    ],
+    "Account & Data Deletion — Nova Legal": [
+      "/account-deletion"
+    ],
+    "Account & Data Deletion — version history — Nova Legal": [
+      "/account-deletion/versions"
+    ],
+    "Account &amp; Data Deletion": [
+      "/",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/data",
+      "/privacy",
+      "/search"
+    ],
+    "Accounts": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "All": [
+      "/search"
+    ],
+    "Applicable documents": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "Applicable documents not yet determined": [
+      "/products"
+    ],
+    "Applies only to products with community spaces or shared content.": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "Applies to": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Atlas": [
+      "/",
+      "/products/atlas"
+    ],
+    "Atlas — legal — Nova Legal": [
+      "/products/atlas"
+    ],
+    "Atlas desktop app": [
+      "/products/atlas"
+    ],
+    "Atlas is a local-first desktop assistant. It can work with files, applications, system information, voice, and its on-device memory through declared capabilities.": [
+      "/products/atlas"
+    ],
+    "Atlas website": [
+      "/products/atlas"
+    ],
+    "Being prepared — not in force": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Breadcrumb": [
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Browse help for Nova products and issue categories.": [
+      "/products/nova-help"
+    ],
+    "Browse legal information": [
+      "/"
+    ],
+    "Browse recordings and clips, with media metadata and thumbnails where available.": [
+      "/products/replay-gg"
+    ],
+    "Browse the Nova ecosystem and product information.": [
+      "/products/nova"
+    ],
+    "Community": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Community Guidelines": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Community Guidelines — Nova Legal": [
+      "/community-guidelines"
+    ],
+    "Community Guidelines — version history — Nova Legal": [
+      "/community-guidelines/versions"
+    ],
+    "Community rules": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "Content pending": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Cookies & Tracking — Nova Legal": [
+      "/cookies"
+    ],
+    "Cookies & Tracking — version history — Nova Legal": [
+      "/cookies/versions"
+    ],
+    "Cookies &amp; Tracking": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Copyright": [
+      "/",
+      "/community-guidelines",
+      "/copyright",
+      "/copyright/versions",
+      "/dmca",
+      "/search"
+    ],
+    "Copyright — Nova Legal": [
+      "/copyright"
+    ],
+    "Copyright — version history — Nova Legal": [
+      "/copyright/versions"
+    ],
+    "Copyright &amp; DMCA": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Create, sign in to, and manage a Nova Account.": [
+      "/products/nova"
+    ],
+    "Current version": [
+      "/acceptable-use/versions",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines/versions",
+      "/cookies/versions",
+      "/copyright/versions",
+      "/data/versions",
+      "/dmca/versions",
+      "/privacy/versions",
+      "/security/versions",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Data": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "Data & Retention — Nova Legal": [
+      "/data"
+    ],
+    "Data & Retention — version history — Nova Legal": [
+      "/data/versions"
+    ],
+    "Data &amp; Retention": [
+      "/",
+      "/account-deletion",
+      "/data",
+      "/data/versions",
+      "/privacy",
+      "/search",
+      "/security"
+    ],
+    "Desktop app": [
+      "/",
+      "/products",
+      "/products/nova-forge",
+      "/products/replay-gg"
+    ],
+    "Desktop app &amp; website": [
+      "/",
+      "/products",
+      "/products/atlas",
+      "/products/nova-cut"
+    ],
+    "Details": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "DMCA Notices": [
+      "/",
+      "/copyright",
+      "/dmca",
+      "/dmca/versions",
+      "/search"
+    ],
+    "DMCA Notices — Nova Legal": [
+      "/dmca"
+    ],
+    "DMCA Notices — version history — Nova Legal": [
+      "/dmca/versions"
+    ],
+    "Document details": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Edit multi-track video and audio on a timeline with trimming, splitting, snapping, and undo/redo.": [
+      "/products/nova-cut"
+    ],
+    "Every document on this site, filtered as you type.": [
+      "/search"
+    ],
+    "Every Nova product has a page here. A new product is one entry in <1/> — no route, template or navigation change. There are 12 documents in total; see <2>the legal home</2>.": [
+      "/products"
+    ],
+    "Export media with configurable resolution, frame rate, codec, quality, and hardware acceleration where available.": [
+      "/products/nova-cut"
+    ],
+    "Filter by category": [
+      "/search"
+    ],
+    "Find a document by name, category or subject.": [
+      "/"
+    ],
+    "Find links to product support and the Nova community.": [
+      "/products/nova"
+    ],
+    "Find local files, open registered applications, and report system status.": [
+      "/products/atlas"
+    ],
+    "Help": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Help with a Nova product, or open a support ticket. Legal is not support.": [
+      "/"
+    ],
+    "How long information is kept, where it is held, and how it is removed.": [
+      "/",
+      "/account-deletion",
+      "/data",
+      "/privacy",
+      "/search",
+      "/security"
+    ],
+    "How Nova handles copyright, and what to do about work that is not yours.": [
+      "/",
+      "/community-guidelines",
+      "/copyright",
+      "/dmca",
+      "/search"
+    ],
+    "How Nova protects accounts and information, and how to report a problem.": [
+      "/",
+      "/account",
+      "/data",
+      "/search",
+      "/security"
+    ],
+    "How to close a Nova Account, and what happens to information when you do.": [
+      "/",
+      "/account",
+      "/account-deletion",
+      "/data",
+      "/privacy",
+      "/search"
+    ],
+    "How to send a takedown notice or a counter-notice.": [
+      "/",
+      "/copyright",
+      "/dmca",
+      "/search"
+    ],
+    "Information about the terms for using Nova products.": [
+      "/",
+      "/search",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Installed Nova products use the shared account client to connect to Nova Accounts when someone chooses to sign in.": [
+      "/products/nova-help"
+    ],
+    "Installed product connection": [
+      "/products/nova-help"
+    ],
+    "It can record a full session or maintain an instant-replay buffer so a recent moment can be saved after it happens.": [
+      "/products/replay-gg"
+    ],
+    "Its featured products are Nova Cut and Atlas; the site also links people to support and the Nova community.": [
+      "/products/nova"
+    ],
+    "Join the Nova Discord": [
+      "/"
+    ],
+    "Join the Nova Discord<1/>": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Legal": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Legal home": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Legal information for Atlas.": [
+      "/products/atlas"
+    ],
+    "Legal information for each Nova product, and which documents apply to it.": [
+      "/"
+    ],
+    "Legal information for each Nova product.": [
+      "/products"
+    ],
+    "Legal information for each product in the Nova ecosystem.": [
+      "/products"
+    ],
+    "Legal information for Nova Cut.": [
+      "/products/nova-cut"
+    ],
+    "Legal information for Nova Forge.": [
+      "/products/nova-forge"
+    ],
+    "Legal information for Nova.": [
+      "/products/nova"
+    ],
+    "Legal information for Nova.Help.": [
+      "/products/nova-help"
+    ],
+    "Legal information for Online Earth.": [
+      "/products/online-earth"
+    ],
+    "Legal information for Replay.GG.": [
+      "/products/replay-gg"
+    ],
+    "Legal information for the Nova ecosystem": [
+      "/"
+    ],
+    "Looking for something else?": [
+      "/"
+    ],
+    "Menu": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "No earlier versions. When this document is revised, the version it replaces will be listed here with the dates it was in force.": [
+      "/acceptable-use/versions",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines/versions",
+      "/cookies/versions",
+      "/copyright/versions",
+      "/data/versions",
+      "/dmca/versions",
+      "/privacy/versions",
+      "/security/versions",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "No terms specific to Atlas have been written.": [
+      "/products/atlas"
+    ],
+    "No terms specific to Nova Cut have been written.": [
+      "/products/nova-cut"
+    ],
+    "No terms specific to Nova Forge have been written.": [
+      "/products/nova-forge"
+    ],
+    "No terms specific to Nova have been written.": [
+      "/products/nova"
+    ],
+    "No terms specific to Nova.Help have been written.": [
+      "/products/nova-help"
+    ],
+    "No terms specific to Online Earth have been written.": [
+      "/products/online-earth"
+    ],
+    "No terms specific to Replay.GG have been written.": [
+      "/products/replay-gg"
+    ],
+    "No version published yet": [
+      "/acceptable-use/versions",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines/versions",
+      "/cookies/versions",
+      "/copyright/versions",
+      "/data/versions",
+      "/dmca/versions",
+      "/privacy/versions",
+      "/security/versions",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "No versions published yet.": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "None published yet": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Not determined yet. Which documents apply to this product is recorded on the documents themselves, and will appear here once that has been decided.": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "Nothing here is in force yet": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "Nothing in NovaLegal has been approved or reviewed by an attorney. That does not mean you do not have to follow, agree to, and accept the terms, rules, or notices presented to you when using a Nova product.": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Nothing matched. Try a shorter word, or <1>browse every document</1>.": [
+      "/search"
+    ],
+    "Nova": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Nova — legal — Nova Legal": [
+      "/products/nova"
+    ],
+    "Nova Account": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-help",
+      "/products/replay-gg"
+    ],
+    "Nova Account Terms": [
+      "/",
+      "/account",
+      "/account-deletion",
+      "/account/versions",
+      "/privacy",
+      "/search",
+      "/security",
+      "/terms"
+    ],
+    "Nova Account Terms — Nova Legal": [
+      "/account"
+    ],
+    "Nova Account Terms — version history — Nova Legal": [
+      "/account/versions"
+    ],
+    "Nova Cut": [
+      "/",
+      "/products/nova-cut"
+    ],
+    "Nova Cut — legal — Nova Legal": [
+      "/products/nova-cut"
+    ],
+    "Nova Cut desktop app": [
+      "/products/nova-cut"
+    ],
+    "Nova Cut is a professional non-linear editor for video and photos. Its shared core and rendering engine are designed for desktop today and other platforms over time.": [
+      "/products/nova-cut"
+    ],
+    "Nova Cut website": [
+      "/products/nova-cut"
+    ],
+    "Nova Forge": [
+      "/",
+      "/products/nova-forge"
+    ],
+    "Nova Forge — legal — Nova Legal": [
+      "/products/nova-forge"
+    ],
+    "Nova is the public home for the ecosystem: a place to discover the products, their shared direction, and a Nova Account.": [
+      "/products/nova"
+    ],
+    "Nova Legal": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Nova Legal — home": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Nova Legal — Legal information for the Nova ecosystem": [
+      "/"
+    ],
+    "Nova Legal — Legal information for the Nova ecosystem.": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Nova Legal is being built": [
+      "/"
+    ],
+    "Nova Legal's documents are still being written, and which of them apply to Atlas has not been determined. This page shows the structure that will hold that information — it is not a statement about how Atlas is governed.": [
+      "/products/atlas"
+    ],
+    "Nova Legal's documents are still being written, and which of them apply to Nova Cut has not been determined. This page shows the structure that will hold that information — it is not a statement about how Nova Cut is governed.": [
+      "/products/nova-cut"
+    ],
+    "Nova Legal's documents are still being written, and which of them apply to Nova Forge has not been determined. This page shows the structure that will hold that information — it is not a statement about how Nova Forge is governed.": [
+      "/products/nova-forge"
+    ],
+    "Nova Legal's documents are still being written, and which of them apply to Nova has not been determined. This page shows the structure that will hold that information — it is not a statement about how Nova is governed.": [
+      "/products/nova"
+    ],
+    "Nova Legal's documents are still being written, and which of them apply to Nova.Help has not been determined. This page shows the structure that will hold that information — it is not a statement about how Nova.Help is governed.": [
+      "/products/nova-help"
+    ],
+    "Nova Legal's documents are still being written, and which of them apply to Online Earth has not been determined. This page shows the structure that will hold that information — it is not a statement about how Online Earth is governed.": [
+      "/products/online-earth"
+    ],
+    "Nova Legal's documents are still being written, and which of them apply to Replay.GG has not been determined. This page shows the structure that will hold that information — it is not a statement about how Replay.GG is governed.": [
+      "/products/replay-gg"
+    ],
+    "Nova website": [
+      "/products/nova"
+    ],
+    "Nova.Help": [
+      "/",
+      "/products/nova-help"
+    ],
+    "Nova.Help — legal — Nova Legal": [
+      "/products/nova-help"
+    ],
+    "Nova.Help is the support portal for the Nova ecosystem. It organizes product help, routes support issues, and provides a web surface for Nova Accounts.": [
+      "/products/nova-help"
+    ],
+    "Nova.Help website": [
+      "/products/nova-help"
+    ],
+    "Nova.Help<1/>": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Nova<1/>Legal": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "One place to find the status and legal information for Nova products.": [
+      "/"
+    ],
+    "Online Earth": [
+      "/",
+      "/products/online-earth"
+    ],
+    "Online Earth — legal — Nova Legal": [
+      "/products/online-earth"
+    ],
+    "Preview compositions with GPU rendering and work with effects, transitions, keyframes, text, and audio controls.": [
+      "/products/nova-cut"
+    ],
+    "Previous versions": [
+      "/acceptable-use/versions",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines/versions",
+      "/cookies/versions",
+      "/copyright/versions",
+      "/data/versions",
+      "/dmca/versions",
+      "/privacy/versions",
+      "/security/versions",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Primary": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Print": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Privacy": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Privacy Policy": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Privacy Policy — Nova Legal": [
+      "/privacy"
+    ],
+    "Privacy Policy — version history — Nova Legal": [
+      "/privacy/versions"
+    ],
+    "Product": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "Product data information pending": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "Product surfaces": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-help",
+      "/products/replay-gg"
+    ],
+    "Product-specific terms": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg"
+    ],
+    "Products": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Products — Nova Legal": [
+      "/products"
+    ],
+    "Record gameplay from a selected display and save full sessions.": [
+      "/products/replay-gg"
+    ],
+    "Related documents": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Replay.GG": [
+      "/",
+      "/products/replay-gg"
+    ],
+    "Replay.GG — legal — Nova Legal": [
+      "/products/replay-gg"
+    ],
+    "Replay.GG captures gameplay from a Windows desktop and organizes recordings and clips in a local media library.": [
+      "/products/replay-gg"
+    ],
+    "Replay.GG desktop app": [
+      "/products/replay-gg"
+    ],
+    "Save clips from an instant-replay buffer and create clips from recordings.": [
+      "/products/replay-gg"
+    ],
+    "Search": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Search — Nova Legal": [
+      "/search"
+    ],
+    "Search documents, categories and products": [
+      "/search"
+    ],
+    "Search Nova Legal": [
+      "/",
+      "/search"
+    ],
+    "Search Nova Legal for terms, privacy, community and product documents.": [
+      "/search"
+    ],
+    "Security": [
+      "/",
+      "/account",
+      "/data",
+      "/search",
+      "/security",
+      "/security/versions"
+    ],
+    "Security — Nova Legal": [
+      "/security"
+    ],
+    "Security — version history — Nova Legal": [
+      "/security/versions"
+    ],
+    "Skip to content": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Start and manage Nova Account sign-in from the web.": [
+      "/products/nova-help"
+    ],
+    "Status": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Support website": [
+      "/",
+      "/products",
+      "/products/nova-help"
+    ],
+    "Switch between light and dark": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Terms": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Terms of Service": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Terms of Service — Nova Legal": [
+      "/terms"
+    ],
+    "Terms of Service — version history — Nova Legal": [
+      "/terms/versions"
+    ],
+    "Terms of Usage": [
+      "/",
+      "/search",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions"
+    ],
+    "Terms of Usage — Nova Legal": [
+      "/terms-of-usage"
+    ],
+    "Terms of Usage — version history — Nova Legal": [
+      "/terms-of-usage/versions"
+    ],
+    "Terms that apply to Atlas in particular, in addition to any general terms.": [
+      "/products/atlas"
+    ],
+    "Terms that apply to Nova Cut in particular, in addition to any general terms.": [
+      "/products/nova-cut"
+    ],
+    "Terms that apply to Nova Forge in particular, in addition to any general terms.": [
+      "/products/nova-forge"
+    ],
+    "Terms that apply to Nova in particular, in addition to any general terms.": [
+      "/products/nova"
+    ],
+    "Terms that apply to Nova.Help in particular, in addition to any general terms.": [
+      "/products/nova-help"
+    ],
+    "Terms that apply to Online Earth in particular, in addition to any general terms.": [
+      "/products/online-earth"
+    ],
+    "Terms that apply to Replay.GG in particular, in addition to any general terms.": [
+      "/products/replay-gg"
+    ],
+    "The agreement between you and Nova for using its products.": [
+      "/",
+      "/acceptable-use",
+      "/account",
+      "/privacy",
+      "/search",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "The agreements that govern using Nova products.": [
+      "/"
+    ],
+    "The complete support path is available to guests. Signing in connects an optional Nova Account; it does not unlock product features.": [
+      "/products/nova-help"
+    ],
+    "The desktop app is designed to keep its work on the computer. An optional external model can add wider-world reasoning, but is not required for Atlas to function.": [
+      "/products/atlas"
+    ],
+    "The editing application for creating video and photo projects.": [
+      "/products/nova-cut"
+    ],
+    "The editor keeps projects and media work on the machine, with native file access and FFmpeg-backed export in the desktop application.": [
+      "/products/nova-cut"
+    ],
+    "The independent software studio and front door to the Nova ecosystem.": [
+      "/products",
+      "/products/nova"
+    ],
+    "The legal centre for the Nova ecosystem. Terms, privacy, community and product-specific documents in one place.": [
+      "/"
+    ],
+    "The local-first assistant, summoned with a global shortcut.": [
+      "/products/atlas"
+    ],
+    "The Nova Account — one identity across every Nova product.": [
+      "/"
+    ],
+    "The Nova community.": [
+      "/"
+    ],
+    "The public ecosystem and account website.": [
+      "/products/nova"
+    ],
+    "The separate marketing and download website for Atlas.": [
+      "/products/atlas"
+    ],
+    "The separate official website for product information, downloads, updates, and help.": [
+      "/products/nova-cut"
+    ],
+    "The shared account client used by supported Nova desktop products.": [
+      "/products/nova-help"
+    ],
+    "The storage and identifiers Nova products use in a browser, and what for.": [
+      "/",
+      "/cookies",
+      "/privacy",
+      "/search"
+    ],
+    "The structure of this site is finished; the legal documents themselves have not been written. Every document below is a placeholder, and <1>nothing on this site is in force or should be relied on</1>. Each document will be published here with an effective date and a version number once it has been written and reviewed.": [
+      "/"
+    ],
+    "The support portal and account web surface.": [
+      "/products/nova-help"
+    ],
+    "The support portal for Nova products and a Nova Account sign-in surface.": [
+      "/products",
+      "/products/nova-help"
+    ],
+    "The terms for a Nova Account — one identity across every Nova product.": [
+      "/",
+      "/account",
+      "/account-deletion",
+      "/privacy",
+      "/search",
+      "/security",
+      "/terms"
+    ],
+    "The Windows gameplay capture, replay, clip, and media-library application.": [
+      "/products/replay-gg"
+    ],
+    "Theme": [
+      "/",
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/search",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "This document is being prepared": [
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "This document is being prepared. There is no text here yet, and nothing on this page is in force or should be relied on.": [
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "This is factual product context, not legal terms or a privacy statement.": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-help",
+      "/products/replay-gg"
+    ],
+    "Use declared skills to interact with desktop interfaces and perform approved actions.": [
+      "/products/atlas"
+    ],
+    "Use offline voice, local memory, and a local file index when available.": [
+      "/products/atlas"
+    ],
+    "Use product support paths without requiring a Nova Account.": [
+      "/products/nova-help"
+    ],
+    "Version": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Version history": [
+      "/acceptable-use/versions",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines/versions",
+      "/cookies/versions",
+      "/copyright/versions",
+      "/data/versions",
+      "/dmca/versions",
+      "/privacy/versions",
+      "/security/versions",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Version history <1/>": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Version history for Acceptable Use Policy.": [
+      "/acceptable-use/versions"
+    ],
+    "Version history for Account & Data Deletion.": [
+      "/account-deletion/versions"
+    ],
+    "Version history for Community Guidelines.": [
+      "/community-guidelines/versions"
+    ],
+    "Version history for Cookies & Tracking.": [
+      "/cookies/versions"
+    ],
+    "Version history for Copyright.": [
+      "/copyright/versions"
+    ],
+    "Version history for Data & Retention.": [
+      "/data/versions"
+    ],
+    "Version history for DMCA Notices.": [
+      "/dmca/versions"
+    ],
+    "Version history for Nova Account Terms.": [
+      "/account/versions"
+    ],
+    "Version history for Privacy Policy.": [
+      "/privacy/versions"
+    ],
+    "Version history for Security.": [
+      "/security/versions"
+    ],
+    "Version history for Terms of Service.": [
+      "/terms/versions"
+    ],
+    "Version history for Terms of Usage.": [
+      "/terms-of-usage/versions"
+    ],
+    "Versions": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ],
+    "Website": [
+      "/",
+      "/products",
+      "/products/nova"
+    ],
+    "Website &amp; desktop app": [
+      "/",
+      "/products",
+      "/products/online-earth"
+    ],
+    "What Atlas stores, where it is kept, and how long for.": [
+      "/products/atlas"
+    ],
+    "What information Atlas handles, and what happens to it.": [
+      "/products/atlas"
+    ],
+    "What information Nova Cut handles, and what happens to it.": [
+      "/products/nova-cut"
+    ],
+    "What information Nova Forge handles, and what happens to it.": [
+      "/products/nova-forge"
+    ],
+    "What information Nova handles, and what happens to it.": [
+      "/",
+      "/products/nova"
+    ],
+    "What information Nova handles, why, and what happens to it.": [
+      "/",
+      "/account",
+      "/account-deletion",
+      "/cookies",
+      "/data",
+      "/privacy",
+      "/search",
+      "/terms"
+    ],
+    "What information Nova.Help handles, and what happens to it.": [
+      "/products/nova-help"
+    ],
+    "What information Online Earth handles, and what happens to it.": [
+      "/products/online-earth"
+    ],
+    "What information Replay.GG handles, and what happens to it.": [
+      "/products/replay-gg"
+    ],
+    "What is expected of people in Nova community spaces.": [
+      "/",
+      "/acceptable-use",
+      "/community-guidelines",
+      "/copyright",
+      "/search"
+    ],
+    "What is expected of people using Nova products, and how content is handled.": [
+      "/"
+    ],
+    "What it does": [
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-help",
+      "/products/replay-gg"
+    ],
+    "What may and may not be done with Nova products and services.": [
+      "/",
+      "/acceptable-use",
+      "/community-guidelines",
+      "/search",
+      "/terms"
+    ],
+    "What Nova Cut stores, where it is kept, and how long for.": [
+      "/products/nova-cut"
+    ],
+    "What Nova Forge stores, where it is kept, and how long for.": [
+      "/products/nova-forge"
+    ],
+    "What Nova stores, where it is kept, and how long for.": [
+      "/products/nova"
+    ],
+    "What Nova.Help stores, where it is kept, and how long for.": [
+      "/products/nova-help"
+    ],
+    "What Online Earth stores, where it is kept, and how long for.": [
+      "/products/online-earth"
+    ],
+    "What Replay.GG stores, where it is kept, and how long for.": [
+      "/products/replay-gg"
+    ],
+    "When it has been written and reviewed it will be published here with an effective date and a version number.": [
+      "/acceptable-use",
+      "/acceptable-use/versions",
+      "/account",
+      "/account-deletion",
+      "/account-deletion/versions",
+      "/account/versions",
+      "/community-guidelines",
+      "/community-guidelines/versions",
+      "/cookies",
+      "/cookies/versions",
+      "/copyright",
+      "/copyright/versions",
+      "/data",
+      "/data/versions",
+      "/dmca",
+      "/dmca/versions",
+      "/privacy",
+      "/privacy/versions",
+      "/products/atlas",
+      "/products/nova",
+      "/products/nova-cut",
+      "/products/nova-forge",
+      "/products/nova-help",
+      "/products/online-earth",
+      "/products/replay-gg",
+      "/security",
+      "/security/versions",
+      "/terms",
+      "/terms-of-usage",
+      "/terms-of-usage/versions",
+      "/terms/versions"
+    ],
+    "Whether community rules apply to Atlas has not been determined.": [
+      "/products/atlas"
+    ],
+    "Whether community rules apply to Nova Cut has not been determined.": [
+      "/products/nova-cut"
+    ],
+    "Whether community rules apply to Nova Forge has not been determined.": [
+      "/products/nova-forge"
+    ],
+    "Whether community rules apply to Nova has not been determined.": [
+      "/products/nova"
+    ],
+    "Whether community rules apply to Nova.Help has not been determined.": [
+      "/products/nova-help"
+    ],
+    "Whether community rules apply to Online Earth has not been determined.": [
+      "/products/online-earth"
+    ],
+    "Whether community rules apply to Replay.GG has not been determined.": [
+      "/products/replay-gg"
+    ],
+    "Which Nova Legal documents govern Atlas has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.": [
+      "/products/atlas"
+    ],
+    "Which Nova Legal documents govern Nova Cut has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.": [
+      "/products/nova-cut"
+    ],
+    "Which Nova Legal documents govern Nova Forge has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.": [
+      "/products/nova-forge"
+    ],
+    "Which Nova Legal documents govern Nova has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.": [
+      "/products/nova"
+    ],
+    "Which Nova Legal documents govern Nova.Help has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.": [
+      "/products/nova-help"
+    ],
+    "Which Nova Legal documents govern Online Earth has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.": [
+      "/products/online-earth"
+    ],
+    "Which Nova Legal documents govern Replay.GG has not been determined yet. Rather than guess, this page lists nothing — the set will appear here once it has been decided. In the meantime you can <1>browse every document</1>.": [
+      "/products/replay-gg"
+    ],
+    "Which Nova products this document applies to has not been determined yet.": [
+      "/acceptable-use",
+      "/account",
+      "/account-deletion",
+      "/community-guidelines",
+      "/cookies",
+      "/copyright",
+      "/data",
+      "/dmca",
+      "/privacy",
+      "/security",
+      "/terms",
+      "/terms-of-usage"
+    ]
+  }
+}

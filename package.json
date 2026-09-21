@@ -1,0 +1,17 @@
+{
+  "name": "@nova/legal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Nova Legal - the legal centre for the Nova ecosystem. Static, zero dependencies.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/serve.mjs",
+    "dev": "node --watch src/serve.mjs",
+    "build": "node src/build.mjs",
+    "check": "node src/check.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

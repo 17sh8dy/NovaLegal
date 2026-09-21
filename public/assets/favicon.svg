@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- The Nova mark, so the family is recognisable in a tab strip. Currentcolor is
+       not available to a favicon, so the brand violet is set literally; it reads on
+       both a light and a dark tab bar. -->
+  <path fill="#7C5CFF" d="M12 .8c.62 6.5 4.7 10.58 11.2 11.2-6.5.62-10.58 4.7-11.2 11.2-.62-6.5-4.7-10.58-11.2-11.2C7.3 11.38 11.38 7.3 12 .8Z"/>
+</svg>

@@ -1,0 +1,1067 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Nova Legal
+
+   The Nova design language, tuned for reading rather than for a pitch. The
+   tokens are the Nova site's own, so the family is recognisable; what changes
+   is the emphasis. A legal site is a reading surface: the measure is narrow,
+   the line height is generous, the type is a serif for document bodies, and
+   there is almost no motion.
+
+   THE ONE COLOUR RULE WORTH KNOWING: amber is reserved for "being prepared".
+   Nothing else on this site is amber, so a reader learns in one page that the
+   amber panel means "not in force" — and every document currently has one.
+   ───────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --ground:      #F5F6FB;
+  --panel:       #FFFFFF;
+  --ink:         #0E1120;
+  --ink-2:       #4B5470;
+  --ink-3:       #666E8D;
+  --rule:        rgba(14, 17, 32, .13);
+  --rule-strong: rgba(14, 17, 32, .26);
+
+  --brand:       #5B3FE0;
+  --brand-solid: #6B4AF5;
+  --brand-soft:  rgba(124, 92, 255, .09);
+  --on-brand:    #FFFFFF;
+
+  /* "Being prepared". The only amber on the site. */
+  --pend:        #8A6212;
+  --pend-edge:   rgba(200, 145, 46, .42);
+  --pend-soft:   rgba(200, 145, 46, .10);
+
+  /* "In force". Unused until a document is published, and defined now so the
+     published state is a token change rather than a new colour decision. */
+  --live:        #1F6B45;
+  --live-soft:   rgba(31, 107, 69, .10);
+  --live-edge:   rgba(31, 107, 69, .30);
+
+  --card:        rgba(255, 255, 255, .72);
+  --card-hover:  rgba(255, 255, 255, .96);
+  --card-edge:   rgba(14, 17, 32, .10);
+  --card-edge-hi:rgba(14, 17, 32, .20);
+
+  --shadow-1: 0 1px 2px rgba(14, 17, 32, .05), 0 2px 8px rgba(14, 17, 32, .045);
+  --shadow-2: 0 2px 4px rgba(14, 17, 32, .05), 0 12px 28px rgba(14, 17, 32, .09);
+
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, "Times New Roman", serif;
+  --sans:  "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono:  "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace;
+
+  /* Fluid, but with a floor: legal text must never be small. */
+  --f-display: clamp(2.1rem, 4.6vw, 3.3rem);
+  --f-h1:      clamp(1.75rem, 3.4vw, 2.5rem);
+  --f-h2:      clamp(1.2rem, 1.9vw, 1.45rem);
+  --f-body:    1.0625rem;
+  --f-doc:     1.125rem;
+  --f-small:   .875rem;
+  --f-label:   .76rem;
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+
+  --wrap: 1180px;
+  --measure: 68ch;
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground:      #090B12;
+    --panel:       #111522;
+    --ink:         #F8F9FC;
+    --ink-2:       #A5AEC7;
+    --ink-3:       #838CA9;
+    --rule:        rgba(165, 174, 199, .16);
+    --rule-strong: rgba(165, 174, 199, .32);
+
+    --brand:       #9C82FF;
+    --brand-solid: #7C5CFF;
+    --brand-soft:  rgba(124, 92, 255, .14);
+    --on-brand:    #090B12;
+
+    --pend:        #E0B15C;
+    --pend-edge:   rgba(224, 177, 92, .38);
+    --pend-soft:   rgba(224, 177, 92, .09);
+
+    --live:        #6FD3A2;
+    --live-soft:   rgba(111, 211, 162, .10);
+    --live-edge:   rgba(111, 211, 162, .28);
+
+    --card:        rgba(255, 255, 255, .034);
+    --card-hover:  rgba(255, 255, 255, .062);
+    --card-edge:   rgba(165, 174, 199, .14);
+    --card-edge-hi:rgba(165, 174, 199, .30);
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, .4), 0 2px 10px rgba(0, 0, 0, .28);
+    --shadow-2: 0 2px 6px rgba(0, 0, 0, .45), 0 14px 34px rgba(0, 0, 0, .42);
+  }
+}
+
+/* The explicit choices, which must win in both directions. */
+:root[data-theme="dark"] {
+  --ground: #090B12; --panel: #111522;
+  --ink: #F8F9FC; --ink-2: #A5AEC7; --ink-3: #838CA9;
+  --rule: rgba(165,174,199,.16); --rule-strong: rgba(165,174,199,.32);
+  --brand: #9C82FF; --brand-solid: #7C5CFF; --brand-soft: rgba(124,92,255,.14); --on-brand: #090B12;
+  --pend: #E0B15C; --pend-edge: rgba(224,177,92,.38); --pend-soft: rgba(224,177,92,.09);
+  --live: #6FD3A2; --live-soft: rgba(111,211,162,.10); --live-edge: rgba(111,211,162,.28);
+  --card: rgba(255,255,255,.034); --card-hover: rgba(255,255,255,.062);
+  --card-edge: rgba(165,174,199,.14); --card-edge-hi: rgba(165,174,199,.30);
+  --shadow-1: 0 1px 2px rgba(0,0,0,.4), 0 2px 10px rgba(0,0,0,.28);
+  --shadow-2: 0 2px 6px rgba(0,0,0,.45), 0 14px 34px rgba(0,0,0,.42);
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--f-body);
+  line-height: 1.65;
+  /* A legal site is read top to bottom; smooth anchor jumps help orientation.
+     Disabled under reduced motion at the bottom of this file. */
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 { line-height: 1.25; letter-spacing: -.011em; }
+
+a { color: var(--brand); text-underline-offset: .18em; }
+a:hover { text-decoration-thickness: 2px; }
+
+code { font-family: var(--mono); font-size: .92em; }
+
+/* ── Focus ────────────────────────────────────────────────────────────────────
+   One visible ring, on everything, never removed. A legal document has to be
+   navigable by keyboard, and `:focus-visible` keeps it off mouse clicks. */
+:where(a, button, input, [tabindex]):focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 100;
+  padding: .7rem 1.1rem;
+  border-radius: 0 0 var(--r-sm) 0;
+  background: var(--brand-solid);
+  color: var(--on-brand);
+  font-weight: 600;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 0; top: 0;
+}
+
+.wrap {
+  width: min(100% - 2.5rem, var(--wrap));
+  margin-inline: auto;
+}
+.wrap.narrow { width: min(100% - 2.5rem, 780px); }
+
+.muted { color: var(--ink-3); }
+
+/* ── Masthead ────────────────────────────────────────────────────────────── */
+
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--ground) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+}
+
+.masthead__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 60px;
+}
+
+.wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--ink);
+  font-weight: 650;
+  letter-spacing: .01em;
+  text-decoration: none;
+}
+.wordmark .mark { width: 19px; height: 19px; color: var(--brand); }
+.wordmark__sep { opacity: .45; }
+
+.masthead__end {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-left: auto;
+}
+
+.masthead__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.1rem;
+}
+.masthead__nav a {
+  color: var(--ink-2);
+  font-size: var(--f-small);
+  text-decoration: none;
+}
+.masthead__nav a:hover { color: var(--ink); }
+.masthead__nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.masthead__search {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .35rem .7rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-pill);
+  color: var(--ink-2);
+  font-size: var(--f-small);
+  text-decoration: none;
+}
+.masthead__search:hover { border-color: var(--card-edge-hi); color: var(--ink); }
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 32px; height: 32px;
+  padding: 0;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--brand); border-color: var(--card-edge-hi); }
+
+/* The hamburger. Hidden until the nav no longer fits; see the responsive block. */
+.masthead__toggle {
+  display: none;
+  width: 38px; height: 38px;
+  margin-left: auto;
+  padding: 0;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.masthead__bars,
+.masthead__bars::before,
+.masthead__bars::after {
+  display: block;
+  width: 16px; height: 1.6px;
+  margin-inline: auto;
+  background: currentColor;
+  content: "";
+}
+.masthead__bars::before { transform: translateY(-5px); }
+.masthead__bars::after  { transform: translateY(3.4px); }
+
+/* ── Hero ────────────────────────────────────────────────────────────────── */
+
+.hero {
+  padding-block: clamp(1.8rem, 4vw, 3rem) clamp(1.2rem, 2.4vw, 1.8rem);
+  border-bottom: 1px solid var(--rule);
+}
+.hero--home { padding-block: clamp(2.6rem, 6vw, 4.6rem) clamp(1.8rem, 3vw, 2.6rem); }
+
+.eyebrow {
+  margin: 0 0 .5rem;
+  color: var(--ink-3);
+  font-size: var(--f-label);
+  font-weight: 600;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.hero__display {
+  max-width: 20ch;
+  margin: 0 0 .9rem;
+  font-family: var(--serif);
+  font-size: var(--f-display);
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+
+.hero__title {
+  max-width: 24ch;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--f-h1);
+  font-weight: 500;
+}
+
+.hero__lede {
+  max-width: 62ch;
+  margin: .7rem 0 0;
+  color: var(--ink-2);
+}
+
+.hero__inner { display: flex; flex-wrap: wrap; gap: 1.5rem 2rem; justify-content: space-between; }
+.hero__status { margin-top: .9rem; }
+
+.hero__counts {
+  margin: 1.2rem 0 0;
+  color: var(--ink-3);
+  font-size: var(--f-small);
+}
+
+/* The homepage lede placeholder. Given the pending treatment on purpose — it is
+   not copy, and must never start reading like copy. */
+.hero__placeholder {
+  display: inline-flex;
+  gap: .6rem;
+  align-items: center;
+  max-width: 60ch;
+  margin: 0;
+  padding: .7rem 1rem;
+  border: 1px dashed var(--pend-edge);
+  border-radius: var(--r-md);
+  background: var(--pend-soft);
+  color: var(--pend);
+  font-size: var(--f-small);
+}
+.hero__placeholder .icon { flex: none; }
+
+/* ── Breadcrumbs ─────────────────────────────────────────────────────────── */
+
+.crumbs { margin-bottom: 1rem; }
+.crumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .55rem;
+  margin: 0; padding: 0;
+  list-style: none;
+  color: var(--ink-3);
+  font-size: var(--f-small);
+}
+.crumbs__item + .crumbs__item::before {
+  margin-right: .55rem;
+  content: "/";
+  opacity: .5;
+}
+.crumbs a { color: var(--ink-2); text-decoration: none; }
+.crumbs a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ── Main ─────────────────────────────────────────────────────────────────── */
+
+.main { padding-block: clamp(1.8rem, 3.5vw, 2.8rem) clamp(3rem, 6vw, 5rem); }
+.main:focus { outline: none; }
+
+.section { margin-bottom: 2.6rem; }
+
+.section-title {
+  margin: 0 0 1rem;
+  font-size: var(--f-h2);
+  font-weight: 620;
+}
+
+.prose { max-width: var(--measure); color: var(--ink-2); }
+
+.back-link { margin-top: 2.4rem; font-size: var(--f-small); }
+.back-link a { display: inline-flex; align-items: center; gap: .3rem; text-decoration: none; }
+.back-link a:hover { text-decoration: underline; }
+.back-link .icon { transform: rotate(180deg); }
+
+.plain-list { padding-left: 1.1rem; max-width: var(--measure); }
+.plain-list li { margin-bottom: .5rem; }
+
+.empty {
+  max-width: var(--measure);
+  margin: 0;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  color: var(--ink-2);
+  font-size: var(--f-small);
+}
+.empty--quiet { border-style: dashed; margin-top: 1.6rem; }
+
+.sep { margin-inline: .5rem; color: var(--ink-3); }
+
+/* ── Badges & status ─────────────────────────────────────────────────────── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .32rem;
+  padding: .2rem .55rem;
+  border: 1px solid transparent;
+  border-radius: var(--r-pill);
+  font-size: .74rem;
+  font-weight: 620;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+.badge--pending {
+  border-color: var(--pend-edge);
+  background: var(--pend-soft);
+  color: var(--pend);
+}
+.badge--published {
+  border-color: var(--live-edge);
+  background: var(--live-soft);
+  color: var(--live);
+}
+.badge--quiet {
+  border-color: var(--card-edge);
+  color: var(--ink-3);
+  font-weight: 550;
+}
+
+/* ── The pending panel ───────────────────────────────────────────────────────
+   The most important component on the site. Dashed, tinted, iconed — it must
+   never be mistakable for a short paragraph of policy. */
+
+.pending {
+  display: flex;
+  gap: 1rem;
+  max-width: var(--measure);
+  padding: 1.3rem 1.4rem;
+  border: 1.5px dashed var(--pend-edge);
+  border-radius: var(--r-lg);
+  background: var(--pend-soft);
+}
+.pending__mark { flex: none; color: var(--pend); }
+.pending__body > p { margin: 0 0 .7rem; color: var(--ink-2); }
+.pending__body > p:last-child { margin-bottom: 0; }
+.pending__title {
+  color: var(--pend) !important;
+  font-weight: 680;
+  letter-spacing: .01em;
+}
+.pending__fine { font-size: var(--f-small); }
+
+/* ── Notices ─────────────────────────────────────────────────────────────── */
+
+.notice {
+  display: flex;
+  gap: .85rem;
+  max-width: 78ch;
+  margin-bottom: 2.4rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-md);
+  background: var(--card);
+}
+.notice--warn { border-color: var(--pend-edge); background: var(--pend-soft); }
+.notice__icon { flex: none; color: var(--ink-3); }
+.notice--warn .notice__icon { color: var(--pend); }
+.notice__body > p { margin: 0; color: var(--ink-2); font-size: var(--f-small); }
+.notice__title {
+  margin: 0 0 .35rem !important;
+  color: var(--ink) !important;
+  font-size: var(--f-body) !important;
+  font-weight: 640;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .55rem 1.05rem;
+  border: 1px solid transparent;
+  border-radius: var(--r-pill);
+  font: inherit;
+  font-size: var(--f-small);
+  font-weight: 620;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background .16s var(--ease), border-color .16s var(--ease);
+}
+.btn--primary { background: var(--brand-solid); color: var(--on-brand); }
+.btn--primary:hover { background: color-mix(in srgb, var(--brand-solid) 88%, #000); }
+.btn--quiet {
+  border-color: var(--card-edge);
+  background: transparent;
+  color: var(--ink-2);
+}
+.btn--quiet:hover { border-color: var(--card-edge-hi); color: var(--ink); }
+
+/* ── Categories & cards ──────────────────────────────────────────────────── */
+
+.category { margin-bottom: 3rem; scroll-margin-top: 80px; }
+
+.category__head {
+  display: flex;
+  gap: .9rem;
+  align-items: flex-start;
+  margin-bottom: 1.1rem;
+  padding-bottom: .85rem;
+  border-bottom: 1px solid var(--rule);
+}
+.category__icon { flex: none; margin-top: .15rem; color: var(--brand); }
+.category__title { margin: 0; font-size: var(--f-h2); font-weight: 640; }
+.category__blurb { margin: .25rem 0 0; color: var(--ink-3); font-size: var(--f-small); }
+
+.doc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+  gap: .85rem;
+}
+
+.doc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  padding: 1.05rem 2.6rem 1.05rem 1.15rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .16s var(--ease), background .16s var(--ease);
+}
+.doc-card:hover { border-color: var(--card-edge-hi); background: var(--card-hover); }
+
+.doc-card__head {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.doc-card__title {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  font-weight: 620;
+}
+.doc-card__desc { color: var(--ink-2); font-size: var(--f-small); }
+.doc-card__foot { color: var(--ink-3); font-size: .8rem; }
+.doc-card__go {
+  position: absolute;
+  top: 1.1rem; right: 1rem;
+  color: var(--ink-3);
+  transition: transform .16s var(--ease), color .16s var(--ease);
+}
+.doc-card:hover .doc-card__go { transform: translateX(2px); color: var(--brand); }
+.doc-card--compact { padding-block: .85rem; }
+
+.prod-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10.5rem), 1fr));
+  gap: .7rem;
+}
+.prod-card {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  padding: .95rem 1rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-md);
+  background: var(--card);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color .16s var(--ease), background .16s var(--ease);
+}
+.prod-card:hover { border-color: var(--card-edge-hi); background: var(--card-hover); }
+.prod-card__icon { color: var(--brand); }
+.prod-card__name { font-weight: 620; }
+.prod-card__kind { color: var(--ink-3); font-size: .8rem; }
+
+/* ── Closing links ───────────────────────────────────────────────────────── */
+
+.closing { margin-top: 3.5rem; padding-top: 2.4rem; border-top: 1px solid var(--rule); }
+.closing__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: .85rem;
+}
+.closing__card {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-md);
+  color: inherit;
+  text-decoration: none;
+}
+.closing__card:hover { border-color: var(--card-edge-hi); background: var(--card-hover); }
+.closing__icon { color: var(--brand); }
+.closing__title { font-weight: 620; }
+.closing__desc { color: var(--ink-2); font-size: var(--f-small); }
+
+/* ── Document layout ─────────────────────────────────────────────────────── */
+
+.doc-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 17.5rem;
+  gap: 3rem;
+  align-items: start;
+}
+
+.doc { min-width: 0; max-width: var(--measure); }
+
+.doc-section { margin-bottom: 2.2rem; scroll-margin-top: 84px; }
+.doc-section__heading {
+  position: relative;
+  margin: 0 0 .7rem;
+  font-size: var(--f-h2);
+  font-weight: 620;
+}
+.doc-section__anchor {
+  margin-left: .4rem;
+  color: var(--ink-3);
+  opacity: 0;
+  text-decoration: none;
+}
+.doc-section:hover .doc-section__anchor,
+.doc-section__anchor:focus-visible { opacity: 1; }
+
+/* The document body is the one place this site uses a serif: it is the reading
+   surface, and long legal prose is measurably easier in one. */
+.doc-section p {
+  margin: 0 0 1rem;
+  font-family: var(--serif);
+  font-size: var(--f-doc);
+  line-height: 1.72;
+}
+
+/* Only visible when printing; see the print block. */
+.doc__print-head { display: none; }
+
+/* ── The rail ────────────────────────────────────────────────────────────── */
+
+.rail {
+  position: sticky;
+  top: 76px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-size: var(--f-small);
+}
+
+.rail__block { padding-bottom: 1.3rem; border-bottom: 1px solid var(--rule); }
+.rail__block:last-child { border-bottom: 0; padding-bottom: 0; }
+.rail__block--actions { padding-top: .2rem; }
+
+.rail__heading {
+  margin: 0 0 .6rem;
+  color: var(--ink-3);
+  font-size: var(--f-label);
+  font-weight: 650;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.rail__note { margin: 0; color: var(--ink-2); }
+.rail__list { margin: 0; padding-left: 1.05rem; color: var(--ink-2); }
+.rail__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  margin-top: .6rem;
+  text-decoration: none;
+}
+.rail__link:hover { text-decoration: underline; }
+
+.toc__heading {
+  margin: 0 0 .6rem;
+  color: var(--ink-3);
+  font-size: var(--f-label);
+  font-weight: 650;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.toc__list {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+.toc__list a { color: var(--ink-2); text-decoration: none; }
+.toc__list a:hover { color: var(--ink); }
+/* Set by legal.js as the reader scrolls. */
+.toc__list a[data-current] { color: var(--brand); font-weight: 620; }
+
+.meta { margin: 0; display: flex; flex-direction: column; gap: .5rem; }
+.meta__row { display: flex; gap: 1rem; justify-content: space-between; }
+.meta__row dt { color: var(--ink-3); }
+.meta__row dd { margin: 0; font-weight: 560; text-align: right; }
+.meta--pending dd { color: var(--pend); }
+
+/* ── Versions ────────────────────────────────────────────────────────────── */
+
+.versions { margin: 0; padding: 0; list-style: none; display: grid; gap: .8rem; }
+
+.version {
+  display: flex;
+  gap: 1rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-md);
+  background: var(--card);
+}
+.version--current { border-color: var(--live-edge); background: var(--live-soft); }
+.version__mark { flex: none; color: var(--ink-3); }
+.version--current .version__mark { color: var(--live); }
+.version__label { margin: 0 0 .5rem; font-weight: 640; }
+.version__meta { margin: 0; display: flex; flex-wrap: wrap; gap: .3rem 1.5rem; font-size: var(--f-small); }
+.version__meta div { display: flex; gap: .4rem; }
+.version__meta dt { color: var(--ink-3); }
+.version__meta dd { margin: 0; }
+.version__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .25rem;
+  margin-top: .6rem;
+  font-size: var(--f-small);
+  text-decoration: none;
+}
+.version__link:hover { text-decoration: underline; }
+.version__note { margin: .6rem 0 0; color: var(--ink-3); font-size: var(--f-small); }
+
+/* ── Product pages ───────────────────────────────────────────────────────── */
+
+.prod-intro {
+  margin-bottom: 2.8rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid var(--rule);
+}
+.prod-intro__head { display: flex; gap: 1rem; align-items: center; }
+.prod-intro__icon { color: var(--brand); }
+.prod-intro__name { margin: 0; font-size: var(--f-h2); font-weight: 640; }
+.prod-intro__kind { margin: .1rem 0 0; color: var(--ink-3); font-size: var(--f-small); }
+.prod-intro__blurb { max-width: var(--measure); margin: 1rem 0 .8rem; color: var(--ink-2); }
+.prod-intro__links { margin: 0; font-size: var(--f-small); }
+
+.product-facts {
+  margin: 0 0 2.8rem;
+  padding: 1.5rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-md);
+  background: var(--card);
+}
+.product-facts__head { margin-bottom: 1.3rem; }
+.product-facts__head .section-title { margin-bottom: .35rem; }
+.product-facts__head p,
+.product-facts__overview p,
+.product-facts__account p { max-width: var(--measure); color: var(--ink-2); }
+.product-facts__overview p { margin: 0 0 .75rem; }
+.product-facts__overview p:last-child { margin-bottom: 0; }
+.product-facts__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.35rem;
+}
+.product-facts h3 { margin: 0 0 .65rem; font-size: 1rem; font-weight: 650; }
+.product-facts__list,
+.product-facts__surfaces { display: grid; gap: .65rem; margin: 0; padding-left: 1.2rem; color: var(--ink-2); }
+.product-facts__surfaces { padding-left: 0; list-style: none; }
+.product-facts__surfaces li { display: grid; gap: .12rem; }
+.product-facts__surfaces span { font-size: var(--f-small); }
+.product-facts__account { margin-top: 1.35rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+.product-facts__account p { margin: 0; }
+
+.footer__attorney-notice {
+  max-width: 72ch;
+  margin: .85rem 0 0;
+  color: var(--ink-3);
+  font-size: var(--f-small);
+}
+
+.prod-block { margin-bottom: 2.8rem; scroll-margin-top: 80px; }
+.prod-block__blurb { max-width: var(--measure); margin: -.4rem 0 1rem; color: var(--ink-3); font-size: var(--f-small); }
+
+.link-pending { color: var(--ink-3); }
+.link-pending__note { font-size: .8rem; opacity: .8; }
+
+/* ── Search ──────────────────────────────────────────────────────────────── */
+
+.search {
+  position: relative;
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.search__icon {
+  position: absolute;
+  left: .9rem;
+  color: var(--ink-3);
+  pointer-events: none;
+}
+.search__input {
+  flex: 1;
+  min-width: 0;
+  padding: .75rem 1rem .75rem 2.6rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-pill);
+  background: var(--panel);
+  color: inherit;
+  font: inherit;
+}
+.search__input:focus { outline: 2px solid var(--brand); outline-offset: 1px; }
+/* With JS the list filters live, so the button is redundant — but it must stay
+   in the DOM for the no-JS path, where submitting is the only way to search. */
+.js .search__go { display: none; }
+
+.chips { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: 1.2rem; }
+.chip {
+  padding: .34rem .8rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--ink-2);
+  font: inherit;
+  font-size: var(--f-small);
+  cursor: pointer;
+}
+.chip:hover { border-color: var(--card-edge-hi); color: var(--ink); }
+.chip--on, .chip[aria-pressed="true"] {
+  border-color: transparent;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-weight: 620;
+}
+/* Without JS the chips do nothing, so they are not offered. */
+html:not(.js) .chips { display: none; }
+
+.search__count { margin: 0 0 1rem; color: var(--ink-3); font-size: var(--f-small); }
+
+.results { margin: 0; padding: 0; list-style: none; display: grid; gap: .7rem; }
+.result {
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-md);
+  background: var(--card);
+}
+.result__main {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  padding: 1rem 1.15rem;
+  color: inherit;
+  text-decoration: none;
+}
+.result:hover { border-color: var(--card-edge-hi); }
+.result__head { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; }
+.result__title { font-weight: 620; }
+.result__cat { color: var(--ink-3); font-size: .8rem; }
+.result__desc { color: var(--ink-2); font-size: var(--f-small); }
+.result__hints {
+  margin: 0;
+  padding: 0 1.15rem 1rem 1.15rem;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+.result__hint a {
+  display: inline-block;
+  padding: .18rem .55rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--r-pill);
+  font-size: .78rem;
+  text-decoration: none;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+
+.footer {
+  padding-block: 2.6rem 2rem;
+  border-top: 1px solid var(--rule);
+  background: color-mix(in srgb, var(--ground) 94%, var(--ink));
+}
+
+.footer__cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+  gap: 1.8rem;
+  margin-bottom: 2rem;
+}
+.footer__heading {
+  margin: 0 0 .7rem;
+  color: var(--ink-3);
+  font-size: var(--f-label);
+  font-weight: 650;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.footer__col ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .45rem; }
+.footer__col a {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  color: var(--ink-2);
+  font-size: var(--f-small);
+  text-decoration: none;
+}
+.footer__col a:hover { color: var(--ink); text-decoration: underline; }
+
+.footer__base {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+}
+.footer__note { margin: 0; color: var(--ink-3); font-size: var(--f-small); }
+.footer__pending {
+  display: inline-flex;
+  gap: .45rem;
+  align-items: center;
+  margin: 0;
+  color: var(--pend);
+  font-size: var(--f-small);
+}
+.footer__pending .icon { flex: none; }
+
+/* ── Responsive ──────────────────────────────────────────────────────────────
+   The rail moves ABOVE the document rather than shrinking. A table of contents
+   squeezed into a phone's margin is worse than one you scroll past once. */
+
+@media (max-width: 60rem) {
+  .doc-layout { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .doc { max-width: none; order: 2; }
+  .rail {
+    position: static;
+    order: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    gap: 1.2rem 2rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .rail__block { border-bottom: 0; padding-bottom: 0; }
+}
+
+.masthead__lang-mobile { display: none; }
+
+@media (max-width: 46rem) {
+  .masthead__lang-mobile { display: inline-block; margin-left: auto; }
+  .masthead__lang-mobile + .masthead__toggle { margin-left: 0; }
+  .masthead__end .nova-lang-slot { display: none; }
+  .masthead__toggle { display: block; }
+  .masthead__end {
+    display: none;
+    order: 3;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .9rem;
+    padding-bottom: 1rem;
+  }
+  .masthead__inner { flex-wrap: wrap; }
+  .masthead__end[data-open] { display: flex; }
+  .masthead__nav { flex-direction: column; gap: .1rem; }
+  .masthead__nav a { padding: .5rem 0; font-size: var(--f-body); }
+  .masthead__search { align-self: flex-start; }
+  .product-facts { padding: 1.2rem; }
+  .product-facts__grid { grid-template-columns: 1fr; gap: 1.25rem; }
+
+  /* Legal text on a phone gets the full width and a slightly larger body: this
+     is the reading case that matters most and the one usually left worst. */
+  .wrap { width: min(100% - 1.6rem, var(--wrap)); }
+  .doc-section p { font-size: 1.0625rem; }
+  .hero__inner { flex-direction: column; }
+}
+
+/* ── Reduced motion ──────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+/* ── Print ───────────────────────────────────────────────────────────────────
+   A legal document has to print properly — people file them, attach them and
+   read them on paper. Everything that is not the document goes: navigation,
+   rail, footer, search, related cards. What stays is the title, the status,
+   the version and dates, and the text.
+
+   Deliberately KEEPING the pending panel: a printed placeholder that lost its
+   "not in force" marking would be the single most dangerous page this site
+   could produce. */
+
+@media print {
+  .masthead,
+  .footer,
+  .rail,
+  .crumbs,
+  .related,
+  .skip-link,
+  .back-link,
+  .hero__counts,
+  .notice { display: none !important; }
+
+  :root {
+    --ground: #fff; --panel: #fff;
+    --ink: #000; --ink-2: #1a1a1a; --ink-3: #444;
+    --rule: #bbb; --card-edge: #bbb;
+    --pend: #6b4a06; --pend-edge: #6b4a06; --pend-soft: transparent;
+    --brand: #000;
+  }
+
+  body { background: #fff; color: #000; font-size: 11.5pt; }
+
+  .hero { padding-block: 0 .6rem; border-bottom: 1px solid #bbb; }
+  .hero__title { font-size: 20pt; }
+  .hero__lede { color: #333; }
+
+  .doc-layout { display: block; }
+  .doc { max-width: none; }
+
+  /* The running head, hidden on screen and shown here: a printed page that has
+     been separated from its tab needs to say what it is and whether it is in
+     force. */
+  .doc__print-head {
+    display: block !important;
+    margin-bottom: 1.2rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid #bbb;
+  }
+  .doc__print-site { margin: 0; font-size: 9pt; letter-spacing: .08em; text-transform: uppercase; }
+  .doc__print-title { margin: .2rem 0 0; font-size: 15pt; font-weight: 700; }
+  .doc__print-meta { margin: .2rem 0 0; font-size: 9.5pt; color: #333; }
+
+  .pending { border: 1.5pt solid #6b4a06; background: transparent; }
+
+  /* Never split a heading from the paragraph it introduces, and never leave one
+     line of a paragraph alone on a page. */
+  .doc-section { break-inside: auto; }
+  .doc-section__heading { break-after: avoid; }
+  .doc-section p { orphans: 3; widows: 3; }
+  .doc-section__anchor { display: none; }
+
+  /* A printed document loses every href, so the destination is printed with it. */
+  .doc a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; color: #444; }
+
+  a { color: #000; text-decoration: underline; }
+}
