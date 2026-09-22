@@ -50,3 +50,22 @@ test('a failed or false status check leaves the guest links alone — never a de
   assert.match(section, guardedFlip);
   assert.match(section, /\.catch\(/); // a network/CORS failure is caught, not left to throw
 });
+
+/**
+ * Found live 2026-09-25: `.account-chip__link { display: inline-flex; … }` and the browser's
+ * own `[hidden] { display: none }` have EQUAL specificity (one class, one attribute selector),
+ * so whichever comes later in the cascade wins — an author stylesheet always beats the UA
+ * stylesheet at a tie, so the class rule silently cancelled `hidden` and the "Account" link was
+ * on screen at all times regardless of what JS decided. A plain string search for "hidden"
+ * existing somewhere in the CSS would not have caught this; the fix has to be verified as
+ * actually following the `.account-chip__link` rule it corrects.
+ */
+test('an [hidden] account-chip link is actually hidden — not silently un-hidden by its own class rule', () => {
+  const css = fs.readFileSync(path.join(root, 'public/assets/legal.css'), 'utf8');
+  const classRule = css.indexOf('.account-chip__link {');
+  const hiddenOverride = css.indexOf('.account-chip__link[hidden]');
+  assert.notEqual(hiddenOverride, -1, 'no [hidden] override for .account-chip__link at all');
+  assert.ok(hiddenOverride > classRule, '[hidden] override must come AFTER the class rule it corrects, to win the cascade');
+  const rule = css.slice(hiddenOverride, css.indexOf('}', hiddenOverride) + 1);
+  assert.match(rule, /display:\s*none/);
+});

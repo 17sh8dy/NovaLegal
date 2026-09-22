@@ -395,6 +395,13 @@ code { font-family: var(--mono); font-size: .92em; }
   text-decoration: none;
   white-space: nowrap;
 }
+/* `.account-chip__link[hidden]` has the SAME specificity as the class rule above (one class,
+   one attribute selector) and comes later in this file, so without this it would silently win
+   and the browser's default `[hidden] { display: none }` would never apply — the signed-in
+   Account link stayed visibly rendered at all times, guest links and all, regardless of what
+   JS decided. Found live 2026-09-25: it was on screen next to Sign in / Create account and
+   crowded Contact onto a second, oddly-broken row. */
+.account-chip__link[hidden] { display: none; }
 .account-chip__link:hover { border-color: var(--brand); color: var(--brand); }
 .account-chip__link--quiet {
   border-color: transparent;

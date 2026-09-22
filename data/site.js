@@ -31,8 +31,8 @@ export const site = {
     'The legal centre for the Nova ecosystem. Terms, privacy, community and product-specific ' +
     'documents in one place.',
 
-  /** Set at deploy time. `null` while there is no public address for this site. */
-  origin: null,
+  /** Live 2026-09-24 on Cloudflare (Workers, not Pages — see docs/FACT-SHEET.md). */
+  origin: 'https://nova-legal.shadylabs.workers.dev',
 
   /**
    * Who operates Nova, as it appears in the documents. Stated by the owner: an individual who
