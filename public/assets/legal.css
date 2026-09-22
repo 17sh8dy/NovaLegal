@@ -258,10 +258,11 @@ code { font-family: var(--mono); font-size: .92em; }
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  /* Sits right after the wordmark (via .masthead__inner's gap) rather than being pushed to the
-     far edge of .wrap — on a wide viewport a flush-right cluster reads as a huge, disconnected
-     leap from the logo. */
-  margin-right: auto;
+  margin-left: auto;
+  /* A small nudge further right, past .wrap's usual inset — desktop row only; cancelled below
+     46rem, where this becomes a full-width stacked mobile panel and the same shift would push
+     it half out of view. */
+  margin-right: -.5rem;
 }
 
 .masthead__nav {
@@ -1137,7 +1138,7 @@ html:not(.js) .chips { display: none; }
     align-items: stretch;
     gap: .9rem;
     padding-bottom: 1rem;
-    margin-right: 0; /* cancel the desktop auto-margin — full-width stacked panel here */
+    margin-right: 0; /* cancel the desktop-row nudge — full-width here, not flush-right */
   }
   .masthead__inner { flex-wrap: wrap; }
   .masthead__end[data-open] { display: flex; }
