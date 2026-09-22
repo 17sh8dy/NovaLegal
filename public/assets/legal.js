@@ -144,6 +144,37 @@
     });
   }
 
+  /* ── Account status (cross-site) ───────────────────────────────────────────────────────
+   *
+   * The chip is rendered server-side as "guest" (Sign in / Create account) — the only honest
+   * default a page built ahead of time can show, since a Nova Account session lives on a
+   * different origin (see layout.mjs's accountControl comment). This asks Nova's
+   * `/account/status` — `credentials: 'include'` so its cookie actually goes — and swaps in
+   * the signed-in link if the answer is yes. On ANY failure it changes nothing: the guest
+   * links stay exactly as rendered, which is the one default that never blocks a sign-in. */
+
+  var accountChip = document.querySelector('[data-account-chip]');
+  if (accountChip && window.fetch) {
+    var statusUrl = accountChip.getAttribute('data-account-status-url');
+    if (statusUrl) {
+      fetch(statusUrl, { credentials: 'include', mode: 'cors' })
+        .then(function (res) {
+          return res.ok ? res.json() : null;
+        })
+        .then(function (data) {
+          if (!data || !data.signedIn) return;
+          var guestLinks = accountChip.querySelectorAll('[data-account-guest]');
+          for (var i = 0; i < guestLinks.length; i += 1) guestLinks[i].hidden = true;
+          var signedInLink = accountChip.querySelector('[data-account-signed-in]');
+          if (signedInLink) signedInLink.hidden = false;
+        })
+        .catch(function () {
+          /* Offline, blocked by an extension, Nova unreachable, or this origin is not (yet) on
+             Nova's CORS allowlist — every one of those must leave the guest links showing. */
+        });
+    }
+  }
+
   /* ── Print ──────────────────────────────────────────────────────────────────────────── */
 
   var printButton = document.querySelector('[data-print]');

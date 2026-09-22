@@ -72,15 +72,29 @@ function textStyleControl() {
   </div>`;
 }
 
-/** The account chip: a real, live link to the shared Nova Account sign-in — NOT implemented
-    here. NovaLegal has no accounts of its own; see data/documents/contact.js and the account
-    field on the nova-legal entry in data/products.js. */
+/**
+ * The account chip: real, live links to the shared Nova Account system — NOT implemented here.
+ * NovaLegal has no accounts of its own; see data/documents/contact.js and the account field on
+ * the nova-legal entry in data/products.js.
+ *
+ * ⚠ NO-JS DEFAULT IS "GUEST". Without JavaScript, or before the status check resolves, this
+ * shows Sign in / Create account — the same as if nobody were signed in. That is the ONLY
+ * honest default a static page rendered ahead of time can give: it cannot know your Nova
+ * Account session, which lives on a different origin. legal.js's `[data-account-…]` handler
+ * asks Nova's `/account/status` (site.accountStatus) and swaps to the `data-account-signed-in`
+ * link — initially `hidden` — the moment it learns you already are. On any failure (offline, a
+ * script blocker, Nova unreachable) it silently leaves the guest links exactly as rendered,
+ * because "assume signed out" is the failure mode that never blocks anyone from signing in.
+ */
 function accountControl() {
-  return `<div class="account-chip">
-    <a class="account-chip__link" href="${esc(site.accountSignIn)}" rel="noopener">
+  return `<div class="account-chip" data-account-chip data-account-status-url="${esc(site.accountStatus)}">
+    <a class="account-chip__link" data-account-guest href="${esc(site.accountSignIn)}" rel="noopener">
       ${icon('sign-in', { size: 16 })}<span>Sign in</span>
     </a>
-    <a class="account-chip__link account-chip__link--quiet" href="${esc(site.accountCreate)}" rel="noopener">Create account</a>
+    <a class="account-chip__link account-chip__link--quiet" data-account-guest href="${esc(site.accountCreate)}" rel="noopener">Create account</a>
+    <a class="account-chip__link" data-account-signed-in href="${esc(site.accountManage)}" rel="noopener" hidden>
+      ${icon('sign-in', { size: 16 })}<span>Account</span>
+    </a>
   </div>`;
 }
 

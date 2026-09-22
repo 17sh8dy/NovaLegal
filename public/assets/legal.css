@@ -259,6 +259,10 @@ code { font-family: var(--mono); font-size: .92em; }
   align-items: center;
   gap: 1.25rem;
   margin-left: auto;
+  /* A small nudge further right, past .wrap's usual inset — desktop row only; cancelled below
+     46rem, where this becomes a full-width stacked mobile panel and the same shift would push
+     it half out of view. */
+  margin-right: -.5rem;
 }
 
 .masthead__nav {
@@ -1127,6 +1131,7 @@ html:not(.js) .chips { display: none; }
     align-items: stretch;
     gap: .9rem;
     padding-bottom: 1rem;
+    margin-right: 0; /* cancel the desktop-row nudge — full-width here, not flush-right */
   }
   .masthead__inner { flex-wrap: wrap; }
   .masthead__end[data-open] { display: flex; }

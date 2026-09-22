@@ -53,12 +53,24 @@ export const site = {
   help: 'https://nova-help.17sh8dy.workers.dev/',
 
   /**
-   * The real, live Nova Account sign-in and creation pages, on the Nova website. NovaLegal
-   * implements no accounts or sign-in of its own — these are a link OUT to the one shared
-   * identity system, the same way `help` links out to Nova.Help. Verified live 2026-09-24.
+   * The real, live Nova Account sign-in, creation and management pages, on the Nova website.
+   * NovaLegal implements no accounts or sign-in of its own — these are a link OUT to the one
+   * shared identity system, the same way `help` links out to Nova.Help. Verified live
+   * 2026-09-24.
    */
   accountSignIn: 'https://nova-780.pages.dev/account/sign-in',
   accountCreate: 'https://nova-780.pages.dev/account/new',
+  accountManage: 'https://nova-780.pages.dev/account',
+
+  /**
+   * `GET`, cross-site, `credentials: 'include'` — answers `{ signedIn: boolean }` so the header
+   * chip can hide "Sign in" / "Create account" for someone already signed in, instead of always
+   * showing them regardless. Requires Nova's own CORS allowlist (see that repo's
+   * `functions/account/[[path]].mjs`, `legalOrigins()`) to include the origin this site is
+   * actually served from — `http://localhost:4500` (this site's dev server) is allowed by
+   * default there; a real deployed origin needs adding to Nova's `NOVA_LEGAL_ORIGINS`.
+   */
+  accountStatus: 'https://nova-780.pages.dev/account/status',
 };
 
 /** Primary navigation. Category ids resolve through `data/categories.js`. */
