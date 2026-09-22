@@ -75,11 +75,6 @@ export const site = {
 
 /** Primary navigation. Category ids resolve through `data/categories.js`. */
 export const nav = [
-  { href: '/', label: 'Legal home' },
-  { href: '/terms', label: 'Terms' },
-  { href: '/privacy', label: 'Privacy' },
-  { href: '/cookies', label: 'Cookies' },
-  { href: '/account', label: 'Accounts' },
   { href: '/products', label: 'Products' },
   { href: '/contact', label: 'Contact' },
 ];
