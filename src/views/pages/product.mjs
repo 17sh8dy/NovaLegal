@@ -8,16 +8,12 @@
  * apply to whatever has a Discord. Which documents legally govern which product is a
  * determination somebody qualified makes, recorded in each document's `appliesTo`.
  *
- * Until that is filled in, `applicable` is empty and this page says so in a sentence. It does
- * NOT render a hopeful list, and it does not render an empty grid that reads as a bug.
- *
- * The sections the brief asked for — product terms, privacy, community rules, copyright, data
- * — are present as a real structure, each showing the same honest empty state. When a document
- * declares a product, it appears here automatically with no change to this file.
+ * A document declares the products it governs; this page lists what declares it. A category
+ * with nothing under it says so in a sentence rather than rendering an empty grid.
  */
 
 import { documents, documentsFor, getProduct } from '../../core/catalog.mjs';
-import { breadcrumbs, documentCard, esc, maybeLink, notice, pendingPanel } from '../components.mjs';
+import { breadcrumbs, documentCard, esc, maybeLink } from '../components.mjs';
 import { icon } from '../icons.mjs';
 import { hero, page } from '../layout.mjs';
 
@@ -84,22 +80,9 @@ export function productPage(product) {
   const applicable = documentsFor(product.id);
   const inCategory = (category) => applicable.filter((doc) => doc.category === category);
 
-  const undetermined =
-    'Not determined yet. Which documents apply to this product is recorded on the documents ' +
-    'themselves, and will appear here once that has been decided.';
+  const undetermined = 'No document of this kind applies to this product.';
 
   const main = `<div class="wrap">
-    ${notice(
-      'warn',
-      'Nothing here is in force yet',
-      `<p>
-        Nova Legal's documents are still being written, and which of them apply to
-        ${esc(product.name)} has not been determined. This page shows the structure that will
-        hold that information — it is not a statement about how ${esc(product.name)} is
-        governed.
-      </p>`,
-    )}
-
     <section class="prod-intro">
       <div class="prod-intro__head">
         <span class="prod-intro__icon" aria-hidden="true">${icon(product.icon, { size: 26 })}</span>
@@ -123,12 +106,7 @@ export function productPage(product) {
       ${
         applicable.length
           ? `<div class="doc-grid">${applicable.map((doc) => documentCard(doc)).join('')}</div>`
-          : `<p class="empty">
-              Which Nova Legal documents govern ${esc(product.name)} has not been determined
-              yet. Rather than guess, this page lists nothing — the set will appear here once
-              it has been decided. In the meantime you can
-              <a href="/">browse every document</a>.
-            </p>`
+          : `<p class="empty">No documents apply to ${esc(product.name)} yet. You can <a href="/">browse every document</a>.</p>`
       }
     </section>
 
@@ -153,7 +131,7 @@ export function productPage(product) {
       heading: 'Community rules',
       blurb: 'Applies only to products with community spaces or shared content.',
       docs: inCategory('community'),
-      emptyNote: `Whether community rules apply to ${product.name} has not been determined.`,
+      emptyNote: `No community rules apply to ${product.name}: it does not host content shared between people.`,
     })}
 
     ${block({
@@ -167,9 +145,25 @@ export function productPage(product) {
     <section class="prod-block" id="data" aria-labelledby="pb-data">
       <h2 class="section-title" id="pb-data">Data</h2>
       <p class="prod-block__blurb">
-        What ${esc(product.name)} stores, where it is kept, and how long for.
+        What ${esc(product.name)} stores or sends. The full picture is in the
+        <a href="/privacy">Privacy Policy</a>.
       </p>
-      ${pendingPanel({ title: 'Product data information pending' })}
+      ${
+        product.data?.length
+          ? `<ul class="product-facts__list">${product.data.map((line) => `<li>${esc(line)}</li>`).join('')}</ul>`
+          : '<p class="empty">No summary has been written for this product.</p>'
+      }
+    </section>
+
+    <section class="prod-block" id="age" aria-labelledby="pb-age">
+      <h2 class="section-title" id="pb-age">Recommended age</h2>
+      <p class="prod-block__blurb">
+        ${
+          product.minimumAge
+            ? `${esc(product.name)} is ${esc(product.minimumAge)}+ recommended. This is a recommendation, not an enforced or verified requirement; see the <a href="/terms#age">Terms of Service</a>.`
+            : `No recommended age has been decided for ${esc(product.name)}.`
+        }
+      </p>
     </section>
 
     <p class="back-link"><a href="/products">${icon('chevron', { size: 14 })} All products</a></p>

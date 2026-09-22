@@ -13,9 +13,10 @@
  * renders a link checks. A `null` destination renders as plain text or not at all, never as a
  * dead link and never as "coming soon".
  *
- * ⚠ NOTHING IN THIS FILE IS A LEGAL STATEMENT. No company name, no legal entity, no address,
- * no jurisdiction. Those are facts nobody has confirmed, and a placeholder that reads like one
- * is worse than an obvious gap. See `data/documents/index.js`.
+ * ⚠ WHAT IS AND IS NOT A FACT HERE. `operator` and `contactEmail` were stated by the owner
+ * (2026-09-21) and are the only two. There is no company, no legal entity, no postal address,
+ * no phone number, no registered agent and NO GOVERNING LAW: the owner has not chosen a state,
+ * so no document may name one. Do not add any of them without being told.
  */
 
 export const site = {
@@ -34,13 +35,16 @@ export const site = {
   origin: null,
 
   /**
-   * Where a legal enquiry goes. `null` hides the block that shows it rather than printing a
-   * route nobody reads.
-   *
-   * ⚠ Deliberately unset. Which address handles legal correspondence is a decision, not a
-   * detail, and inventing one here would put it on every page of the site.
+   * Who operates Nova, as it appears in the documents. Stated by the owner: an individual who
+   * uses the name "17 Shady". NOT a company, and never inferred from a handle or an address.
    */
-  contactEmail: null,
+  operator: '17 Shady',
+
+  /**
+   * Where a legal enquiry goes. Stated by the owner: the same address Nova.Help uses. There is
+   * deliberately no second legal address, phone number or postal address.
+   */
+  contactEmail: 'getnovasupport@gmail.com',
 
   /** The community. The one link on this site that is real rather than a placeholder. */
   discord: 'https://discord.gg/XBhER9Z6EB',
@@ -54,9 +58,10 @@ export const nav = [
   { href: '/', label: 'Legal home' },
   { href: '/terms', label: 'Terms' },
   { href: '/privacy', label: 'Privacy' },
-  { href: '/community-guidelines', label: 'Community' },
+  { href: '/cookies', label: 'Cookies' },
   { href: '/account', label: 'Accounts' },
   { href: '/products', label: 'Products' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 /**
@@ -71,6 +76,7 @@ export const footer = [
     links: [
       { href: null, label: 'About Nova', note: 'site pending' },
       { href: '/products', label: 'Products' },
+      { href: '/contact', label: 'Legal contact & notices' },
     ],
   },
   {
@@ -78,10 +84,10 @@ export const footer = [
     links: [
       { href: '/terms', label: 'Terms of Service' },
       { href: '/privacy', label: 'Privacy Policy' },
+      { href: '/cookies', label: 'Cookies & Browser Storage' },
       { href: '/acceptable-use', label: 'Acceptable Use' },
-      { href: '/cookies', label: 'Cookies & Tracking' },
-      { href: '/community-guidelines', label: 'Community Guidelines' },
-      { href: '/copyright', label: 'Copyright & DMCA' },
+      { href: '/account', label: 'Nova Account' },
+      { href: '/atlas-terms', label: 'Atlas Terms' },
     ],
   },
   {

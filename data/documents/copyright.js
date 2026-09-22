@@ -17,6 +17,7 @@ export const document = {
   appliesTo: [],
 
   status: 'pending',
+  note: "Nova does not yet have a copyright or takedown process. It will be written if a Nova product needs one.",
   effectiveDate: null,
   updatedDate: null,
   version: null,

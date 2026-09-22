@@ -17,6 +17,7 @@ export const document = {
   appliesTo: [],
 
   status: 'pending',
+  note: "No Nova product currently hosts content shared between people, so there are no community rules to publish. This will be written if one does.",
   effectiveDate: null,
   updatedDate: null,
   version: null,

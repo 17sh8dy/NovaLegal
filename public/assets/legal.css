@@ -456,6 +456,19 @@ code { font-family: var(--mono); font-size: .92em; }
   letter-spacing: .01em;
 }
 .pending__fine { font-size: var(--f-small); }
+.pending__status {
+  padding-top: .6rem;
+  border-top: 1px dashed var(--pend-edge);
+  color: var(--ink) !important;
+}
+
+/* A verbatim block (the attorney-review notice): set apart, never translated. */
+.verbatim {
+  padding: .9rem 1rem;
+  border-left: 3px solid var(--pend);
+  background: var(--pend-soft);
+  font-style: italic;
+}
 
 /* ── Notices ─────────────────────────────────────────────────────────────── */
 

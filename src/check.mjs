@@ -50,7 +50,7 @@ if (undetermined.length) {
 
 if (stats.pending) {
   console.log(
-    `\n  ${stats.pending} document(s) are placeholders. Every page carries the "being prepared"` +
-      '\n  banner while that is true, which is correct. See data/documents/index.js.',
+    `\n  ${stats.pending} document(s) are placeholders. The footer notes that` +
+      '\n  those are not in force. See data/documents/index.js.',
   );
 }

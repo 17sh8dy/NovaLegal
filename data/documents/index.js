@@ -5,18 +5,19 @@
  * ⚠  READ THIS BEFORE ADDING ANYTHING TO A DOCUMENT.
  * ═════════════════════════════════════════════════════════════════════════════════════════
  *
- * **NO DOCUMENT ON THIS SITE CONTAINS REAL LEGAL CONTENT YET, AND NONE MAY UNTIL IT HAS BEEN
- * WRITTEN AND REVIEWED BY SOMEBODY QUALIFIED TO DO IT.**
- *
- * That is not a note to remember. `src/core/catalog.mjs` enforces it, and `npm run check`
- * fails the build:
+ * **A DOCUMENT IS EITHER `published` (COMPLETE, DATED, VERSIONED) OR `pending` (EMPTY).** There
+ * is no half-state, and `src/core/catalog.mjs` enforces it — `npm run check` fails the build:
  *
  *   · a `status: 'pending'` document may NOT carry `sections`, an `effectiveDate`, an
- *     `updatedDate`, a `version`, or any `versions` — so there is no way to half-publish
- *     something, and no way for placeholder prose to be mistaken for policy;
- *   · a `status: 'published'` document MUST carry all of them — so there is no way to publish
- *     an undated, unversioned document either;
+ *     `updatedDate`, a `version` or any `versions`. It MAY carry one plain `note` (a sentence
+ *     about its own status, e.g. "planned, not currently offered") — never a term;
+ *   · a `status: 'published'` document MUST carry sections, both dates and a version, and a
+ *     non-empty `appliesTo`; every link in its text must resolve; and it may not use words
+ *     that claim compliance, certification, attorney review or absolute security;
  *   · every `related` id and every `appliesTo` product id must resolve.
+ *
+ * Published documents were written 2026-09-21 from the code, not from the product names — see
+ * docs/FACT-SHEET.md. NONE has been reviewed by an attorney, and the site says so.
  *
  * The two states are visually unmistakable on the page: a pending document renders a marked
  * "Content pending" panel where its body would be, and never anything that could be read as a
@@ -67,12 +68,21 @@ import { document as account } from './account.js';
 import { document as accountDeletion } from './account-deletion.js';
 import { document as data } from './data.js';
 import { document as security } from './security.js';
+import { document as atlasTerms } from './atlas-terms.js';
+import { document as replayGgTerms } from './replay-gg-terms.js';
+import { document as novaCutTerms } from './nova-cut-terms.js';
+import { document as subscriptions } from './subscriptions.js';
+import { document as contact } from './contact.js';
 
 /** Order within a category is order on screen. */
 export const documents = [
   terms,
   termsOfUsage,
+  atlasTerms,
+  replayGgTerms,
+  novaCutTerms,
   acceptableUse,
+  subscriptions,
   privacy,
   cookies,
   data,
@@ -82,4 +92,5 @@ export const documents = [
   dmca,
   account,
   accountDeletion,
+  contact,
 ];

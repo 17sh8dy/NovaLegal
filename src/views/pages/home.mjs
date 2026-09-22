@@ -58,14 +58,10 @@ export function homePage() {
   const main = `
   <div class="wrap">
     ${notice(
-      'warn',
-      'Nova Legal is being built',
-      `<p>
-        The structure of this site is finished; the legal documents themselves have not been
-        written. Every document below is a placeholder, and <strong>nothing on this site is in
-        force or should be relied on</strong>. Each document will be published here with an
-        effective date and a version number once it has been written and reviewed.
-      </p>`,
+      'info',
+      'Read this first',
+      `<p>Nothing in NovaLegal has been approved or reviewed by an attorney. That does not mean you do not have to follow, agree to, and accept the terms, rules, or notices presented to you when using a Nova product.</p>
+      <p>A document marked <strong>Content pending</strong> has not been written yet and is not in force. Documents marked <strong>In force</strong> carry a version and an effective date. English is the original of every document; other languages are translations.</p>`,
     )}
 
     <section class="browse" aria-labelledby="browse-heading">
@@ -105,7 +101,7 @@ export function homePage() {
       <p class="hero__counts">
         ${esc(stats.documents)} documents across ${esc(stats.categories)} categories and
         ${esc(stats.products)} products.
-        ${stats.published === 0 ? 'None published yet.' : `${esc(stats.published)} published.`}
+        ${stats.published === 0 ? 'None published yet.' : `${esc(stats.published)} published, ${esc(stats.pending)} still to be written.`}
       </p>
     </div>
   </section>`;

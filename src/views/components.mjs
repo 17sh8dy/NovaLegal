@@ -28,6 +28,7 @@ export const classes = (...values) => values.filter(Boolean).join(' ');
 
 /** A date, in the one format this site uses. `null` in, empty string out — never a guess. */
 const dateFormat = new Intl.DateTimeFormat('en-GB', {
+  timeZone: 'UTC', // a date-only value must not slide to the previous day in a western time zone
   day: 'numeric',
   month: 'long',
   year: 'numeric',
@@ -64,7 +65,7 @@ export const statusBadge = (pending) =>
  *   3. IT SAYS WHAT IS TRUE INSTEAD: this document is being prepared, and nothing here is in
  *      force. That is honest, and it is the only claim this component is allowed to make.
  */
-export const pendingPanel = ({ title = 'Content pending' } = {}) => `
+export const pendingPanel = ({ title = 'Content pending', note = null } = {}) => `
   <div class="pending" role="note" aria-label="This document is being prepared">
     <div class="pending__mark" aria-hidden="true">${icon('draft', { size: 22 })}</div>
     <div class="pending__body">
@@ -73,9 +74,10 @@ export const pendingPanel = ({ title = 'Content pending' } = {}) => `
         This document is being prepared. There is no text here yet, and nothing on this page is
         in force or should be relied on.
       </p>
+      ${note ? `<p class="pending__status"><strong>Current status:</strong> ${esc(note)}</p>` : ''}
       <p class="pending__fine">
-        When it has been written and reviewed it will be published here with an effective date
-        and a version number.
+        When it has been written it will be published here with an effective date and a version
+        number.
       </p>
     </div>
   </div>`;

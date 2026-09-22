@@ -35,15 +35,16 @@ import {
   tableOfContents,
 } from '../components.mjs';
 import { icon } from '../icons.mjs';
+import { blockHtml } from '../../core/markup.mjs';
 import { hero, page } from '../layout.mjs';
 
-/** A published section. Paragraph strings in, escaped paragraphs out — never raw HTML. */
+/** A published section. Blocks in (see core/markup.mjs), escaped HTML out — never raw HTML in. */
 const section = (entry) => `<section class="doc-section" id="${esc(entry.id)}">
   <h2 class="doc-section__heading">
     ${esc(entry.heading)}
     <a class="doc-section__anchor" href="#${esc(entry.id)}" aria-label="Link to this section">#</a>
   </h2>
-  ${entry.body.map((paragraph) => `<p>${esc(paragraph)}</p>`).join('')}
+  ${entry.body.map(blockHtml).join('')}
 </section>`;
 
 /**
@@ -71,7 +72,7 @@ export function documentPage(doc, { related }) {
   const category = categoryOf(doc);
 
   const body = doc.pending
-    ? pendingPanel()
+    ? pendingPanel({ note: doc.note })
     : doc.sections.map(section).join('');
 
   const rail = `<aside class="rail" aria-label="Document details">

@@ -14,7 +14,7 @@ export const categories = [
   {
     id: 'terms',
     label: 'Terms',
-    blurb: 'The agreements that govern using Nova products.',
+    blurb: 'The terms for using Nova products, and terms specific to one product.',
     icon: 'document',
   },
   {
@@ -34,6 +34,12 @@ export const categories = [
     label: 'Accounts',
     blurb: 'The Nova Account — one identity across every Nova product.',
     icon: 'user',
+  },
+  {
+    id: 'notices',
+    label: 'Notices & contact',
+    blurb: 'How to reach Nova about a legal matter, and what these documents are and are not.',
+    icon: 'info',
   },
 ];
 

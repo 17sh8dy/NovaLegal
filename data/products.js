@@ -14,6 +14,22 @@
  * is reviewed its `appliesTo` is `[]` and every product page honestly says the applicable set
  * has not been determined. Filling that in is a deliberate act by somebody qualified to do it.
  *
+ * `inScope: false` keeps a product's data here but gives it no page, card or document. Online
+ * Earth and Nova Forge are out of NovaLegal's scope by the owner's decision (2026-09-21); the
+ * entries are kept, not deleted, so bringing one in is deleting one line.
+ *
+ * `minimumAge` is the owner's stated product-use age policy (2026-09-21): 13 for the six
+ * in-scope products. It is a use policy, NOT a claim of legal compliance or a parental-consent
+ * mechanism, and it is never inferred — a product without one says none has been decided.
+ *
+ * `data` is a short list of VERIFIED facts about what the product stores or sends, taken from
+ * reading its code (see docs/FACT-SHEET.md). A claim that is not in the code is not in this list.
+ *
+ * `hasAccount` and `hasBrowserStorage` are what let `data/documents/_common.js` compute
+ * ACCOUNT_PRODUCTS and BROWSER_PRODUCTS from this file instead of a second, hand-maintained
+ * list — so adding a product here is the ONLY place its account/browser status needs stating;
+ * nothing downstream needs to remember to also update a document's product groups.
+ *
  * `blurb` is a plain description of what the product IS — a factual sentence taken from the
  * product's own material — and carries no legal meaning.
  */
@@ -21,6 +37,13 @@
 export const products = [
   {
     id: 'nova',
+    minimumAge: 13,
+    hasAccount: true,
+    hasBrowserStorage: true,
+    data: [
+      "Browsing the Nova website without signing in sets no cookies and uses no analytics or third-party scripts. If you choose a language, that choice is saved in your browser.",
+      "Creating, signing in to and managing a Nova Account happens on this website. What an account stores is described in the Privacy Policy and the Nova Account document.",
+    ],
     name: 'Nova',
     /** Shown under the name. Descriptive only. */
     blurb: 'The independent software studio and front door to the Nova ecosystem.',
@@ -46,6 +69,13 @@ export const products = [
   },
   {
     id: 'nova-help',
+    minimumAge: 13,
+    hasAccount: true,
+    hasBrowserStorage: true,
+    data: [
+      "A support ticket stores what you write, your email address, an optional name, any files you attach, the platform and version you give, the ticket’s history, and the IP address it was sent from.",
+      "Nova.Help sets at most two cookies: one keeps you signed in, and one lets you reopen a single ticket. It uses no analytics or third-party scripts.",
+    ],
     name: 'Nova.Help',
     blurb: 'The support portal for Nova products and a Nova Account sign-in surface.',
     kind: 'Support website',
@@ -69,6 +99,13 @@ export const products = [
   },
   {
     id: 'nova-cut',
+    minimumAge: 13,
+    hasAccount: true,
+    hasBrowserStorage: true,
+    data: [
+      "Projects and media stay on your computer. Nova Cut’s own settings state that it has no analytics or crash reporting.",
+      "The feature that connects Nova Cut to a Nova service is the optional Nova Account sign-in.",
+    ],
     name: 'Nova Cut',
     blurb: 'A desktop-first non-linear video and photo editor.',
     kind: 'Desktop app & website',
@@ -91,7 +128,32 @@ export const products = [
     account: 'A Nova Account is optional. The editor remains usable without signing in.',
   },
   {
+    id: 'nova-legal',
+    name: 'NovaLegal',
+    blurb: 'The legal centre for the Nova ecosystem: terms, privacy and product-specific documents.',
+    kind: 'Website',
+    icon: 'document',
+    minimumAge: 13,
+    hasAccount: false,
+    hasBrowserStorage: true,
+    url: null,
+    help: 'https://nova-help.17sh8dy.workers.dev/help/nova-site',
+    overview: [
+      'NovaLegal is a static website that publishes the terms, privacy and product documents for Nova products.',
+    ],
+    capabilities: [
+      'Read, search and print the legal documents for each Nova product.',
+      'Switch the language of the page.',
+    ],
+    surfaces: [{ name: 'NovaLegal website', detail: 'This site.' }],
+    account: 'NovaLegal has no accounts and no sign-in.',
+    data: [
+      'This site has no forms, no accounts and no analytics. It saves your theme and language choice in your browser.',
+    ],
+  },
+  {
     id: 'online-earth',
+    inScope: false,
     name: 'Online Earth',
     blurb: 'A spatial platform for exploring the world and what is connected to it.',
     kind: 'Website & desktop app',
@@ -101,6 +163,13 @@ export const products = [
   },
   {
     id: 'replay-gg',
+    minimumAge: 13,
+    hasAccount: true,
+    hasBrowserStorage: false,
+    data: [
+      "Recordings and clips are saved on your computer. System audio, microphone and webcam inputs exist as options in its settings.",
+      "Replay.GG checks GitHub’s release hosting for a newer version, and downloads an update only when you choose to.",
+    ],
     name: 'Replay.GG',
     blurb: 'A desktop app for recording gameplay and creating clips from PC games.',
     kind: 'Desktop app',
@@ -123,6 +192,14 @@ export const products = [
   },
   {
     id: 'atlas',
+    minimumAge: 13,
+    hasAccount: true,
+    hasBrowserStorage: true,
+    data: [
+      "Atlas works on your computer with nothing connected. Its settings, memory and file index stay on your computer.",
+      "Anything you send to an AI provider you add, or to a web search service, leaves your computer. Atlas Terms describes exactly what is sent.",
+      "API keys you enter are stored in Windows Credential Manager on your computer, not on a Nova server.",
+    ],
     name: 'Atlas',
     blurb: 'A local-first desktop assistant that helps operate a computer.',
     kind: 'Desktop app & website',
@@ -146,6 +223,7 @@ export const products = [
   },
   {
     id: 'nova-forge',
+    inScope: false,
     name: 'Nova Forge',
     blurb: 'A desktop toolkit for organizing game configuration, mods, profiles, and saves.',
     kind: 'Desktop app',

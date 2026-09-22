@@ -30,8 +30,27 @@
  */
 
 import { categories, getCategory } from '../../data/categories.js';
-import { products, getProduct } from '../../data/products.js';
+import { products as allProducts } from '../../data/products.js';
 import { documents as rawDocuments } from '../../data/documents/index.js';
+import { blockText, linkTargets, resolveHref } from './markup.mjs';
+
+/* Products marked `inScope: false` stay in data/products.js (nothing is deleted) but get no
+   page, no card and no document. See the note at the top of that file. */
+export const products = allProducts.filter((product) => product.inScope !== false);
+export const getProduct = (id) => products.find((product) => product.id === id) ?? null;
+
+/* Claims a published document may not make. NovaLegal has not been reviewed by an attorney and
+   no compliance or certification has been established, so these words cannot appear — not even
+   by accident in a later edit. The attorney-review notice itself is a `verbatim` block and is
+   exempt: it says the opposite. */
+const OVERCLAIMS = [
+  [/\b(?:gdpr|ccpa|cpra|coppa|hipaa|ferpa)\b/i, 'names a specific privacy law (no compliance has been established)'],
+  [/\bcompliant\b/i, 'uses "compliant" (no legal compliance has been established)'],
+  [/\bcertified\b|\bcertification\b/i, 'claims a certification'],
+  [/attorney[- ](?:approved|reviewed|vetted)|lawyer[- ](?:approved|reviewed|vetted)/i, 'claims attorney review'],
+  [/military[- ]grade|bank[- ]level|100\s?% secure|unhackable|completely secure/i, 'makes an absolute security claim'],
+  [/\bend[- ]to[- ]end encrypt/i, 'claims end-to-end encryption'],
+];
 
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 
@@ -99,7 +118,7 @@ export const documentsFor = (productId) =>
 /** A document's category record, for breadcrumbs. */
 export const categoryOf = (doc) => getCategory(doc.category);
 
-export { categories, products, getCategory, getProduct };
+export { categories, getCategory };
 
 /** Counts, for `npm run check` and the homepage. */
 export const stats = {
@@ -185,7 +204,30 @@ export function validate() {
             "Write the sections and set the dates, then set status to 'published'.",
         );
       }
+      /* The one thing a placeholder MAY say: a plain sentence about its own status ("planned,
+         not currently offered"). It is a status line, not a term, so it may not contain links
+         or markup and is checked for overclaims like any other text. */
+      if (doc.note !== undefined) {
+        if (typeof doc.note !== 'string' || !doc.note.trim()) {
+          errors.push(`${where}: note must be a non-empty string.`);
+        } else {
+          if (/[\[\]{}*]/.test(doc.note)) errors.push(`${where}: a pending note is plain text — no markup.`);
+          for (const [pattern, why] of OVERCLAIMS) {
+            if (pattern.test(doc.note)) errors.push(`${where}: the note ${why}.`);
+          }
+        }
+      }
       continue;
+    }
+
+    if (doc.note !== undefined) {
+      errors.push(`${where}: only a 'pending' document carries a note; a published one says it in its sections.`);
+    }
+
+    /* A document that governs nothing cannot be published: "which products" is the first thing
+       a reader needs, and an empty list would read as "applies to nobody". */
+    if (!doc.appliesTo?.length) {
+      errors.push(`${where}: is 'published' with an empty appliesTo. Say which products it governs.`);
     }
 
     /* ── RULE 2: a published document carries all of it ──────────────────────────────── */
@@ -212,6 +254,48 @@ export function validate() {
       sectionIds.add(section.id);
       if (!Array.isArray(section.body) || !section.body.length) {
         errors.push(`${where}: section "${section.id}" has no body.`);
+        continue;
+      }
+
+      for (const block of section.body) {
+        const at = `${where}, section "${section.id}"`;
+        const shaped =
+          typeof block === 'string' ||
+          (block && typeof block === 'object' &&
+            [Array.isArray(block.list), Array.isArray(block.ordered), typeof block.verbatim === 'string'].filter(Boolean).length === 1);
+        if (!shaped) {
+          errors.push(`${at}: a body block must be a string, { list }, { ordered } or { verbatim }.`);
+          continue;
+        }
+        const texts = blockText(block);
+        if (!texts.length || texts.some((t) => typeof t !== 'string' || !t.trim())) {
+          errors.push(`${at}: a body block has empty text.`);
+        }
+        for (const text of texts) {
+          for (const target of linkTargets(text)) {
+            if (!resolveHref(target)) {
+              errors.push(`${at}: link target "${target}" is not allowed (see src/core/markup.mjs).`);
+              continue;
+            }
+            const [path, fragment] = target.split('#');
+            if (path.startsWith('/') && path !== '/' && !['/search', '/products'].includes(path)) {
+              const [, first, second] = path.split('/');
+              if (first === 'products') {
+                if (!productIds.has(second)) errors.push(`${at}: link "${target}" names a product that is not in scope.`);
+              } else {
+                const linked = rawDocuments.find((other) => other.id === first);
+                if (!linked || second) errors.push(`${at}: link "${target}" does not resolve to a document.`);
+                else if (fragment && !(linked.sections ?? []).some((s) => s.id === fragment)) {
+                  errors.push(`${at}: link "${target}" points at a section that does not exist.`);
+                }
+              }
+            }
+          }
+          if (typeof block === 'object' && block.verbatim !== undefined) continue;
+          for (const [pattern, why] of OVERCLAIMS) {
+            if (pattern.test(text)) errors.push(`${at}: text ${why}: "${text.slice(0, 70)}…"`);
+          }
+        }
       }
     }
 

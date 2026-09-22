@@ -2,15 +2,15 @@
  * Search.
  *
  * ─────────────────────────────────────────────────────────────────────────────────────────
- * DELIBERATELY SMALL. There are eleven documents. A search index, a ranking function and a
+ * DELIBERATELY SMALL. The document count is small. A search index, a ranking function and a
  * server round trip would all be real engineering spent on a list that fits on one screen —
  * so this page RENDERS EVERY DOCUMENT server-side, and the script filters the list that is
  * already there. That gives three things at once:
  *
  *   · it works with JavaScript disabled (you get the full list, which is a fine answer);
  *   · it is instant, because nothing is fetched;
- *   · it degrades to exactly the right thing as the set grows — when eleven becomes two
- *     hundred, the same markup gains a real index behind it and the page is unchanged.
+ *   · it degrades to exactly the right thing as the set grows — when this becomes two hundred,
+ *     the same markup gains a real index behind it and the page is unchanged.
  *
  * The filterable text is emitted into a `data-search` attribute per row: title, description,
  * category, the products it applies to, and — once documents are published — their section

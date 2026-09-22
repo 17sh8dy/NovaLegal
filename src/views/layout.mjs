@@ -19,6 +19,7 @@
  *    tickets constantly; a page whose title is just the site name is useless in a list of tabs.
  */
 
+import { stats } from '../core/catalog.mjs';
 import { site, nav, footer as footerColumns } from '../../data/site.js';
 import { esc, maybeLink } from './components.mjs';
 import { icon, MARK } from './icons.mjs';
@@ -93,17 +94,16 @@ function footer() {
           ${esc(site.name)} — ${esc(site.tagline)}.
         </p>
         <!--
-          THE ONE SENTENCE THAT MUST STAY UNTIL THE DOCUMENTS ARE REAL.
-
-          Every document on this site is a placeholder, and somebody arriving from a search
-          engine on one page has no way to know that from the page alone. This says it in the
-          one place that appears on every page. Remove it only when there is published content
-          to remove it for.
+          Placeholders remain (subscriptions, copyright), and a reader who lands on one from a
+          search engine must not mistake it for policy. Published documents say "In force" in
+          their own header, so this line says only what is true of the rest.
         -->
-        <p class="footer__pending">
-          ${icon('draft', { size: 15 })}
-          The documents on this site are being prepared. Nothing published here yet is in force.
-        </p>
+        ${
+          stats.pending
+            ? `<p class="footer__pending">${icon('draft', { size: 15 })}
+          A document marked “Content pending” has not been written yet and is not in force.</p>`
+            : ''
+        }
         <p class="footer__attorney-notice">
           Nothing in NovaLegal has been approved or reviewed by an attorney. That does not mean
           you do not have to follow, agree to, and accept the terms, rules, or notices presented

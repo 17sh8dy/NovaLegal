@@ -6,8 +6,7 @@
  * a route that exists in development and not in the build (or the reverse) is the classic way a
  * static site ships a 404 nobody noticed, and here it is not expressible.
  *
- * Routes are GENERATED from the catalog, not written out. Eleven documents produce twenty-two
- * routes (a page and a version history each), six products produce six, four categories four.
+ * Routes are GENERATED from the catalog, not written out. The document count times two (a page and a version history each), plus one route per product, plus one per category.
  * Adding a document adds its routes; there is no list to keep in step.
  */
 
