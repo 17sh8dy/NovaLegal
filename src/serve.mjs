@@ -46,11 +46,19 @@ const SECURITY = {
 /**
  * Serve a file out of `public/`, or answer false.
  *
+ * ⚠ Mirrors `build.mjs` exactly: that copies the WHOLE of `public/` into `dist/`, so this must
+ * be willing to serve anything under `public/`, not one hardcoded subdirectory. A previous
+ * version only served `/assets/…`, which quietly 404'd every request for `/i18n/<lang>.json`
+ * here in dev — the runtime never throws on that, it just stays in English, so the language
+ * selector looked broken with no error anywhere. `dist/` was never affected; only this server
+ * was. `npm test` now has a regression test for this (`test/serve.test.mjs`).
+ *
  * The resolved path is checked to be INSIDE `public/` before anything is read — `..` in a URL
- * is the oldest way to walk a static server out of its own directory.
+ * is the oldest way to walk a static server out of its own directory. A route always wins over
+ * a static file (checked first, in `createServer`), so this can stay this permissive.
  */
 async function serveStatic(res, pathname) {
-  if (!pathname.startsWith('/assets/')) return false;
+  if (pathname === '/' || pathname.endsWith('/')) return false;
 
   const target = path.resolve(publicDir, `.${pathname}`);
   if (!target.startsWith(publicDir + path.sep)) return false;

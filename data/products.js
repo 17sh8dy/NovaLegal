@@ -146,9 +146,10 @@ export const products = [
       'Switch the language of the page.',
     ],
     surfaces: [{ name: 'NovaLegal website', detail: 'This site.' }],
-    account: 'NovaLegal has no accounts and no sign-in.',
+    account: 'NovaLegal has no accounts of its own. Its header links to the shared Nova Account sign-in and creation pages on the Nova website; nothing about that account is stored here.',
     data: [
-      'This site has no forms, no accounts and no analytics. It saves your theme and language choice in your browser.',
+      'This site has no forms, no accounts and no analytics. It saves your theme, language and text-style choice in your browser.',
+      'The header’s "Sign in" and "Create account" links go straight to the real Nova Account pages on the Nova website. NovaLegal does not implement sign-in itself and does not see or store anything about your account.',
     ],
   },
   {

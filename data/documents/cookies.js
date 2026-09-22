@@ -39,6 +39,7 @@ export const document = {
           list: [
             '**Language** — when you choose a language, the site saves it in a cookie named nova.lang (kept for one year) and in your browser’s local storage, so the next page opens in that language. Used on Nova, Nova.Help, NovaLegal and the Nova Cut and Atlas websites.',
             '**Theme** — NovaLegal, the Nova Cut website and the Atlas website save your light or dark choice in local storage.',
+            '**Text style** — NovaLegal saves your chosen font from the Text Styles menu (top right) in local storage, so it applies on your next visit. No choice is made for you, and nothing is sent anywhere — it only changes the font this browser renders the page in.',
             '**Assistant name** — the Atlas website saves the name you give the assistant in the demo, in local storage.',
           ],
         },

@@ -23,16 +23,66 @@ import { stats } from '../core/catalog.mjs';
 import { site, nav, footer as footerColumns } from '../../data/site.js';
 import { esc, maybeLink } from './components.mjs';
 import { icon, MARK } from './icons.mjs';
+import { TEXT_STYLE_KEY, TEXT_STYLES } from './textStyles.mjs';
 
 /**
- * Resolve the theme before the first paint.
+ * Resolve the theme AND the text style before the first paint.
  *
- * Three states, matching the rest of the Nova ecosystem: an explicit choice is stored and
- * stamped on `<html>`; the default is "system" and stamps nothing, so the CSS media query
- * decides. Wrapped in try/catch because `localStorage` throws outright in a browser configured
- * to block site data, and a legal document must render for that reader too.
+ * Same reasoning for both: an explicit choice is stored and stamped on `<html>` as an
+ * attribute the CSS keys off, so a reader who chose OpenDyslexic or dark never sees a flash of
+ * the default first. Wrapped in try/catch because `localStorage` throws outright in a browser
+ * configured to block site data, and a legal document must render for that reader too.
  */
-const THEME_SCRIPT = `try{var t=localStorage.getItem("nova-legal-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}document.documentElement.classList.add("js")`;
+const THEME_SCRIPT =
+  `try{var t=localStorage.getItem("nova-legal-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}` +
+  `try{var f=localStorage.getItem(${JSON.stringify(TEXT_STYLE_KEY)});if(f)document.documentElement.setAttribute("data-text-style",f)}catch(e){}` +
+  `document.documentElement.classList.add("js")`;
+
+/**
+ * The Text Styles control: a toggle button and its panel of font choices. See textStyles.mjs.
+ *
+ * ⚠ NO INLINE `style="…"`. The site's CSP is `style-src 'self'` with no `'unsafe-inline'`, so an
+ * inline style attribute is silently dropped by the browser rather than merely inadvisable —
+ * each option's preview font instead comes from a `.text-style__option[data-text-style-option="…"]`
+ * rule in legal.css, one per id, which `test/text-styles.test.mjs` checks actually exists.
+ */
+function textStyleControl() {
+  const options = TEXT_STYLES.map(
+    (font) => `<button class="text-style__option" type="button" role="menuitemradio" aria-checked="false"
+        data-text-style-option="${esc(font.id)}">${esc(font.label)}</button>`,
+  ).join('');
+
+  return `<div class="text-style" data-text-style-menu>
+    <button class="theme-toggle" type="button" data-text-style-toggle aria-haspopup="true" aria-expanded="false"
+        aria-controls="text-style-panel" aria-label="Text styles: change the font used across this site">
+      ${icon('text-lines', { size: 16 })}<span class="sr-only">Text styles</span>
+    </button>
+    <div class="text-style__panel" id="text-style-panel" role="menu" aria-label="Text styles" data-text-style-panel>
+      <p class="text-style__title">Text styles</p>
+      <p class="text-style__note">
+        Changes the font used across the whole site — a plain-language accessibility option for
+        dyslexia, low vision, or just a font you find easier to read. Saved in your browser.
+      </p>
+      <div class="text-style__options" role="none">
+        <button class="text-style__option text-style__option--default" type="button" role="menuitemradio" aria-checked="true"
+            data-text-style-option="">Default</button>
+        ${options}
+      </div>
+    </div>
+  </div>`;
+}
+
+/** The account chip: a real, live link to the shared Nova Account sign-in — NOT implemented
+    here. NovaLegal has no accounts of its own; see data/documents/contact.js and the account
+    field on the nova-legal entry in data/products.js. */
+function accountControl() {
+  return `<div class="account-chip">
+    <a class="account-chip__link" href="${esc(site.accountSignIn)}" rel="noopener">
+      ${icon('sign-in', { size: 16 })}<span>Sign in</span>
+    </a>
+    <a class="account-chip__link account-chip__link--quiet" href="${esc(site.accountCreate)}" rel="noopener">Create account</a>
+  </div>`;
+}
 
 function header(currentPath) {
   const links = nav
@@ -59,9 +109,11 @@ function header(currentPath) {
         <nav class="masthead__nav" aria-label="Primary">${links}</nav>
         <span class="nova-lang-slot" data-nova-lang-slot></span>
         <a class="masthead__search" href="/search">${icon('search', { size: 17 })}<span>Search</span></a>
+        ${textStyleControl()}
         <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch between light and dark">
           ${icon('nova', { size: 16 })}<span class="sr-only">Theme</span>
         </button>
+        ${accountControl()}
       </div>
     </div>
   </header>`;

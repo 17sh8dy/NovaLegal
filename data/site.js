@@ -51,6 +51,14 @@ export const site = {
 
   /** Nova.Help — the support portal. Separate from legal on purpose; see the footer. */
   help: 'https://nova-help.17sh8dy.workers.dev/',
+
+  /**
+   * The real, live Nova Account sign-in and creation pages, on the Nova website. NovaLegal
+   * implements no accounts or sign-in of its own — these are a link OUT to the one shared
+   * identity system, the same way `help` links out to Nova.Help. Verified live 2026-09-24.
+   */
+  accountSignIn: 'https://nova-780.pages.dev/account/sign-in',
+  accountCreate: 'https://nova-780.pages.dev/account/new',
 };
 
 /** Primary navigation. Category ids resolve through `data/categories.js`. */

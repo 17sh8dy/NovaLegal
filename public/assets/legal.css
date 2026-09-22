@@ -115,6 +115,51 @@
   --shadow-2: 0 2px 6px rgba(0,0,0,.45), 0 14px 34px rgba(0,0,0,.42);
 }
 
+/* ── Text Styles ─────────────────────────────────────────────────────────────
+   An alternative font for the whole site — see src/views/textStyles.mjs, the one source for
+   the option list this must stay in step with (test/text-styles.test.mjs checks it). Five are
+   self-hosted (public/assets/fonts/, same-origin, never a third-party request — this site's
+   own "no third-party fonts" claim stays true with this on); five are OS font stacks, nothing
+   to load. Redefining --sans AND --serif is what makes this "all the text": every heading, the
+   document body (which otherwise uses --serif) and ordinary UI text all read one of these two
+   variables. --mono is untouched on purpose — code stays code. */
+
+@font-face { font-family: 'OpenDyslexic'; src: url('/assets/fonts/opendyslexic-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'OpenDyslexic'; src: url('/assets/fonts/opendyslexic-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Atkinson Hyperlegible'; src: url('/assets/fonts/atkinson-hyperlegible-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Atkinson Hyperlegible'; src: url('/assets/fonts/atkinson-hyperlegible-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Lexend'; src: url('/assets/fonts/lexend-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Lexend'; src: url('/assets/fonts/lexend-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Andika'; src: url('/assets/fonts/andika-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Andika'; src: url('/assets/fonts/andika-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Comic Neue'; src: url('/assets/fonts/comic-neue-400.woff2') format('woff2'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Comic Neue'; src: url('/assets/fonts/comic-neue-700.woff2') format('woff2'); font-weight: 700; font-style: normal; font-display: swap; }
+
+:root[data-text-style="opendyslexic"]    { --sans: 'OpenDyslexic', sans-serif; --serif: 'OpenDyslexic', sans-serif; }
+:root[data-text-style="atkinson"]        { --sans: 'Atkinson Hyperlegible', sans-serif; --serif: 'Atkinson Hyperlegible', sans-serif; }
+:root[data-text-style="lexend"]          { --sans: 'Lexend', sans-serif; --serif: 'Lexend', sans-serif; }
+:root[data-text-style="andika"]          { --sans: 'Andika', sans-serif; --serif: 'Andika', sans-serif; }
+:root[data-text-style="comic-neue"]      { --sans: 'Comic Neue', sans-serif; --serif: 'Comic Neue', sans-serif; }
+:root[data-text-style="arial"]           { --sans: Arial, 'Helvetica Neue', Helvetica, sans-serif; --serif: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+:root[data-text-style="verdana"]         { --sans: Verdana, Geneva, sans-serif; --serif: Verdana, Geneva, sans-serif; }
+:root[data-text-style="tahoma"]          { --sans: Tahoma, Geneva, Verdana, sans-serif; --serif: Tahoma, Geneva, Verdana, sans-serif; }
+:root[data-text-style="century-gothic"]  { --sans: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; --serif: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; }
+:root[data-text-style="trebuchet"]       { --sans: 'Trebuchet MS', 'Lucida Grande', sans-serif; --serif: 'Trebuchet MS', 'Lucida Grande', sans-serif; }
+
+/* Each option previews ITS OWN font regardless of which one is currently active — the :root
+   rules above only affect the page once chosen, so a button needs its own rule. No inline
+   `style=` (see layout.mjs's note): style-src has no 'unsafe-inline'. */
+.text-style__option[data-text-style-option="opendyslexic"]   { font-family: 'OpenDyslexic', sans-serif; }
+.text-style__option[data-text-style-option="atkinson"]       { font-family: 'Atkinson Hyperlegible', sans-serif; }
+.text-style__option[data-text-style-option="lexend"]         { font-family: 'Lexend', sans-serif; }
+.text-style__option[data-text-style-option="andika"]         { font-family: 'Andika', sans-serif; }
+.text-style__option[data-text-style-option="comic-neue"]     { font-family: 'Comic Neue', sans-serif; }
+.text-style__option[data-text-style-option="arial"]          { font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+.text-style__option[data-text-style-option="verdana"]        { font-family: Verdana, Geneva, sans-serif; }
+.text-style__option[data-text-style-option="tahoma"]         { font-family: Tahoma, Geneva, Verdana, sans-serif; }
+.text-style__option[data-text-style-option="century-gothic"] { font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif; }
+.text-style__option[data-text-style-option="trebuchet"]      { font-family: 'Trebuchet MS', 'Lucida Grande', sans-serif; }
+
 * { box-sizing: border-box; }
 
 html { -webkit-text-size-adjust: 100%; }
@@ -257,6 +302,102 @@ code { font-family: var(--mono); font-size: .92em; }
   cursor: pointer;
 }
 .theme-toggle:hover { color: var(--brand); border-color: var(--card-edge-hi); }
+
+/* ── Text Styles control ─────────────────────────────────────────────────── */
+
+.text-style { position: relative; }
+
+.text-style__panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 40;
+  width: min(280px, 84vw);
+  padding: .9rem 1rem 1rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-lg);
+  background: var(--panel);
+  box-shadow: var(--shadow-2);
+  /* The "very small" open animation: a short fade with a couple of pixels of travel. Collapses
+     to nothing under prefers-reduced-motion via the site-wide rule at the bottom of this file. */
+  transform-origin: top right;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px) scale(.98);
+  transition: opacity 110ms ease, transform 110ms ease, visibility 110ms;
+  pointer-events: none;
+}
+.text-style[data-open] .text-style__panel {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+}
+
+.text-style__title {
+  margin: 0 0 .25rem;
+  font-size: var(--f-small);
+  font-weight: 650;
+}
+.text-style__note {
+  margin: 0 0 .8rem;
+  color: var(--ink-2);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.text-style__options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .4rem;
+}
+.text-style__option {
+  padding: .5rem .55rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--ink);
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+}
+.text-style__option:hover { border-color: var(--card-edge-hi); background: var(--card); }
+.text-style__option[aria-checked="true"] {
+  border-color: var(--brand);
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-weight: 600;
+}
+.text-style__option--default { grid-column: 1 / -1; }
+
+/* ── Account chip ────────────────────────────────────────────────────────── */
+
+.account-chip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+}
+.account-chip__link {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .35rem .7rem;
+  border: 1px solid var(--card-edge);
+  border-radius: var(--r-pill);
+  color: var(--ink);
+  font-size: var(--f-small);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.account-chip__link:hover { border-color: var(--brand); color: var(--brand); }
+.account-chip__link--quiet {
+  border-color: transparent;
+  color: var(--ink-2);
+  font-weight: 500;
+}
+.account-chip__link--quiet:hover { border-color: var(--card-edge-hi); color: var(--ink); }
 
 /* The hamburger. Hidden until the nav no longer fits; see the responsive block. */
 .masthead__toggle {

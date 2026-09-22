@@ -32,6 +32,11 @@ const paths = {
   draft: '<path d="M6 3.5h7.5L18 8v12.5H6z" stroke-dasharray="3 2.4"/><path d="M13.5 3.5V8H18"/>',
   print: '<path d="M7 9V4h10v5"/><rect x="3.5" y="9" width="17" height="7" rx="1.6"/><path d="M7 14h10v6H7z"/>',
   external: '<path d="M14 5h5v5M19 5l-8 8M17 14v5H5V7h5"/>',
+  /* Three lines of text, the shortest one last — the "Text styles" control. Deliberately not
+     the hamburger's three EQUAL bars (`.masthead__bars`), so the two controls read as
+     different things at a glance rather than as two menu buttons. */
+  'text-lines': '<path d="M4 6.5h16M4 12h16M4 17.5h10"/>',
+  'sign-in': '<path d="M11 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h5"/><path d="M15 8l4 4-4 4M9 12h10"/>',
   discord:
     '<path d="M8.6 15.6c-1.4-.4-2.4-1.1-3-2 .3-2.7 1.1-5.1 2.4-7.1a9.7 9.7 0 0 1 2.6-.8l.5 1c1-.1 1.9-.1 2.9 0l.5-1c.9.2 1.8.4 2.6.8 1.3 2 2.1 4.4 2.4 7.1-.6.9-1.6 1.6-3 2l-.9-1.4"/><path d="M8.6 15.6c2.3.7 4.5.7 6.8 0"/><path d="M10 11.5h.01M14 11.5h.01"/>',
 };

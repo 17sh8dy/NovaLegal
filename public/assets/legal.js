@@ -67,6 +67,83 @@
     });
   }
 
+  /* ── Text Styles ────────────────────────────────────────────────────────────────────────
+   *
+   * The panel's stored choice is already applied before first paint by the inline script in
+   * <head> (see layout.mjs's THEME_SCRIPT) — this only wires the button, so nothing here can
+   * cause a flash of the wrong font. See src/views/textStyles.mjs for the option list and the
+   * key this reads and writes. */
+
+  var TEXT_STYLE_KEY = 'nova-legal-text-style';
+
+  function storedTextStyle() {
+    try {
+      return localStorage.getItem(TEXT_STYLE_KEY) || '';
+    } catch (e) {
+      return '';
+    }
+  }
+
+  function setTextStyle(id) {
+    if (id) document.documentElement.setAttribute('data-text-style', id);
+    else document.documentElement.removeAttribute('data-text-style');
+    try {
+      localStorage.setItem(TEXT_STYLE_KEY, id);
+    } catch (e) {
+      /* Applies for this page view; simply will not be remembered. */
+    }
+  }
+
+  var textStyleMenu = document.querySelector('[data-text-style-menu]');
+  var textStyleToggle = document.querySelector('[data-text-style-toggle]');
+  var textStylePanel = document.querySelector('[data-text-style-panel]');
+  var textStyleOptions = textStylePanel
+    ? Array.prototype.slice.call(textStylePanel.querySelectorAll('[data-text-style-option]'))
+    : [];
+
+  function markActiveOption() {
+    var current = storedTextStyle();
+    textStyleOptions.forEach(function (option) {
+      option.setAttribute('aria-checked', String(option.getAttribute('data-text-style-option') === current));
+    });
+  }
+
+  function closeTextStyleMenu() {
+    if (!textStyleMenu || !textStyleMenu.hasAttribute('data-open')) return;
+    textStyleMenu.removeAttribute('data-open');
+    textStyleToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function openTextStyleMenu() {
+    textStyleMenu.setAttribute('data-open', '');
+    textStyleToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  if (textStyleMenu && textStyleToggle && textStylePanel && textStyleOptions.length) {
+    markActiveOption();
+
+    textStyleToggle.addEventListener('click', function () {
+      if (textStyleMenu.hasAttribute('data-open')) closeTextStyleMenu();
+      else openTextStyleMenu();
+    });
+
+    textStyleOptions.forEach(function (option) {
+      option.addEventListener('click', function () {
+        setTextStyle(option.getAttribute('data-text-style-option'));
+        markActiveOption();
+        closeTextStyleMenu();
+        textStyleToggle.focus();
+      });
+    });
+
+    document.addEventListener('click', function (event) {
+      if (!textStyleMenu.contains(event.target)) closeTextStyleMenu();
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') closeTextStyleMenu();
+    });
+  }
+
   /* ── Print ──────────────────────────────────────────────────────────────────────────── */
 
   var printButton = document.querySelector('[data-print]');
