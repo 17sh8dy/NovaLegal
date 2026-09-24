@@ -52,7 +52,7 @@ export const products = [
     /** The product's own site. `null` until one exists; never invented. */
     url: null,
     /** Its section of the support portal. Real, and generated from Nova.Help's catalog. */
-    help: 'https://nova-help.17sh8dy.workers.dev/help/nova-site',
+    help: 'https://nova-help.shadylabs.workers.dev/help/nova-site',
     overview: [
       'Nova is the public home for the ecosystem: a place to discover the products, their shared direction, and a Nova Account.',
       'Its featured products are Nova Cut and Atlas; the site also links people to support and the Nova community.',
@@ -80,8 +80,8 @@ export const products = [
     blurb: 'The support portal for Nova products and a Nova Account sign-in surface.',
     kind: 'Support website',
     icon: 'help',
-    url: 'https://nova-help.17sh8dy.workers.dev/',
-    help: 'https://nova-help.17sh8dy.workers.dev/',
+    url: 'https://nova-help.shadylabs.workers.dev/',
+    help: 'https://nova-help.shadylabs.workers.dev/',
     overview: [
       'Nova.Help is the support portal for the Nova ecosystem. It organizes product help, routes support issues, and provides a web surface for Nova Accounts.',
       'Installed Nova products use the shared account client to connect to Nova Accounts when someone chooses to sign in.',
@@ -111,7 +111,7 @@ export const products = [
     kind: 'Desktop app & website',
     icon: 'film',
     url: null,
-    help: 'https://nova-help.17sh8dy.workers.dev/help/nova-cut',
+    help: 'https://nova-help.shadylabs.workers.dev/help/nova-cut',
     overview: [
       'Nova Cut is a professional non-linear editor for video and photos. Its shared core and rendering engine are designed for desktop today and other platforms over time.',
       'The editor keeps projects and media work on the machine, with native file access and FFmpeg-backed export in the desktop application.',
@@ -137,7 +137,7 @@ export const products = [
     hasAccount: false,
     hasBrowserStorage: true,
     url: null,
-    help: 'https://nova-help.17sh8dy.workers.dev/help/nova-site',
+    help: 'https://nova-help.shadylabs.workers.dev/help/nova-site',
     overview: [
       'NovaLegal is a static website that publishes the terms, privacy and product documents for Nova products.',
     ],
@@ -160,7 +160,7 @@ export const products = [
     kind: 'Website & desktop app',
     icon: 'globe',
     url: null,
-    help: 'https://nova-help.17sh8dy.workers.dev/help/online-earth',
+    help: 'https://nova-help.shadylabs.workers.dev/help/online-earth',
   },
   {
     id: 'replay-gg',
@@ -176,7 +176,7 @@ export const products = [
     kind: 'Desktop app',
     icon: 'record',
     url: null,
-    help: 'https://nova-help.17sh8dy.workers.dev/help/replay-gg',
+    help: 'https://nova-help.shadylabs.workers.dev/help/replay-gg',
     overview: [
       'Replay.GG captures gameplay from a Windows desktop and organizes recordings and clips in a local media library.',
       'It can record a full session or maintain an instant-replay buffer so a recent moment can be saved after it happens.',
@@ -206,7 +206,7 @@ export const products = [
     kind: 'Desktop app & website',
     icon: 'compass',
     url: null,
-    help: 'https://nova-help.17sh8dy.workers.dev/help/atlas',
+    help: 'https://nova-help.shadylabs.workers.dev/help/atlas',
     overview: [
       'Atlas is a local-first desktop assistant. It can work with files, applications, system information, voice, and its on-device memory through declared capabilities.',
       'The desktop app is designed to keep its work on the computer. An optional external model can add wider-world reasoning, but is not required for Atlas to function.',

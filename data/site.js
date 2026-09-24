@@ -50,7 +50,7 @@ export const site = {
   discord: 'https://discord.gg/XBhER9Z6EB',
 
   /** Nova.Help — the support portal. Separate from legal on purpose; see the footer. */
-  help: 'https://nova-help.17sh8dy.workers.dev/',
+  help: 'https://nova-help.shadylabs.workers.dev/',
 
   /**
    * The real, live Nova Account sign-in, creation and management pages, on the Nova website.
