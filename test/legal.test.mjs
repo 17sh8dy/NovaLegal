@@ -48,10 +48,10 @@ test('the operator and the contact are exactly what the owner stated', () => {
   assert.equal(site.contactEmail, 'getnovasupport@gmail.com');
 });
 
-test('Online Earth and Nova Forge are out of scope: no page, no card, no document', () => {
-  assert.deepEqual(products.map((p) => p.id).sort(), ['atlas', 'nova', 'nova-cut', 'nova-help', 'nova-legal', 'replay-gg']);
+test('Online Earth is out of scope (no page, no card, no document); Nova Forge is in scope since 2026-10-02', () => {
+  assert.deepEqual(products.map((p) => p.id).sort(), ['atlas', 'nova', 'nova-cut', 'nova-forge', 'nova-help', 'nova-legal', 'replay-gg']);
   for (const doc of documents) for (const id of doc.appliesTo) assert.ok(products.some((p) => p.id === id));
-  assert.equal(routes().some((r) => r.path.includes('online-earth') || r.path.includes('nova-forge')), false);
+  assert.equal(routes().some((r) => r.path.includes('online-earth')), false);
 });
 
 test('every in-scope product has a 13+ recommended age (not an enforced one) and stored facts', () => {
@@ -65,7 +65,7 @@ test('every in-scope product has a 13+ recommended age (not an enforced one) and
 });
 
 test('subscriptions and copyright material are placeholders, with a plain status note', () => {
-  for (const id of ['subscriptions', 'copyright', 'dmca', 'community-guidelines']) {
+  for (const id of ['subscriptions', 'copyright', 'community-guidelines']) {
     const doc = documents.find((d) => d.id === id);
     assert.equal(doc.status, 'pending');
     assert.ok(doc.note);

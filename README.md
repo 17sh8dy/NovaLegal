@@ -70,7 +70,7 @@ check`. Its routes (the page and its version history) are generated automaticall
 
 `data/products.js` lists every Nova product NovaLegal covers, each with a verified `data: […]`
 list of what it actually stores or sends and a `minimumAge`. A product with `inScope: false`
-(Online Earth, Nova Forge, as of 2026-09-21 — the owner's call) keeps its entry but gets no page,
+(Online Earth, as of 2026-09-21 — the owner's call; Nova Forge was brought into scope on 2026-10-02) keeps its entry but gets no page,
 card or document; bringing one into scope is deleting one line.
 
 ## Commands

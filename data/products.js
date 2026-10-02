@@ -15,8 +15,9 @@
  * has not been determined. Filling that in is a deliberate act by somebody qualified to do it.
  *
  * `inScope: false` keeps a product's data here but gives it no page, card or document. Online
- * Earth and Nova Forge are out of NovaLegal's scope by the owner's decision (2026-09-21); the
- * entries are kept, not deleted, so bringing one in is deleting one line.
+ * Earth is out of NovaLegal's scope by the owner's decision (2026-09-21); Nova Forge was brought
+ * in on 2026-10-02 at the owner's request. The entry is kept, not deleted, so bringing a product
+ * in is deleting one line.
  *
  * `minimumAge` is the owner's stated product-use age policy (2026-09-21): 13 for the six
  * in-scope products. It is a use policy, NOT a claim of legal compliance or a parental-consent
@@ -224,15 +225,38 @@ export const products = [
   },
   {
     id: 'nova-forge',
-    inScope: false,
+    // In scope since 2026-10-02, at the owner's request (was out of scope from 2026-09-21).
+    // `minimumAge: 13` follows the family policy stated for the other products; the owner has not
+    // stated one for Nova Forge specifically — confirm it.
+    minimumAge: 13,
+    hasAccount: false,
+    hasBrowserStorage: false,
+    data: [
+      "Profiles, the mod list you keep and save backups are stored in a folder on your computer. Nova Forge has no accounts, analytics or crash reporting, and sends none of that anywhere.",
+      "Nova Forge looks through a few common folders on your computer for emulators you installed. The result stays on your computer.",
+      "When you choose a link — a store, a guide, an emulator website or another Nova product — Nova Forge asks Windows to open it in your browser. Nova Forge does not include, host or download any game, mod or emulator.",
+    ],
     name: 'Nova Forge',
-    blurb: 'A desktop toolkit for organizing game configuration, mods, profiles, and saves.',
+    blurb: 'A desktop toolkit for organizing game profiles, mods, and saves.',
     kind: 'Desktop app',
     /** No dedicated icon drawn yet; falls back to the generic document glyph. */
     icon: 'draft',
     url: null,
     /** No Nova.Help section exists for it yet. */
     help: null,
+    overview: [
+      'Nova Forge helps you keep each game you play organized: a profile per game with its own folders, a list of the mods you track, and backups of your saves.',
+      'It can start an emulator you already installed with a game file you chose. It is not an emulator and includes no games.',
+    ],
+    capabilities: [
+      'Create profiles for a game, each with its own game folders, mod list and backups.',
+      'Keep a list of the mods you use, and start a mod’s own launcher if it has one.',
+      'Back up a save folder as a copy on your computer, and start an emulator you installed.',
+    ],
+    surfaces: [
+      { name: 'Nova Forge desktop app', detail: 'The Windows app for game profiles, mods and saves.' },
+    ],
+    account: 'Nova Forge has no accounts of its own and does not use a Nova Account.',
   },
 ];
 
