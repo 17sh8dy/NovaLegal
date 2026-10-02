@@ -40,6 +40,15 @@ export const document = {
       ],
     },
     {
+      id: 'no-affiliation',
+      heading: 'No ownership, no affiliation',
+      body: [
+        'Nova does not own, sell, license, host or provide any third-party game, console, emulator, mod, store or other material that Nova Forge works with or links to. Everything of that kind belongs to someone else.',
+        'Nova Forge is independently developed. It is not affiliated with, sponsored by, or endorsed by any game publisher, console maker, emulator project, store, mod site, company, organization or other rights holder. Names, titles, logos and trademarks belong to their owners and are used only to say what a profile or link is about.',
+        'Nova does not speak for any of them, and none of them is responsible for Nova Forge.',
+      ],
+    },
+    {
       id: 'your-files',
       heading: 'Your files and what you are responsible for',
       body: [
