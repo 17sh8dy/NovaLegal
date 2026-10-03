@@ -19,7 +19,7 @@
  *    tickets constantly; a page whose title is just the site name is useless in a list of tabs.
  */
 
-import { stats } from '../core/catalog.mjs';
+import { stats, documents } from '../core/catalog.mjs';
 import { site, nav, footer as footerColumns } from '../../data/site.js';
 import { esc, maybeLink } from './components.mjs';
 import { icon, MARK } from './icons.mjs';
@@ -133,6 +133,18 @@ function header(currentPath) {
   </header>`;
 }
 
+/** "10/3/26": the newest updatedDate of any published document, so it moves when a document does. */
+function lastUpdated() {
+  const newest = documents
+    .filter((doc) => doc.status === 'published' && /^\d{4}-\d{2}-\d{2}$/.test(String(doc.updatedDate ?? '')))
+    .map((doc) => doc.updatedDate)
+    .sort()
+    .pop();
+  if (!newest) return '';
+  const [y, m, d] = newest.split('-').map(Number);
+  return `${m}/${d}/${String(y).slice(2)}`;
+}
+
 function footer() {
   const columns = footerColumns
     .map(
@@ -159,6 +171,7 @@ function footer() {
         <p class="footer__note">
           ${esc(site.name)} — ${esc(site.tagline)}.
         </p>
+        ${lastUpdated() ? `<p class="footer__updated">NovaLegal last updated (${lastUpdated()})</p>` : ''}
         <!--
           Placeholders remain (subscriptions, copyright), and a reader who lands on one from a
           search engine must not mistake it for policy. Published documents say "In force" in

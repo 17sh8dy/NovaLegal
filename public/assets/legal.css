@@ -1094,6 +1094,7 @@ html:not(.js) .chips { display: none; }
   border-top: 1px solid var(--rule);
 }
 .footer__note { margin: 0; color: var(--ink-3); font-size: var(--f-small); }
+.footer__updated { margin: 0; color: var(--ink-3); font-size: var(--f-small); }
 .footer__pending {
   display: inline-flex;
   gap: .45rem;
