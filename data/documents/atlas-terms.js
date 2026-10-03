@@ -23,7 +23,7 @@ export const document = {
   appliesTo: ['atlas'],
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: PUBLISHED,
+  updatedDate: '2026-10-03',
   version: '1.0',
   versions: [],
   sections: [
@@ -40,6 +40,8 @@ export const document = {
       heading: 'What Atlas does on your computer',
       body: [
         'When you ask, Atlas can open apps and files, find files, create files and folders, control windows, and use the mouse and keyboard. Atlas acts on your computer with your permissions.',
+        'Scripts and projects. Atlas can write whole project folders (such as a small game or tool) into a folder you choose. It can also run a PowerShell script, but only after it shows you the entire script and you approve it, and it refuses scripts that would be dangerous or that reach outside the folders you have allowed. Atlas builds these projects itself, without an AI model.',
+        'Folders, engines and plugins. Atlas only works inside folders you have allowed. If you ask for a folder it cannot reach yet, it asks first, and it adds the folder only if you click “Add It?”. To offer help with game projects, Atlas checks whether Unreal Engine, Unity, Godot or Blender is installed by looking in the Windows registry and in the usual install folders. It never downloads, installs or starts them. Atlas also reads a plugins folder in its own app data. A plugin is only a description of project files, and it cannot run code.',
         'You are responsible for what you ask Atlas to do and for confirming actions it asks you to confirm. Atlas has an emergency-stop control that halts what it is doing.',
         'Atlas can capture your screen. A screenshot is shown to you; it is not sent to an AI provider.',
       ],
