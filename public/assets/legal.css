@@ -1232,3 +1232,7 @@ html:not(.js) .chips { display: none; }
 
   a { color: #000; text-decoration: underline; }
 }
+
+/* The shared "not translated yet" notice: line it up with the page content and give it room, instead
+   of sitting narrower than the cards and touching the box underneath. */
+.ni-notice { width: min(100% - 2.5rem, var(--wrap)); margin: 1.25rem auto 1.5rem; }
