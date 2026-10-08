@@ -23,7 +23,7 @@ export const document = {
   appliesTo: ['atlas'],
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: '2026-10-03',
+  updatedDate: '2026-10-07',
   version: '1.0',
   versions: [],
   sections: [
@@ -47,6 +47,36 @@ export const document = {
       ],
     },
     {
+      id: 'prohibited-uses',
+      heading: 'Prohibited uses',
+      body: [
+        'You may not use Atlas to facilitate, enable or assist in carrying out illegal or seriously harmful activity. The full list is in the [Acceptable Use Policy](/acceptable-use#prohibited-uses). For Atlas, in short, that means using Atlas to:',
+        {
+          list: [
+            '**Sexually exploit people.** Create, request, possess, distribute or facilitate child sexual abuse material or any sexual content involving minors; exploit or traffic anyone; or sexualize a real person or create intimate imagery or sexual deepfakes of them without their consent.',
+            '**Cause serious harm.** Plan or facilitate serious violent crime, terrorism or violent extremism, threats, extortion or coercive abuse, or give instructions for harming or killing people or encouraging self-harm.',
+            '**Make or traffic illegal drugs or weapons.** Manufacture illegal drugs, facilitate drug trafficking or evade drug-law enforcement; help build or use illegal weapons or carry out a violent attack; or weaponize software, devices, chemicals or other materials.',
+            '**Attack computers, accounts or data.** Create or deploy malware, ransomware, spyware or other destructive software; steal credentials or phish; get into accounts, computers, networks or systems without authorization; steal, destroy or encrypt someone else’s data; run DDoS attacks or other intentional disruption; bypass authentication or security controls without authorization; or evade detection afterwards.',
+            '**Commit fraud.** Run scams or fraudulent schemes, commit identity theft, forge documents or credentials, impersonate someone to defraud or seriously harm them, or manipulate financial systems illegally.',
+            '**Abuse privacy.** Stalk or target someone for surveillance, track someone without their knowledge or consent, dox them, obtain or expose private information without authorization, or get around privacy protections.',
+            '**Misuse Atlas itself.** Bypass an operating system’s security mechanisms, get around another application’s access controls, automate unauthorized actions against third-party services, deliberately damage another person’s computer or data, or evade restrictions a service provider has set.',
+          ],
+        },
+        'Atlas can use the mouse and keyboard, run scripts you approve, and act in other programs. The rules above apply to everything it does on your behalf, and you are responsible for what you ask it to do.',
+        'Understanding is not the same as doing. Asking Atlas to explain how ransomware works, what the risks of a dangerous substance are, or how a defence against an attack works is fine. Using Atlas to deploy ransomware, or to help make an illegal drug, is not.',
+        'Atlas declines some clear requests of this kind. That is a limited safeguard, not a promise that it catches everything, and it does not replace your responsibility to follow these terms and the law.',
+      ],
+    },
+    {
+      id: 'providers-and-rules',
+      heading: 'Models, providers and these rules',
+      body: [
+        'These restrictions apply regardless of whether Atlas uses a Nova-provided model, a locally hosted model, a third-party model, a cloud-based model, a custom provider, or another supported integration. Connecting Atlas to a different model or provider does not change them or exempt you from them.',
+        'In order: Nova’s rules apply first. Atlas’s own safeguards apply next, as far as they go. A provider’s rules then apply on top, and you are responsible for following both the provider’s policies and Nova’s terms.',
+        'Nova cannot promise that every model you connect will follow Nova’s policies. A third-party provider may also impose additional restrictions, and may refuse or limit requests that these terms would allow.',
+      ],
+    },
+    {
       id: 'providers',
       heading: 'AI providers you connect',
       body: [
@@ -65,6 +95,7 @@ export const document = {
             '**Your message**, exactly as you wrote it.',
             '**Attachments you added to that message.** For each one, its name and its location on your computer. For an image or screenshot, only that it is an image; the image itself is not sent. The text of a file is included only if you asked Atlas to read that file.',
             '**A short fixed instruction**, when Atlas could not carry out something you asked and wants the provider to write a reply. It tells the provider that Atlas is a Windows desktop assistant that does actions itself.',
+            '**A short statement of Atlas’s use rules**, in the same cases and whenever Atlas asks a provider to plan actions or work towards a goal for you. It says Atlas does not help carry out illegal or seriously harmful activity, that explaining and teaching about sensitive subjects is fine, and that this applies whichever model is in use. An ordinary question is sent without it.',
             '**A list of the actions Atlas can perform**, with your request, when Atlas asks the provider to turn a new kind of wording into a plan. The list describes Atlas’s abilities, not your data.',
             '**Web results**, when your question needs current information. See the next section.',
             '**A fixed sentence** asking for a longer answer, if you turned on “Think longer”.',
