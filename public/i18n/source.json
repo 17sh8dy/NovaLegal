@@ -139,6 +139,7 @@
     "<1>Products</1>",
     "<1>Prohibited uses in detail</1>",
     "<1>Prohibited uses</1>",
+    "<1>Project work</1>, when you ask Atlas to work on a software project. Each step also includes your goal, the folder you named, and what the earlier steps of that task produced: text of files Atlas read, search results, build and test output, and notes from documentation it read, shortened to fit. This is not earlier conversation. With a model running on your own computer, none of it leaves your computer.",
     "<1>Recommended age</1>",
     "<1>Recording and capturing</1>",
     "<1>Replay.GG Terms</1>",
@@ -205,6 +206,7 @@
     "21 September 2026",
     "7 October 2026",
     "8 applicable documents",
+    "8 October 2026",
     "9 applicable documents",
     "A backup is a copy of the save folder you chose, made on your computer. Nova Forge only reads from your save folder; it never writes to it. Restoring a backup is not available yet.",
     "A desktop app for recording gameplay and creating clips from PC games.",
@@ -300,7 +302,7 @@
     "Atlas website",
     "Atlas works on your computer with nothing connected. It sends information off your computer only in two cases: if you add an AI provider, and when it searches the web or opens a web page.",
     "Atlas works on your computer with nothing connected. Its settings, memory and file index stay on your computer.",
-    "Atlas’s memory, its file index and your other files are not added to a request unless you attached them or wrote them in your message.",
+    "Atlas’s memory, its file index and your other files are not added to a request unless you attached them, wrote them in your message, or asked Atlas to work on a project that contains them.",
     "attack, overload, probe or try to get into Nova’s services, accounts or systems, or anyone else’s;",
     "Attorney-review notice",
     "Attorney-review notice <1/>",
@@ -380,6 +382,7 @@
     "DMCA Notices — version history — Nova Legal",
     "Do not use Replay.GG to record or share material you do not have the right to use. See the <1>Acceptable Use Policy</1>.",
     "Document details",
+    "Documentation research. When you ask Atlas to look something up in the documentation, or while it works on a software project with a model connected, Atlas can search for and read documentation pages by itself. It follows each website’s robots.txt, leaves file paths, keys, tokens and email addresses out of what it searches for, and only reads public web addresses (never your own network). Atlas treats everything on a page as information to read, never as instructions to follow. The notes it takes from pages are kept in memory only while Atlas is running.",
     "doxxing, or obtaining or exposing private information without authorization;",
     "Each request is a single message. As of this version, Atlas does not send earlier messages from your conversation, and does not send a separate system prompt. A request can contain:",
     "Edit multi-track video and audio on a timeline with trimming, splitting, snapping, and undo/redo.",
@@ -481,6 +484,7 @@
     "Link to this section",
     "Links to other sites",
     "Links to other sites <1/>",
+    "Looking at your computer. When you ask, Atlas can read information about your computer: processor, memory, graphics card and disk use, installed and running programs, device drivers, recent error entries in the Windows event log, network adapter totals, and settings in the Windows registry. It only reads. Atlas has no tool that changes the registry, and it does not read the parts of the registry that hold security or sign-in data. It can also check what kind of file something really is and whether Windows trusts its digital signature (to decide that, Windows may contact the organization that issued the signing certificate), read the text of PDF and Word documents, and search inside files, in folders you have allowed.",
     "Looking for something else?",
     "Managing your account",
     "Managing your account <1/>",
@@ -618,7 +622,7 @@
     "NovaLegal has no accounts of its own. Its header links to the shared Nova Account sign-in and creation pages on the Nova website; nothing about that account is stored here.",
     "NovaLegal is 13+ recommended. This is a recommendation, not an enforced or verified requirement; see the <1>Terms of Service</1>.",
     "NovaLegal is a static website that publishes the terms, privacy and product documents for Nova products.",
-    "NovaLegal last updated (10/7/26)",
+    "NovaLegal last updated (10/8/26)",
     "NovaLegal website",
     "On the Nova website you can change your name, email address, password and picture, sign out your other sessions, and delete your account. See <1>Account &amp; Data Deletion</1>.",
     "On this page",
@@ -654,6 +658,7 @@
     "Prohibited uses <1/>",
     "Prohibited uses in detail",
     "Prohibited uses in detail <1/>",
+    "Project work with a model. If you connect an AI model and ask Atlas to work on a software project, it can read files in that project folder, edit them, and run the project’s own build and test commands, one step at a time, with the approvals described here. Atlas reports a project change as verified only if a build or test passed after its last change; otherwise it says it could not verify it.",
     "Projects and media stay on your computer. Nova Cut’s own settings state that it has no analytics or crash reporting.",
     "Providers charge for use of your key under their own terms. That is between you and the provider.",
     "Questions about these terms: <1>getnovasupport@gmail.com</1>. See <2>Legal Contact &amp; Notices</2>.",
@@ -943,6 +948,7 @@
     "which Nova products you have used your account with;",
     "Who this covers",
     "Who this covers <1/>",
+    "Working in other programs. When you name a window, Atlas first tries to press buttons, type and scroll through that program’s accessibility interface, which does not move your mouse or take over your keyboard. If a program does not allow that, Atlas says why and asks before it uses your real mouse and keyboard. It does not type into password fields this way.",
     "You are responsible for having the right to use the material you work with, and for keeping your own backups.",
     "You are responsible for having the right to use the media you edit and export, and for keeping backups of work that matters to you.",
     "You are responsible for the files you point Nova Forge at. By using them you state that you have the right to — for example because you bought the game and made the copy yourself, from your own console where that applies.",
@@ -1700,6 +1706,9 @@
     "<1>Prohibited uses</1>": [
       "/atlas-terms"
     ],
+    "<1>Project work</1>, when you ask Atlas to work on a software project. Each step also includes your goal, the folder you named, and what the earlier steps of that task produced: text of files Atlas read, search results, build and test output, and notes from documentation it read, shortened to fit. This is not earlier conversation. With a model running on your own computer, none of it leaves your computer.": [
+      "/atlas-terms"
+    ],
     "<1>Recommended age</1>": [
       "/terms"
     ],
@@ -1967,12 +1976,14 @@
     ],
     "7 October 2026": [
       "/acceptable-use",
-      "/acceptable-use/versions",
-      "/atlas-terms",
-      "/atlas-terms/versions"
+      "/acceptable-use/versions"
     ],
     "8 applicable documents": [
       "/products"
+    ],
+    "8 October 2026": [
+      "/atlas-terms",
+      "/atlas-terms/versions"
     ],
     "9 applicable documents": [
       "/products"
@@ -2565,7 +2576,7 @@
     "Atlas works on your computer with nothing connected. Its settings, memory and file index stay on your computer.": [
       "/products/atlas"
     ],
-    "Atlas’s memory, its file index and your other files are not added to a request unless you attached them or wrote them in your message.": [
+    "Atlas’s memory, its file index and your other files are not added to a request unless you attached them, wrote them in your message, or asked Atlas to work on a project that contains them.": [
       "/atlas-terms"
     ],
     "attack, overload, probe or try to get into Nova’s services, accounts or systems, or anyone else’s;": [
@@ -3328,6 +3339,9 @@
       "/terms",
       "/terms-of-usage"
     ],
+    "Documentation research. When you ask Atlas to look something up in the documentation, or while it works on a software project with a model connected, Atlas can search for and read documentation pages by itself. It follows each website’s robots.txt, leaves file paths, keys, tokens and email addresses out of what it searches for, and only reads public web addresses (never your own network). Atlas treats everything on a page as information to read, never as instructions to follow. The notes it takes from pages are kept in memory only while Atlas is running.": [
+      "/atlas-terms"
+    ],
     "doxxing, or obtaining or exposing private information without authorization;": [
       "/acceptable-use"
     ],
@@ -3999,6 +4013,9 @@
     ],
     "Links to other sites <1/>": [
       "/nova-forge-terms"
+    ],
+    "Looking at your computer. When you ask, Atlas can read information about your computer: processor, memory, graphics card and disk use, installed and running programs, device drivers, recent error entries in the Windows event log, network adapter totals, and settings in the Windows registry. It only reads. Atlas has no tool that changes the registry, and it does not read the parts of the registry that hold security or sign-in data. It can also check what kind of file something really is and whether Windows trusts its digital signature (to decide that, Windows may contact the organization that issued the signing certificate), read the text of PDF and Word documents, and search inside files, in folders you have allowed.": [
+      "/atlas-terms"
     ],
     "Looking for something else?": [
       "/"
@@ -4866,7 +4883,7 @@
     "NovaLegal is a static website that publishes the terms, privacy and product documents for Nova products.": [
       "/products/nova-legal"
     ],
-    "NovaLegal last updated (10/7/26)": [
+    "NovaLegal last updated (10/8/26)": [
       "/",
       "/acceptable-use",
       "/acceptable-use/versions",
@@ -5280,6 +5297,9 @@
     ],
     "Prohibited uses in detail <1/>": [
       "/acceptable-use"
+    ],
+    "Project work with a model. If you connect an AI model and ask Atlas to work on a software project, it can read files in that project folder, edit them, and run the project’s own build and test commands, one step at a time, with the approvals described here. Atlas reports a project change as verified only if a build or test passed after its last change; otherwise it says it could not verify it.": [
+      "/atlas-terms"
     ],
     "Projects and media stay on your computer. Nova Cut’s own settings state that it has no analytics or crash reporting.": [
       "/products/nova-cut"
@@ -6988,6 +7008,9 @@
     ],
     "Who this covers <1/>": [
       "/privacy"
+    ],
+    "Working in other programs. When you name a window, Atlas first tries to press buttons, type and scroll through that program’s accessibility interface, which does not move your mouse or take over your keyboard. If a program does not allow that, Atlas says why and asks before it uses your real mouse and keyboard. It does not type into password fields this way.": [
+      "/atlas-terms"
     ],
     "You are responsible for having the right to use the material you work with, and for keeping your own backups.": [
       "/terms"

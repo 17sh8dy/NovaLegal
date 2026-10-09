@@ -1,7 +1,9 @@
 /**
  * Atlas Terms — the product-specific terms for Atlas (the app and its website).
  *
- * EVERY "what is sent" statement here comes from tracing the actual request code on 2026-09-21
+ * EVERY "what is sent" statement here comes from tracing the actual request code on 2026-09-21 (and, for project work,
+ * documentation research and what Atlas reads on your computer, on 2026-10-08 — Atlas 1.0.8: packages/engine/src/agent/loop.ts,
+ * skills/docs-skills.ts, web/untrusted.ts, skills/pc-health-skills.ts, skills/file-intel-skills.ts, and the Rust side in pc_health.rs / web.rs)
  * (docs/FACT-SHEET.md §Atlas request trace):
  *   - cloud requests are built in packages/engine/src/engine.ts (converse / planWithAI /
  *     converseWithProvider) and sent by apps/desktop/src-tauri/src/cloud_intelligence.rs as ONE
@@ -23,7 +25,7 @@ export const document = {
   appliesTo: ['atlas'],
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: '2026-10-07',
+  updatedDate: '2026-10-08',
   version: '1.0',
   versions: [],
   sections: [
@@ -41,6 +43,9 @@ export const document = {
       body: [
         'When you ask, Atlas can open apps and files, find files, create files and folders, control windows, and use the mouse and keyboard. Atlas acts on your computer with your permissions.',
         'Scripts and projects. Atlas can write whole project folders (such as a small game or tool) into a folder you choose. It can also run a PowerShell script, but only after it shows you the entire script and you approve it, and it refuses scripts that would be dangerous or that reach outside the folders you have allowed. Atlas builds these projects itself, without an AI model.',
+        'Project work with a model. If you connect an AI model and ask Atlas to work on a software project, it can read files in that project folder, edit them, and run the project’s own build and test commands, one step at a time, with the approvals described here. Atlas reports a project change as verified only if a build or test passed after its last change; otherwise it says it could not verify it.',
+        'Looking at your computer. When you ask, Atlas can read information about your computer: processor, memory, graphics card and disk use, installed and running programs, device drivers, recent error entries in the Windows event log, network adapter totals, and settings in the Windows registry. It only reads. Atlas has no tool that changes the registry, and it does not read the parts of the registry that hold security or sign-in data. It can also check what kind of file something really is and whether Windows trusts its digital signature (to decide that, Windows may contact the organization that issued the signing certificate), read the text of PDF and Word documents, and search inside files, in folders you have allowed.',
+        'Working in other programs. When you name a window, Atlas first tries to press buttons, type and scroll through that program’s accessibility interface, which does not move your mouse or take over your keyboard. If a program does not allow that, Atlas says why and asks before it uses your real mouse and keyboard. It does not type into password fields this way.',
         'Folders, engines and plugins. Atlas only works inside folders you have allowed. If you ask for a folder it cannot reach yet, it asks first, and it adds the folder only if you click “Add It?”. To offer help with game projects, Atlas checks whether Unreal Engine, Unity, Godot or Blender is installed by looking in the Windows registry and in the usual install folders. It never downloads, installs or starts them. Atlas also reads a plugins folder in its own app data. A plugin is only a description of project files, and it cannot run code.',
         'You are responsible for what you ask Atlas to do and for confirming actions it asks you to confirm. Atlas has an emergency-stop control that halts what it is doing.',
         'Atlas can capture your screen. A screenshot is shown to you; it is not sent to an AI provider.',
@@ -99,10 +104,11 @@ export const document = {
             '**A list of the actions Atlas can perform**, with your request, when Atlas asks the provider to turn a new kind of wording into a plan. The list describes Atlas’s abilities, not your data.',
             '**Web results**, when your question needs current information. See the next section.',
             '**A fixed sentence** asking for a longer answer, if you turned on “Think longer”.',
+            '**Project work**, when you ask Atlas to work on a software project. Each step also includes your goal, the folder you named, and what the earlier steps of that task produced: text of files Atlas read, search results, build and test output, and notes from documentation it read, shortened to fit. This is not earlier conversation. With a model running on your own computer, none of it leaves your computer.',
           ],
         },
         'The request also carries the model name you chose, and your API key so the provider can accept it. Testing a connection sends a fixed one-line test message.',
-        'Atlas’s memory, its file index and your other files are not added to a request unless you attached them or wrote them in your message.',
+        'Atlas’s memory, its file index and your other files are not added to a request unless you attached them, wrote them in your message, or asked Atlas to work on a project that contains them.',
       ],
     },
     {
@@ -111,6 +117,7 @@ export const document = {
       body: [
         'Atlas can search the web when you ask, and it can also do so by itself when a question looks like it needs current information. To search, Atlas sends your search query, which is made from your message, to a search service. Atlas can use DuckDuckGo, Tavily (which needs your own Tavily API key, stored in Windows Credential Manager) and Wikipedia.',
         'Atlas may also open pages from the results and read their text. Those requests go from your computer to the website in question, which can see your IP address and that the request came from Atlas.',
+        'Documentation research. When you ask Atlas to look something up in the documentation, or while it works on a software project with a model connected, Atlas can search for and read documentation pages by itself. It follows each website’s robots.txt, leaves file paths, keys, tokens and email addresses out of what it searches for, and only reads public web addresses (never your own network). Atlas treats everything on a page as information to read, never as instructions to follow. The notes it takes from pages are kept in memory only while Atlas is running.',
         'If an AI provider is connected, Atlas then sends the provider the titles, website names, dates and text excerpts of the results and pages it read, with your question, so the provider can write an answer. Do not put private information in a message you expect to trigger a web search.',
       ],
     },
