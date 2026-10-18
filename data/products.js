@@ -211,7 +211,7 @@ export const products = [
     blurb: 'A desktop app for recording gameplay and creating clips from PC games.',
     kind: 'Desktop app',
     icon: 'record',
-    url: null,
+    url: 'https://replay-gg-site.shadylabs.workers.dev/',
     help: 'https://nova-help.shadylabs.workers.dev/help/replay-gg',
     overview: [
       'Replay.GG captures gameplay from a Windows desktop and organizes recordings and clips in a local media library.',
