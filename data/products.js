@@ -236,6 +236,8 @@ export const products = [
       "Atlas works on your computer with nothing connected. Its settings, memory and file index stay on your computer.",
       "Anything you send to an AI provider you add, or to a web search service, leaves your computer. Atlas Terms describes exactly what is sent.",
       "API keys you enter are stored in Windows Credential Manager on your computer, not on a Nova server.",
+      "Atlas keeps counts (not content) of what it has done on your computer for its Stats page. They are not sent anywhere.",
+      "Updates are checked against Atlas's release key before they are installed.",
     ],
     name: 'Atlas',
     blurb: 'A local-first desktop assistant that helps operate a computer.',

@@ -13,6 +13,8 @@
  *     (`askWithContext` ← `describeForEngine`): attachment names + locations, and file text only
  *     for a file the person explicitly asked Atlas to read; images are noted as "an image" only;
  *   - web evidence comes from packages/engine/src/web/evidence.ts `buildEvidencePrompt`.
+ * Atlas 2.0 (2026-10-18) additions come from docs/CLOUD-SAFETY-AND-STATS.md, docs/SECURITY-HARDENING-2.0.md and
+ * docs/MODEL-GATEWAY.md in the Atlas repo, and from engine.ts `identityFacts` / `styled`.
  * If any of that code changes, THIS DOCUMENT MUST CHANGE WITH IT.
  */
 import { PUBLISHED } from './_common.js';
@@ -25,8 +27,8 @@ export const document = {
   appliesTo: ['atlas'],
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: '2026-10-08',
-  version: '1.0',
+  updatedDate: '2026-10-18',
+  version: '2.0',
   versions: [],
   sections: [
     {
@@ -49,6 +51,8 @@ export const document = {
         'Folders, engines and plugins. Atlas only works inside folders you have allowed. If you ask for a folder it cannot reach yet, it asks first, and it adds the folder only if you click “Add It?”. To offer help with game projects, Atlas checks whether Unreal Engine, Unity, Godot or Blender is installed by looking in the Windows registry and in the usual install folders. It never downloads, installs or starts them. Atlas also reads a plugins folder in its own app data. A plugin is only a description of project files, and it cannot run code.',
         'You are responsible for what you ask Atlas to do and for confirming actions it asks you to confirm. Atlas has an emergency-stop control that halts what it is doing.',
         'Atlas can capture your screen. A screenshot is shown to you; it is not sent to an AI provider.',
+        'Checking its own work. After Atlas creates, deletes or changes something, it can read the result back and tell you whether it was confirmed. Longer jobs run as step-by-step tasks that you can see in Settings, stop with the emergency-stop key, and pick up again; Atlas asks before repeating a step whose outcome it could not confirm.',
+        'Atlas’s own files are protected. Atlas’s file tools refuse to read or change the folders where Atlas keeps its settings, downloaded updates and the program itself. Changes that widen what Atlas may reach or trust (a folder, a saved key, a cloud provider’s address, the search address, the stop key) are confirmed in a Windows box that Atlas’s own screen cannot answer for you. This is a safeguard against mistakes and against a misbehaving page; it is not a promise that nothing can ever go wrong on a computer you share with other programs.',
       ],
     },
     {
@@ -87,7 +91,9 @@ export const document = {
       body: [
         'You can connect a cloud AI provider to Atlas. The options today are OpenAI, Anthropic, Google Gemini, Kimi (Moonshot AI), or a custom provider whose address you enter. Atlas can also use a model running on your own computer.',
         'You provide your own API key. Atlas stores it in Windows Credential Manager on your computer. Nova does not store it on a Nova server. Requests go from Atlas on your computer directly to the provider you chose; they do not pass through a Nova server.',
+        'Atlas sends a request only to the address saved for the provider you chose, and does not follow redirects to another address. Atlas holds that address itself, not the page you see. Adding a provider, changing its address or saving a key is confirmed in a Windows box.',
         'Providers charge for use of your key under their own terms. That is between you and the provider.',
+        'Spending limits. Atlas can count your requests and tokens per provider, let you set monthly caps, and pause a provider when it says your account is out of money or when requests arrive in a runaway loop. Token counts are the provider’s own where it reports them, and an estimate otherwise. Atlas never switches to a different provider by itself, and resuming a paused provider or raising a cap is confirmed in a Windows box. These are safeguards, not a guarantee against charges: the provider’s own limits and bill are what count.',
       ],
     },
     {
@@ -103,10 +109,13 @@ export const document = {
             '**A short statement of Atlas’s use rules**, in the same cases and whenever Atlas asks a provider to plan actions or work towards a goal for you. It says Atlas does not help carry out illegal or seriously harmful activity, that explaining and teaching about sensitive subjects is fine, and that this applies whichever model is in use. An ordinary question is sent without it.',
             '**A list of the actions Atlas can perform**, with your request, when Atlas asks the provider to turn a new kind of wording into a plan. The list describes Atlas’s abilities, not your data.',
             '**Web results**, when your question needs current information. See the next section.',
+            '**A short statement of who Atlas is**, with ordinary conversation and with questions about Atlas itself (for example “what can you do”). It says Atlas is a Windows desktop assistant that carries out actions itself, roughly how many tools it has, and that what it remembers is kept on your computer. It contains no memory, file names or system readings. Your name is added only when the model runs on your own computer, never for a cloud provider.',
+            '**A style note**, if you chose a way for Atlas to talk to you in Settings.',
             '**A fixed sentence** asking for a longer answer, if you turned on “Think longer”.',
             '**Project work**, when you ask Atlas to work on a software project. Each step also includes your goal, the folder you named, and what the earlier steps of that task produced: text of files Atlas read, search results, build and test output, and notes from documentation it read, shortened to fit. This is not earlier conversation. With a model running on your own computer, none of it leaves your computer.',
           ],
         },
+        'Ordinary conversation (greetings, thanks and small talk) goes to the model you connected when that model can hold a conversation; if it cannot be reached Atlas answers by itself. If a model supports tool calling or answers held to a format, the list of actions is sent in that form instead of as plain text, limited to the few abilities that fit your request. It describes Atlas’s abilities, not your data, and you can switch off cloud planning of actions in Settings.',
         'The request also carries the model name you chose, and your API key so the provider can accept it. Testing a connection sends a fixed one-line test message.',
         'Atlas’s memory, its file index and your other files are not added to a request unless you attached them, wrote them in your message, or asked Atlas to work on a project that contains them.',
       ],
@@ -115,10 +124,19 @@ export const document = {
       id: 'web',
       heading: 'Web search and web pages',
       body: [
+        'Your own search address. In Settings you can give Atlas the address of a SearXNG search server. When you do, Atlas sends your search query there first, and uses its built-in services only if that server does not answer. You are responsible for the server you point Atlas at. An address on the internet must be https, an address on your own network asks you first, and Atlas never follows it to a different address.',
         'Atlas can search the web when you ask, and it can also do so by itself when a question looks like it needs current information. To search, Atlas sends your search query, which is made from your message, to a search service. Atlas can use DuckDuckGo, Tavily (which needs your own Tavily API key, stored in Windows Credential Manager) and Wikipedia.',
         'Atlas may also open pages from the results and read their text. Those requests go from your computer to the website in question, which can see your IP address and that the request came from Atlas.',
         'Documentation research. When you ask Atlas to look something up in the documentation, or while it works on a software project with a model connected, Atlas can search for and read documentation pages by itself. It follows each website’s robots.txt, leaves file paths, keys, tokens and email addresses out of what it searches for, and only reads public web addresses (never your own network). Atlas treats everything on a page as information to read, never as instructions to follow. The notes it takes from pages are kept in memory only while Atlas is running.',
         'If an AI provider is connected, Atlas then sends the provider the titles, website names, dates and text excerpts of the results and pages it read, with your question, so the provider can write an answer. Do not put private information in a message you expect to trigger a web search.',
+      ],
+    },
+    {
+      id: 'statistics',
+      heading: 'Statistics on your computer',
+      body: [
+        'Atlas keeps a small set of counts on your computer so the Stats page in Settings can show you what it has done: how many requests went to each model, estimated tokens, searches, actions done or failed, stops and time open. They are counts, never the content of your messages, files, searches or paths. They are stored in a file on your computer, Atlas has no way to send them anywhere, and they are not tied to a Nova Account. “Reset statistics” in Settings, or deleting Atlas’s data folder, clears them.',
+        'Keeping the counts on your computer does not change what a cloud provider you connect receives; see above.',
       ],
     },
     {
@@ -140,7 +158,8 @@ export const document = {
       heading: 'Account and updates',
       body: [
         'A Nova Account is optional and does not unlock Atlas features. Signing in links your Nova identity to Atlas without uploading Atlas’s data from your computer.',
-        'Atlas checks GitHub’s release hosting for newer versions.',
+        'Your Nova sign-in on this computer is kept in Windows Credential Manager, and Atlas moves an older saved sign-in there the first time it starts.',
+        'Atlas checks GitHub’s release hosting for newer versions. From Atlas 2.0, an update must carry a digital signature from Atlas’s release key and match the installer’s checksum, and Atlas will only look for updates in its own project’s releases. An update that does not verify is not installed. Atlas 2.0 is the first version that checks this, so installing it is the one step where that check cannot protect you; after that, it applies to every update.',
       ],
     },
     {
