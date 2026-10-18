@@ -99,6 +99,41 @@ export const products = [
     account: 'The complete support path is available to guests. Signing in connects an optional Nova Account; it does not unlock product features.',
   },
   {
+    id: 'nova-review',
+    // Added 2026-10-18. Facts below are from reading Nova.Review's code (worker/index.ts, migrations/).
+    minimumAge: 13,
+    hasAccount: true,
+    hasBrowserStorage: true,
+    data: [
+      "A review or suggestion stores its text, the product it is about, a rating (reviews), the date, and who wrote it. Reviews and suggestions are public. A guest may type any name, or none. Nova Account holders choose whether their Nova display name (and profile picture) or \"Anonymous\" is shown.",
+      "Guests can post without an account. To limit duplicates and abuse, Nova.Review keeps a one-way hash of the guest's IP address with each guest post, vote and report. The hash is never shown and the IP address itself is not stored. Guests cannot edit or delete a post afterwards.",
+      "Signing in is optional and uses a Nova Account. Nova.Review receives your account ID, your display name and, if you approve it, your profile picture, never your email address. It keeps your ID privately, a copy of your name and picture, your notification and name preferences, your notifications, and any notice that a moderator removed something of yours.",
+      "Reports are stored with the reason, an optional short note and a private key for the person who sent it, and are read only by the Nova.Review moderator. Reporting never removes anything by itself.",
+      "Guest posting, voting and reporting load Cloudflare Turnstile, a third-party check that you are not a bot. Nova.Review sets no cookies and uses no analytics; signing in saves a token in your browser's local storage.",
+      "Signed-in people can edit or delete their own reviews and suggestions, and delete everything they have posted on Nova.Review from their account page. A moderator can remove content, with an optional reason shown to its author.",
+    ],
+    name: 'Nova.Review',
+    blurb: 'Reviews and suggestions for Nova products.',
+    kind: 'Website',
+    icon: 'people',
+    url: 'https://nova-review.shadylabs.workers.dev/',
+    help: 'https://nova-help.shadylabs.workers.dev/help/nova-review',
+    overview: [
+      'Nova.Review is where people read and write reviews and suggestions for the public Nova products, and vote on suggestions.',
+      'Anyone can read and post as a guest. A Nova Account is optional and adds editing, deleting, a history, notifications and the choice of how your name is shown.',
+    ],
+    capabilities: [
+      'Read reviews and ratings for Nova products, and visit each product.',
+      'Write reviews and suggestions, and vote on suggestions, as a guest or with a Nova Account.',
+      'With a Nova Account: edit or delete your posts, see suggestion status, choose Anonymous, and turn notifications on or off.',
+      'Report a review or suggestion for a moderator to look at.',
+    ],
+    surfaces: [
+      { name: 'Nova.Review website', detail: 'Reviews, suggestions, votes and the account page.' },
+    ],
+    account: 'A Nova Account is optional. Guests can read, review, suggest and vote; signing in adds managing what you posted.',
+  },
+  {
     id: 'nova-cut',
     minimumAge: 13,
     hasAccount: true,

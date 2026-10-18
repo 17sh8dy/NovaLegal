@@ -49,7 +49,7 @@ test('the operator and the contact are exactly what the owner stated', () => {
 });
 
 test('Online Earth is out of scope (no page, no card, no document); Nova Forge is in scope since 2026-10-02', () => {
-  assert.deepEqual(products.map((p) => p.id).sort(), ['atlas', 'nova', 'nova-cut', 'nova-forge', 'nova-help', 'nova-legal', 'replay-gg']);
+  assert.deepEqual(products.map((p) => p.id).sort(), ['atlas', 'nova', 'nova-cut', 'nova-forge', 'nova-help', 'nova-legal', 'nova-review', 'replay-gg']);
   for (const doc of documents) for (const id of doc.appliesTo) assert.ok(products.some((p) => p.id === id));
   assert.equal(routes().some((r) => r.path.includes('online-earth')), false);
 });
