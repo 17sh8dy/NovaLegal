@@ -78,7 +78,7 @@ export const document = {
         'Nova Cut, Replay.GG and Atlas are desktop apps. Their projects, recordings, clips, files, settings and, for Atlas, its memory and file index, are stored on your computer. Nova does not receive them.',
         'Nova Cut’s own settings state that it has no analytics or crash reporting. No analytics or crash-reporting code was found in Replay.GG or Atlas either.',
         'Replay.GG can record system audio, a microphone and a webcam if you turn those options on. Nova Cut and Replay.GG connect to a Nova service only when you sign in to a Nova Account.',
-        'Replay.GG and Atlas contact GitHub’s release hosting to check for a newer version. An update is downloaded only when you choose to.',
+        'Nova Cut, Replay.GG and Atlas contact GitHub’s release hosting to check for a newer version. An update is downloaded only when you choose to. In Nova Cut you can turn the automatic check off in Settings.',
       ],
     },
     {

@@ -1,7 +1,7 @@
 /**
  * Nova Cut Terms — short, and only what the code supports.
  * Verified 2026-09-21: projects and media stay on the machine; Nova Cut's own settings say it has
- * no analytics or crash reporting; automatic update checking is "planned", not live; Nova Account
+ * no analytics or crash reporting; update checks go to GitHub releases (added after this was written; the privacy policy now says so); Nova Account
  * is optional.
  *
  * ⚠ OPEN QUESTION FOR THE OWNER: NovaCut/package.json says "license": "MIT" but the repository

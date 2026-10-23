@@ -141,6 +141,7 @@ export const products = [
     data: [
       "Projects and media stay on your computer. Nova Cut’s own settings state that it has no analytics or crash reporting.",
       "The feature that connects Nova Cut to a Nova service is the optional Nova Account sign-in.",
+      "Nova Cut checks GitHub’s release hosting for a newer version (this can be turned off in Settings), and downloads an update only when you choose to.",
     ],
     name: 'Nova Cut',
     blurb: 'A desktop-first non-linear video and photo editor.',
