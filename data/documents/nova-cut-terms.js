@@ -18,7 +18,7 @@ export const document = {
   appliesTo: ['nova-cut'],
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: PUBLISHED,
+  updatedDate: '2026-10-22',
   version: '1.0',
   versions: [],
   sections: [
