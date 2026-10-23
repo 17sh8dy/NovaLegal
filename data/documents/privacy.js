@@ -58,7 +58,7 @@ export const document = {
             'one small settings document per product, if a product saves its settings to your account.',
           ],
         },
-        'Nova does not currently verify email addresses by sending email. Google sign-in is planned and is not available yet.',
+        'Nova does not currently verify email addresses by sending email. If you sign in with Google, Nova receives your Google account ID, your email address, whether Google has confirmed it, and your name, and links them to your Nova Account.',
         'The account is shared across Nova products, so signing in to one Nova product uses the same account as the others. Details are in the [Nova Account Terms](/account).',
       ],
     },

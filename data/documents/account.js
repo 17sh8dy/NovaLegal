@@ -20,7 +20,7 @@ export const document = {
   appliesTo: ACCOUNT_PRODUCTS,
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: PUBLISHED,
+  updatedDate: '2026-10-22',
   version: '1.0',
   versions: [],
   sections: [
@@ -28,7 +28,7 @@ export const document = {
       id: 'optional',
       heading: 'A Nova Account is optional',
       body: [
-        'A Nova Account is one sign-in that works across Nova products: Nova, Nova.Help, Nova Cut, Replay.GG and Atlas. It is optional. You can use every product, and ask for support, without one, and an account does not unlock product features today.',
+        'A Nova Account is one sign-in that works across Nova products: Nova, Nova.Help, Nova.Review, Nova Cut, Replay.GG and Atlas. You can sign in with an email address and password, or with Google on the Nova and Nova.Help websites. It is optional. You can use every product, and ask for support, without one, and an account does not unlock product features today.',
         'A paid plan may one day require an account. No paid plan is offered today. See [Subscriptions](/subscriptions).',
       ],
     },
@@ -67,7 +67,6 @@ export const document = {
       body: [
         {
           list: [
-            '**Google sign-in** is coming soon. It is not available today.',
             '**Password reset** is not currently available. There is no email service connected to send a reset link, so a request for one does not send anything. If you are locked out, contact {{contact}}.',
             '**Two-step verification** is not available.',
           ],

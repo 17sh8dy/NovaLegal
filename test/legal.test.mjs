@@ -83,9 +83,10 @@ test('terms-of-usage is a pointer to the canonical Terms, not a second set of te
   assert.ok(doc.sections[0].body.join(' ').includes('(/terms)'));
 });
 
-test('documents say what is not live: Google sign-in, password reset, payments', () => {
+test('documents say what is live and what is not: Google sign-in, password reset, payments', () => {
   const account = textOf(rendered().find((r) => r.path === '/account').html);
-  assert.match(account, /Google sign-in is coming soon/);
+  assert.match(account, /or with Google on the Nova and Nova\.Help websites/);
+  assert.doesNotMatch(account, /Google sign-in is coming soon/);
   assert.match(account, /Password reset is not currently available/);
   assert.match(account, /A Nova Account is optional/);
   assert.doesNotMatch(account, /Nova Accounts? (?:is|are) (?:not available|unavailable)/i);

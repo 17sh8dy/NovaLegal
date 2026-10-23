@@ -16,7 +16,7 @@ export const document = {
   appliesTo: ALL_PRODUCTS,
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: PUBLISHED,
+  updatedDate: '2026-10-22',
   version: '1.0',
   versions: [],
   sections: [
@@ -32,7 +32,7 @@ export const document = {
             'Profile pictures are checked by their actual file contents, and only small PNG, JPEG or WebP images are accepted.',
             'Sign-in and password-related requests are rate limited.',
             'API keys you enter in Atlas are stored in Windows Credential Manager on your computer, and are read by Atlas’s native side rather than by its web interface.',
-            'The Nova websites load no third-party scripts.',
+            'The Nova websites load no third-party scripts, except Nova.Review, which loads Cloudflare Turnstile (a bot check) when a guest posts, votes or reports.',
           ],
         },
       ],
