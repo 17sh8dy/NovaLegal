@@ -15,7 +15,7 @@ export const document = {
   appliesTo: ALL_PRODUCTS,
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: '2026-10-22',
+  updatedDate: '2026-11-12',
   version: '1.0',
   versions: [],
   sections: [
@@ -23,7 +23,7 @@ export const document = {
       id: 'who',
       heading: 'Who this covers',
       body: [
-        'This policy covers Nova, Nova.Help, NovaLegal, Nova Cut (the app and its website), Replay.GG, and Atlas (the app and its website). Nova is owned and operated by 17 Shady, an individual.',
+        'This policy covers Nova, Nova.Help, NovaLegal, Nova Cut (the app and its website), Replay.GG, Atlas (the app and its website), and Vexa (the browser and its website). Nova is owned and operated by 17 Shady, an individual.',
         'Nova collects as little as each product needs. What that is differs by product, so this policy separates what Nova-wide services hold from what each product does on its own.',
       ],
     },
@@ -33,11 +33,12 @@ export const document = {
       body: [
         {
           list: [
-            '**Nova, NovaLegal and the Nova Cut and Atlas websites** have no analytics, no advertising and no third-party scripts. They store only your choices (such as theme and language) in your browser.',
+            '**Nova, NovaLegal and the Nova Cut, Atlas and Vexa websites** have no analytics, no advertising and no third-party scripts. They store only your choices (such as theme and language) in your browser.',
             '**A Nova Account** is optional. If you create one, Nova stores the details listed in “Nova Account information” below.',
             '**Nova.Help** stores the support tickets you send it.',
             '**Nova Cut, Replay.GG and Atlas** keep your projects, recordings, files and settings on your computer.',
             '**Atlas** sends information to a third party only if you add an AI provider or use web search. See “Atlas and third-party services”.',
+            '**Vexa** is a web browser: what you browse, and the browsing data it stores, stay between your computer and the websites you visit. Nova receives none of it. See “Vexa”.',
           ],
         },
       ],
@@ -87,6 +88,16 @@ export const document = {
       body: [
         'Atlas works on your computer with nothing connected. It sends information off your computer only in two cases: if you add an AI provider, and when it searches the web or opens a web page.',
         'What Atlas sends in those cases is described in [Atlas Terms](/atlas-terms). Those services keep, log and use what they receive under their own terms and privacy policies, which Nova does not control. Any API key you enter is stored in Windows Credential Manager on your computer, not on a Nova server.',
+      ],
+    },
+    {
+      id: 'vexa',
+      heading: 'Vexa',
+      body: [
+        'Vexa is a web browser. Your history, bookmarks, open tabs, downloads list, settings, saved passwords, saved contact details, and the cookies, site data and cache that websites store, are kept in a profile folder on your computer. Nova does not receive them. No analytics, crash-reporting, update-check or account code was found in Vexa.',
+        'The websites you visit, and the search engine you choose (DuckDuckGo by default), receive what any browser sends them, such as your IP address, the pages you request and the cookies they set. What they do with it is governed by their own policies, which Nova does not control.',
+        'Saved passwords are encrypted with your operating system’s keystore. If you turn on sync, Vexa writes one file, encrypted with a passphrase you choose, to a folder you pick; whoever stores that folder (for example your cloud storage provider) holds only the encrypted file.',
+        'More detail, including private windows, cookie blocking and location, is in the [Vexa Terms](/vexa-terms).',
       ],
     },
     {
@@ -141,5 +152,5 @@ export const document = {
       ],
     },
   ],
-  related: ['cookies', 'data', 'security', 'account-deletion', 'account', 'atlas-terms', 'terms'],
+  related: ['cookies', 'data', 'security', 'account-deletion', 'account', 'atlas-terms', 'vexa-terms', 'terms'],
 };

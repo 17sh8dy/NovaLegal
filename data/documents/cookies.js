@@ -19,7 +19,7 @@ export const document = {
   appliesTo: BROWSER_PRODUCTS,
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: '2026-10-22',
+  updatedDate: '2026-11-12',
   version: '1.0',
   versions: [],
   sections: [
@@ -60,6 +60,15 @@ export const document = {
       ],
     },
     {
+      id: 'vexa',
+      heading: 'Vexa, the browser',
+      body: [
+        'The Vexa website sets no cookies and stores nothing in your browser.',
+        'Vexa itself is a web browser, so it stores the cookies and site data that the websites you visit set, in its profile folder on your computer. Nova does not set, read or receive them. By default Vexa blocks third-party cookies (cookies sent to or set by a site other than the one in the address bar). Private windows keep cookies only in memory and discard them when the window closes.',
+        'You can clear cookies, site data and cache from Vexa’s settings, or have them cleared every time Vexa closes. See the [Vexa Terms](/vexa-terms).',
+      ],
+    },
+    {
       id: 'control',
       heading: 'Controlling them',
       body: [
@@ -72,5 +81,5 @@ export const document = {
       body: ['See the [Privacy Policy](/privacy). Contact: {{contact}}.'],
     },
   ],
-  related: ['privacy'],
+  related: ['privacy', 'vexa-terms'],
 };

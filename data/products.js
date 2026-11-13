@@ -296,6 +296,45 @@ export const products = [
     ],
     account: 'Nova Forge has no accounts of its own and does not use a Nova Account.',
   },
+  {
+    id: 'vexa',
+    // Added 2026-11-12 at the owner's request. Facts verified by reading Vexa 0.5.0 (D:/Dev/Vexa/src):
+    // no network client of its own, no analytics, crash reporting, update check or accounts; all
+    // data is JSON in the profile folder; passwords via Electron safeStorage; sync = one encrypted
+    // file in a folder the user picks (scrypt + AES-256-GCM); defaults: DNT + GPC on, third-party
+    // cookies blocked, DuckDuckGo search, address-bar suggestions from local history/bookmarks only.
+    minimumAge: 13,
+    hasAccount: false,
+    hasBrowserStorage: true,
+    data: [
+      "Vexa keeps your history, bookmarks, open tabs, downloads list, settings, and the cookies, site data and cache that websites store, in a profile folder on your computer. Vexa has no analytics, crash reporting or accounts, and sends none of that to Nova.",
+      "Saved passwords are encrypted with your operating system’s keystore before they are written to disk. If the system cannot encrypt them, Vexa does not save them.",
+      "Sync is optional and uses no Nova server: Vexa writes one file, encrypted with a passphrase you choose, to a folder you pick (for example one your own cloud storage app keeps in sync).",
+      "Websites you visit, and the search engine you choose (DuckDuckGo by default), receive what any browser sends them. By default Vexa sends Do Not Track and Global Privacy Control signals and blocks third-party cookies.",
+      "The Vexa website sets no cookies, stores nothing in your browser and uses no analytics.",
+    ],
+    name: 'Vexa',
+    blurb: 'Nova’s Chromium-based desktop web browser.',
+    kind: 'Desktop app & website',
+    icon: 'globe',
+    url: 'https://vexa.shadylabs.workers.dev/',
+    /** No Nova.Help section exists for it yet. */
+    help: null,
+    overview: [
+      'Vexa is Nova’s desktop web browser. It runs on the Chromium engine, with its own interface and privacy-first default settings.',
+      'What it stores stays in a profile folder on your computer. It has no Nova account and no Nova server.',
+    ],
+    capabilities: [
+      'Browse the web with tabs, windows, private windows, bookmarks, history and downloads.',
+      'Save passwords and contact details, and optionally sync them through a folder you choose.',
+      'Control cookies, site permissions, and what is cleared when you close it.',
+    ],
+    surfaces: [
+      { name: 'Vexa desktop app', detail: 'The web browser.' },
+      { name: 'Vexa website', detail: 'The product and download website.' },
+    ],
+    account: 'Vexa has no accounts of its own and does not use a Nova Account.',
+  },
 ];
 
 /** A product by id, or null. Never throws — the id usually came from a route. */

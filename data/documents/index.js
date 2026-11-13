@@ -72,6 +72,7 @@ import { document as atlasTerms } from './atlas-terms.js';
 import { document as replayGgTerms } from './replay-gg-terms.js';
 import { document as novaCutTerms } from './nova-cut-terms.js';
 import { document as novaForgeTerms } from './nova-forge-terms.js';
+import { document as vexaTerms } from './vexa-terms.js';
 import { document as subscriptions } from './subscriptions.js';
 import { document as contact } from './contact.js';
 
@@ -83,6 +84,7 @@ export const documents = [
   replayGgTerms,
   novaCutTerms,
   novaForgeTerms,
+  vexaTerms,
   acceptableUse,
   subscriptions,
   privacy,
