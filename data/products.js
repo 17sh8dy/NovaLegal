@@ -310,7 +310,7 @@ export const products = [
       "Vexa keeps your history, bookmarks, open tabs, downloads list, settings, and the cookies, site data and cache that websites store, in a profile folder on your computer. Vexa has no analytics, crash reporting or accounts, and sends none of that to Nova.",
       "Saved passwords are encrypted with your operating system’s keystore before they are written to disk. If the system cannot encrypt them, Vexa does not save them.",
       "Sync is optional and uses no Nova server: Vexa writes one file, encrypted with a passphrase you choose, to a folder you pick (for example one your own cloud storage app keeps in sync).",
-      "Websites you visit, and the search engine you choose (DuckDuckGo by default), receive what any browser sends them. By default Vexa sends Do Not Track and Global Privacy Control signals and blocks third-party cookies.",
+      "Websites you visit, and the search engine you choose (DuckDuckGo by default), receive what any browser sends them. If you choose Vexa Search (beta), Nova’s own search engine, your searches are handled on your computer and are not sent anywhere. By default Vexa sends Do Not Track and Global Privacy Control signals and blocks third-party cookies.",
       "The Vexa website sets no cookies, stores nothing in your browser and uses no analytics.",
     ],
     name: 'Vexa',
@@ -328,6 +328,7 @@ export const products = [
       'Browse the web with tabs, windows, private windows, bookmarks, history and downloads.',
       'Save passwords and contact details, and optionally sync them through a folder you choose.',
       'Control cookies, site permissions, and what is cleared when you close it.',
+      'Search with Vexa Search (beta), Nova’s own search engine, which runs on your computer, or with another search engine of your choice.',
     ],
     surfaces: [
       { name: 'Vexa desktop app', detail: 'The web browser.' },

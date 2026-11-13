@@ -15,7 +15,7 @@ export const document = {
   appliesTo: ALL_PRODUCTS,
   status: 'published',
   effectiveDate: PUBLISHED,
-  updatedDate: '2026-11-12',
+  updatedDate: '2026-11-13',
   version: '1.0',
   versions: [],
   sections: [
@@ -95,7 +95,7 @@ export const document = {
       heading: 'Vexa',
       body: [
         'Vexa is a web browser. Your history, bookmarks, open tabs, downloads list, settings, saved passwords, saved contact details, and the cookies, site data and cache that websites store, are kept in a profile folder on your computer. Nova does not receive them. No analytics, crash-reporting, update-check or account code was found in Vexa.',
-        'The websites you visit, and the search engine you choose (DuckDuckGo by default), receive what any browser sends them, such as your IP address, the pages you request and the cookies they set. What they do with it is governed by their own policies, which Nova does not control.',
+        'The websites you visit, and the search engine you choose (DuckDuckGo by default; Vexa Search, if you choose it, runs on your computer and receives nothing), receive what any browser sends them, such as your IP address, the pages you request and the cookies they set. What they do with it is governed by their own policies, which Nova does not control.',
         'Saved passwords are encrypted with your operating system’s keystore. If you turn on sync, Vexa writes one file, encrypted with a passphrase you choose, to a folder you pick; whoever stores that folder (for example your cloud storage provider) holds only the encrypted file.',
         'More detail, including private windows, cookie blocking and location, is in the [Vexa Terms](/vexa-terms).',
       ],

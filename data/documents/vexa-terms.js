@@ -17,10 +17,17 @@
  *   - presents itself as Chrome on Google's own sign-in hosts; certificate errors never bypassed;
  *   - location only works with a Google API key the user pastes in (Chromium's location service);
  *   - "Make Vexa the default" registers with Windows; the user confirms in Windows' Default apps.
+ * Updated 2026-11-13 for Vexa 0.5.5 (D:DevVexasrcmainexa-search.js, url.js):
+ *   - "Vexa Search (Beta)" is an optional search engine in Settings; DuckDuckGo stays the default;
+ *   - it runs inside Vexa from an index shipped with the app: searches are handled on the computer
+ *     and are not sent to Nova or anyone else; results link to the original websites;
+ *   - the index is built by Nova's own crawler, VexaBot (https://vexa.shadylabs.workers.dev/bot);
+ *   - the "Content Coverage" wording below is the owner's own text (2026-11-13), used verbatim.
  * If any of that changes, THIS DOCUMENT MUST CHANGE WITH IT.
  */
 
 const DATE = '2026-11-12';
+const UPDATED = '2026-11-13';
 
 export const document = {
   id: 'vexa-terms',
@@ -30,8 +37,8 @@ export const document = {
   appliesTo: ['vexa'],
   status: 'published',
   effectiveDate: DATE,
-  updatedDate: DATE,
-  version: '1.0',
+  updatedDate: UPDATED,
+  version: '1.1',
   versions: [],
   sections: [
     {
@@ -54,9 +61,20 @@ export const document = {
       id: 'websites',
       heading: 'Websites and search engines',
       body: [
-        'When you visit a website, that website receives what any browser sends it, such as your IP address, the page you asked for, and its own cookies. Searches you type in the address bar go to the search engine you choose in Settings (DuckDuckGo by default).',
+        'When you visit a website, that website receives what any browser sends it, such as your IP address, the page you asked for, and its own cookies. Searches you type in the address bar go to the search engine you choose in Settings (DuckDuckGo by default). If you choose Vexa Search, your searches are handled on your computer instead and are not sent to Nova or anyone else.',
         'Websites, search engines and other services are run by other people under their own terms and privacy policies. Nova does not control them and is not responsible for their content or for what they do with your information.',
         'On Google’s own sign-in pages, Vexa presents itself as the Chrome browser so that Google sign-in works. Google decides on its own whether to allow a sign-in, and this may stop working at any time.',
+      ],
+    },
+    {
+      id: 'vexa-search',
+      heading: 'Vexa Search — Content Coverage',
+      body: [
+        'Vexa Search is an independently developed search engine with its own web crawler, indexing infrastructure, and ranking systems.',
+        'During its early development and beta stages, Vexa Search will prioritize mainstream websites, technology, gaming, entertainment, education, news, and other general-purpose web content.',
+        'Vexa Search does not prioritize adult-oriented websites or pornography. Such websites may not be intentionally indexed or supported, and coverage may change as the search engine develops.',
+        'Users are always free to select alternative third-party search providers, including Google and Brave, through Vexa’s search settings.',
+        'Vexa Search is offered in Vexa as an optional beta. It runs inside Vexa from an index included with the app, so the searches you make with it are handled on your computer and are not sent to Nova or anyone else. Results link to the original websites, which are run by other people (see “Websites and search engines” above). The index is built by Nova’s crawler, VexaBot, which follows each website’s robots.txt rules. Website owners can read how to control or block VexaBot at vexa.shadylabs.workers.dev/bot.',
       ],
     },
     {
