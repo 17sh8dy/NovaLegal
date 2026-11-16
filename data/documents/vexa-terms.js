@@ -23,22 +23,34 @@
  *     and are not sent to Nova or anyone else; results link to the original websites;
  *   - the index is built by Nova's own crawler, VexaBot (https://vexa.shadylabs.workers.dev/bot);
  *   - the "Content Coverage" wording below is the owner's own text (2026-11-13), used verbatim.
+ * Updated 2026-11-14 for Vexa 0.6.0 (D:\Dev\Vexa\src\main\shields.js, shields-rules.js, wallpapers.js):
+ *   - Vexa Shields, on by default, all in the browser: blocks third-party requests to Vexa's own
+ *     short lists of ad / tracker / fingerprinting hosts, cross-site cookies (network level),
+ *     farbles canvas / WebGL / audio readings per site + session, tries https:// first with http
+ *     fallback, strips click-tracking URL parameters, blocks windows opened without a click, and
+ *     stops navigation to hosts on a bundled phishing/scam list (The Block List Project snapshot,
+ *     taken at build time; nothing downloaded at run time) with "continue anyway";
+ *   - per-site Shields choices + a local "things blocked" counter live in the profile; private
+ *     windows keep their per-site choices in memory; Shields defaults and per-site choices are
+ *     included in the encrypted sync file when sync is on;
+ *   - New Tab wallpapers: uploaded JPG/PNG/WebP files are copied into the profile folder and shown
+ *     only on the New Tab page; the wallpaper settings (not the images) are in the sync file.
  * If any of that changes, THIS DOCUMENT MUST CHANGE WITH IT.
  */
 
 const DATE = '2026-11-12';
-const UPDATED = '2026-11-13';
+const UPDATED = '2026-11-14';
 
 export const document = {
   id: 'vexa-terms',
   title: 'Vexa Terms',
-  description: 'Terms specific to Vexa, the Nova web browser: your data, websites, sync, passwords and extensions.',
+  description: 'Terms specific to Vexa, the Nova web browser: your data, websites, Vexa Shields, sync, passwords and extensions.',
   category: 'terms',
   appliesTo: ['vexa'],
   status: 'published',
   effectiveDate: DATE,
   updatedDate: UPDATED,
-  version: '1.1',
+  version: '1.2',
   versions: [],
   sections: [
     {
@@ -52,7 +64,7 @@ export const document = {
       id: 'your-data',
       heading: 'Your data stays on your computer',
       body: [
-        'Vexa stores your settings, history, bookmarks, open tabs, downloads list, saved passwords, saved contact details, and the cookies, site data and cache that websites set, in a profile folder on your computer. Nova does not receive any of it.',
+        'Vexa stores your settings, history, bookmarks, open tabs, downloads list, saved passwords, saved contact details, Vexa Shields choices, New Tab wallpapers you add, and the cookies, site data and cache that websites set, in a profile folder on your computer. Nova does not receive any of it.',
         'Vexa has no analytics, crash reporting, update check or account. It does not use a Nova Account. Address-bar suggestions come from your own history and bookmarks, not from a search service.',
         'Anyone who can use your computer account may be able to open that profile folder.',
       ],
@@ -78,10 +90,27 @@ export const document = {
       ],
     },
     {
+      id: 'shields',
+      heading: 'Vexa Shields',
+      body: [
+        'Vexa Shields are on by default. They block third-party ads and trackers from a list of well-known ad networks and tracking services, block cross-site cookies, make the canvas, graphics and audio readings that websites can use to fingerprint you slightly different in every session, try the secure (https) version of a website first, remove common click-tracking codes from the links you open, block windows a website opens without you clicking, and warn you before opening a website on a list of known phishing and scam sites.',
+        'Shields work inside Vexa on your computer. Vexa does not send your browsing to Nova or anyone else to decide what to block, and it does not download block lists while you browse: the lists are included with each version of Vexa. The phishing and scam list comes from a third party (The Block List Project) and is a snapshot from when that version was built.',
+        'Shields do not block everything. The ad and tracker lists are intentionally short, websites can serve ads and tracking from their own domain, new phishing and scam sites appear every day, and fingerprinting protection covers only the readings described above. A website not being blocked or warned about does not mean it is safe. If you choose to continue to a site Vexa warned you about, you do so at your own risk.',
+        'Blocking can stop some websites from working properly, and some websites may ask you to turn blocking off. You can turn Shields off, or change single protections, for any site from the shield button next to the address bar, and change the defaults in Settings. Your choices for each site are kept in your profile; in a private window they are forgotten when the window closes.',
+      ],
+    },
+    {
+      id: 'new-tab',
+      heading: 'New Tab wallpapers',
+      body: [
+        'If you add your own image as a New Tab wallpaper, Vexa copies it into your profile folder and shows it only on your New Tab page. It is not uploaded anywhere, and it is not included in sync (your wallpaper settings are). Removing the image in Vexa deletes Vexa’s copy.',
+      ],
+    },
+    {
       id: 'privacy-controls',
       heading: 'Privacy settings',
       body: [
-        'By default Vexa asks websites not to track you (Do Not Track and Global Privacy Control) and blocks third-party cookies. Websites decide for themselves whether to honour those requests.',
+        'By default Vexa asks websites not to track you (Do Not Track and Global Privacy Control) and, through Vexa Shields, blocks third-party cookies. Websites decide for themselves whether to honour the Do Not Track and Global Privacy Control requests.',
         'Third-party cookie blocking works at the network level. A third-party frame inside a page can still read and write its own cookies through scripts, so the blocking does not stop every form of tracking.',
         'Private windows keep their history, cookies and site data only in memory and discard them when the window closes.',
         'You can clear history, the downloads list, cookies, site data, cache, site permissions, saved passwords and saved contact details in Settings, or have some of them cleared every time Vexa closes. Cookies, site data and the cache can only be cleared for all time, not for a shorter period.',
@@ -103,7 +132,7 @@ export const document = {
       body: [
         'Sync is optional and uses no Nova server. When you turn it on, Vexa writes one file, encrypted with a passphrase you choose, to a folder you pick. To use it on another device, you make that folder available there yourself, for example with your own cloud storage service.',
         'Whoever stores that folder holds only the encrypted file. Your passphrase is kept on each of your computers in the operating system’s keystore. Nova cannot recover a forgotten passphrase, and without it the synced file cannot be read.',
-        'Sync can overwrite changes: if you edit bookmarks, settings or contact details on two devices before they sync, the most recent change may replace the other. Keep your own backups of anything you care about.',
+        'Sync can overwrite changes: if you edit bookmarks, settings or contact details on two devices before they sync, the most recent change may replace the other. Settings include your Vexa Shields and New Tab settings, but not the wallpaper images themselves. Keep your own backups of anything you care about.',
       ],
     },
     {
